@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -87,98 +88,170 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-food">
-                        <div class="food-img">
-                            <img src="assets/images/food1.jpg" class="img-fluid" alt="">
+            <ul id="classification" class="row nav nav-pills px-3 pb-3 align-right justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#total">전체</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#pizza">피자</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#topping">토핑</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#side">사이드</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#beverage">음료</a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="total">
+                    <div class="row tab-content">
+                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
+                            <a class="single-food" href="detail.html">
+                                <div class="food-img">
+                                    <img src="assets/images/food1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>Mexican Eggrolls</h5>
+                                        <span class="style-change">$14.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="food-content">
-                            <div class="d-flex justify-content-between">
-                                <h5>Mexican Eggrolls</h5>
-                                <span class="style-change">$14.50</span>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5 mt-sm-0">
+                                <div class="food-img">
+                                    <img src="assets/images/food2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>chicken burger</h5>
+                                        <span class="style-change">$9.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
                             </div>
-                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5 mt-md-0">
+                                <div class="food-img">
+                                    <img src="assets/images/food3.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>topu lasange</h5>
+                                        <span class="style-change">$12.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5">
+                                <div class="food-img">
+                                    <img src="assets/images/food4.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>pepper potatoas</h5>
+                                        <span class="style-change">$14.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5">
+                                <div class="food-img">
+                                    <img src="assets/images/food5.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>bean salad</h5>
+                                        <span class="style-change">$8.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5">
+                                <div class="food-img">
+                                    <img src="assets/images/food6.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>beatball hoagie</h5>
+                                        <span class="style-change">$11.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-food mt-5 mt-sm-0">
-                        <div class="food-img">
-                            <img src="assets/images/food2.jpg" class="img-fluid" alt="">
+                <div class="tab-pane container fade" id="pizza">
+                    <div class="row tab-content">
+                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
+                            <a class="single-food" href="detail.html">
+                                <div class="food-img">
+                                    <img src="assets/images/food1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>Mexican Eggrolls</h5>
+                                        <span class="style-change">$14.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="food-content">
-                            <div class="d-flex justify-content-between">
-                                <h5>chicken burger</h5>
-                                <span class="style-change">$9.50</span>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5 mt-sm-0">
+                                <div class="food-img">
+                                    <img src="assets/images/food2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>chicken burger</h5>
+                                        <span class="style-change">$9.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
                             </div>
-                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-food mt-5 mt-md-0">
+                                <div class="food-img">
+                                    <img src="assets/images/food3.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>topu lasange</h5>
+                                        <span class="style-change">$12.50</span>
+                                    </div>
+                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-food mt-5 mt-md-0">
-                        <div class="food-img">
-                            <img src="assets/images/food3.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="food-content">
-                            <div class="d-flex justify-content-between">
-                                <h5>topu lasange</h5>
-                                <span class="style-change">$12.50</span>
-                            </div>
-                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-food mt-5">
-                        <div class="food-img">
-                            <img src="assets/images/food4.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="food-content">
-                            <div class="d-flex justify-content-between">
-                                <h5>pepper potatoas</h5>
-                                <span class="style-change">$14.50</span>
-                            </div>
-                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-food mt-5">
-                        <div class="food-img">
-                            <img src="assets/images/food5.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="food-content">
-                            <div class="d-flex justify-content-between">
-                                <h5>bean salad</h5>
-                                <span class="style-change">$8.50</span>
-                            </div>
-                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-food mt-5">
-                        <div class="food-img">
-                            <img src="assets/images/food6.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="food-content">
-                            <div class="d-flex justify-content-between">
-                                <h5>beatball hoagie</h5>
-                                <span class="style-change">$11.50</span>
-                            </div>
-                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="tab-pane container fade" id="topping">topping</div>
+                <div class="tab-pane container fade" id="side">side</div>
+                <div class="tab-pane container fade" id="beverage">beverage</div>
             </div>
+            
         </div>
     </section>
     <!-- Food Area End -->
 
     <!-- Table Area Starts -->
-    <section class="table-area section-padding">
+    <!-- <section class="table-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -216,7 +289,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Table Area End -->
 
     <!-- Footer Area Starts -->
@@ -306,5 +379,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
 </body>
 </html>
