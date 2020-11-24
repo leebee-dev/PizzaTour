@@ -17,3 +17,7 @@ ul .nav-link:hover {
     border:1px solid #f8b600;
     background:#fff
 }
+
+.single-food p{
+    color: #777;
+}
