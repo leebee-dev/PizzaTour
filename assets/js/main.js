@@ -16,9 +16,36 @@
             loop: true,
             margin: 30,
             autoplay: true,
-            autoplayTimeout: 2000,
+            autoplayTimeout: 3000,
             autoplayHoverPause: true,
-            nav: false,
+            nav: true,
+            dots: true,
+            smartSpeed: 1000,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 5
+                }
+            }
+        });
+
+        // Employee Slider
+        $('.testimonial-slider2').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true,
             dots: true,
             smartSpeed: 1000,
             responsiveClass: true,
@@ -33,11 +60,12 @@
                     items: 1
                 },
                 992: {
-                    items: 2
+                    items: 1
                 }
             }
         });
 
+        
         // Nice Select
         $('select').niceSelect();
 
