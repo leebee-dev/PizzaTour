@@ -1,0 +1,30 @@
+.food-detail-content span{
+    color:#131230;
+    font-size: 24px;
+    font-weight:700
+}
+
+.food-detail-content p {
+    font-size: 18px;
+}
+
+#info-tab > li > a {
+    background-color: #f8b600;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#info-tab .nav-link.active {
+    color:#f8b600 !important;
+    border: 1px solid #f8b600;
+    background:#fff !important;
+    
+}
+
+#info-tab .nav-link:hover {
+    color:#f8b600;
+    border:1px solid #f8b600;
+    background:#fff;
+    
+}

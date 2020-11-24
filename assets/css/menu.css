@@ -1,0 +1,23 @@
+ul .nav-link {
+    background-color: #f8b600;
+    color: #fff;
+    margin-left: 10px;
+    border-radius:20px !important;
+    text-align: center;
+}
+
+ul .nav-link.active {
+    color:#f8b600 !important;
+    border: 1px solid #f8b600;
+    background:#fff !important;
+}
+
+ul .nav-link:hover {
+    color:#f8b600;
+    border:1px solid #f8b600;
+    background:#fff
+}
+
+.single-food p{
+    color: #777;
+}
