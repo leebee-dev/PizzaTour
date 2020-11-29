@@ -1,7 +1,7 @@
 --
 -- Database : `PizzaTour`
 --
-CREATE DATABASE IF NOT EXISTS `PizzaTour`
+CREATE DATABASE IF NOT EXISTS PizzaTour
   DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
   USE PizzaTour;
 
@@ -11,7 +11,6 @@ CREATE DATABASE IF NOT EXISTS `PizzaTour`
 CREATE TABLE IF NOT EXISTS `Menu` (
 	`idx` INT(5) unsigned NOT NULL auto_increment,
 	`name` VARCHAR(100) NOT NULL default '',
-	`price` INT(11) NOT NULL default 0,
 	`description` VARCHAR(255),
   `class` INT(5) unsigned NOT NULL default 0,
 	`origin` VARCHAR(64),
@@ -21,6 +20,14 @@ CREATE TABLE IF NOT EXISTS `Menu` (
 --
 -- Table structure for table `Price`
 --
+CREATE TABLE IF NOT EXISTS `Price` (
+	`idx` INT(5) unsigned NOT NULL auto_increment,
+  `M` INT(11) default 0,
+  `L` INT(11) default 0,
+  `Big` INT(11) default 0,
+
+  FOREIGN KEY (`idx`) REFERENCES Menu.idx
+);
 
 --
 -- Table structure for table `Nutrition`

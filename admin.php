@@ -1,4 +1,9 @@
-<?php include_once("header.php")?>
+<?php 
+if(!$SESSION['adminID']){
+    echo("<script>location.href='admin_login_form.php';</script>"); 
+}
+
+include_once("header.php")?>
 
     <!-- Banner Area Starts -->
 			<section class="banner full">
