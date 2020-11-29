@@ -11,12 +11,17 @@ CREATE DATABASE IF NOT EXISTS `PizzaTour`
 CREATE TABLE IF NOT EXISTS `Menu` (
 	`idx` INT(5) unsigned NOT NULL auto_increment,
 	`name` VARCHAR(100) NOT NULL default '',
-	`price` INT(11)[] NOT NULL default 0,
+	`price` INT(11) NOT NULL default 0,
 	`description` VARCHAR(255),
+  `class` INT(5) unsigned NOT NULL default 0,
 	`origin` VARCHAR(64),
 	`score` TINYINT default 0,
-    PRIMARY KEY (`idx`)
+   PRIMARY KEY (`idx`)
 );
+--
+-- Table structure for table `Price`
+--
+
 --
 -- Table structure for table `Nutrition`
 --
