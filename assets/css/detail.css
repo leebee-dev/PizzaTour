@@ -7,24 +7,46 @@
 .food-detail-content p {
     font-size: 18px;
 }
+.food-detail image {
+    opacity: 0.5;
+}
 
-#info-tab > li > a {
+#info-tab .card-header {
+    color:#fff !important;
     background-color: #f8b600;
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#info-tab .nav-link.active {
-    color:#f8b600 !important;
-    border: 1px solid #f8b600;
-    background:#fff !important;
     
 }
 
-#info-tab .nav-link:hover {
-    color:#f8b600;
-    border:1px solid #f8b600;
-    background:#fff;
-    
+#info-tab button {
+    color:#fff;
+}
+
+.food-detail-img {
+    height: 50%;
+}
+
+#score i {
+    color: #f8b600;
+    margin-right: -10px
+}
+
+#score {
+    font-size: 60px;
+}
+
+@media (min-width: 425px) and (max-width: 1024.98px){
+    #score {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 425.98px){
+    #score {
+        font-size: 35px;
+    }
+}
+
+.single-comment {
+    border-bottom: 1px solid;
+    margin-bottom: 25px;
 }
