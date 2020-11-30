@@ -7,24 +7,95 @@
 .food-detail-content p {
     font-size: 18px;
 }
+.food-detail image {
+    opacity: 0.5;
+}
 
-#info-tab > li > a {
+#info-tab .card-header {
+    color:#fff !important;
     background-color: #f8b600;
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#info-tab .nav-link.active {
-    color:#f8b600 !important;
-    border: 1px solid #f8b600;
-    background:#fff !important;
     
 }
 
-#info-tab .nav-link:hover {
-    color:#f8b600;
-    border:1px solid #f8b600;
-    background:#fff;
-    
+#info-tab button {
+    color:#fff;
+}
+
+.food-detail-img {
+    height: 50%;
+}
+
+#score i {
+    color: #f8b600;
+    margin-right: -10px
+}
+
+#score {
+    font-size: 60px;
+}
+
+@media (min-width: 425px) and (max-width: 1024.98px){
+    #score {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 425.98px){
+    #score {
+        font-size: 35px;
+    }
+}
+
+.single-comment {
+    border-bottom: 1px solid;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+#comment-section {
+    font-size: medium;
+    padding: 10px;
+    margin: 2px;
+    border-bottom: 1px solid #777;
+}
+
+.comment-edit {
+    font: normal normal normal 14px/1 FontAwesome;;
+}
+
+#name {
+    width: 66%;
+    margin-left: 10px;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+}
+
+#assign-star {
+    font-size: large;
+    display: inline-block;
+    overflow: hidden;
+    height: 40px;
+}
+.star-radioBox {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+.star-radioBox input {
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
 }

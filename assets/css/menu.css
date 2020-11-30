@@ -18,6 +18,12 @@ ul .nav-link:hover {
     background:#fff
 }
 
+@media (max-width: 425.98px){
+    ul li a {
+        font-size: xx-small;
+    }
+}
+
 .single-food p{
     color: #777;
 }
