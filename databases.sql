@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `Menu` (
 -- Table structure for table `Price`
 --
 CREATE TABLE IF NOT EXISTS `Price` (
-	`idx` INT(5) unsigned NOT NULL auto_increment,
+	`idx` INT(5) unsigned NOT NULL,
   `M` INT(11) NOT NULL default 0, 
   `L` INT(11) default 0,
   `Big` INT(11) default 0,
