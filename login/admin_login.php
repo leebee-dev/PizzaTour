@@ -10,8 +10,8 @@ if (isset($_POST)) {
         if (!isset($_SESSION)) {
             session_start();
         }
-        $_SESSION['adminID'] = $user['userID'];
-        echo("<script>alert('로그인 성공');location.href='../index.php';</script>"); 
+        $_SESSION['admin'] = $user['userID'];
+        echo("<script>alert('로그인 성공');location.href='../admin.php';</script>"); 
        } else {
         echo("<script>alert('로그인 실패');location.href='../admin_login_form.php';</script>"); 
     }

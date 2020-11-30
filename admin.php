@@ -1,14 +1,11 @@
 <?php 
-if(!$SESSION['adminID']){
-    echo("<script>location.href='admin_login_form.php';</script>"); 
-}
-
-include_once("header.php")?>
+include_once("admin_header.php");?>
 
     <!-- Banner Area Starts -->
 			<section class="banner full">
 				<article>
-					<img src="assets/images/banner5.jpg"  alt="" />
+                    <img src="assets/images/banner5.jpg"  alt="" />
+                    <h3>관리자페이지</h3>
 					<div class="inner">
 						<header>
                             <h1>CAFE in SEATTLE</h1>
@@ -295,5 +292,5 @@ include_once("header.php")?>
     </section>
     <!--  Services Area End -->
 
-<?php include_once("footer.php")?>
+<?php include_once("footer.php");?>
 

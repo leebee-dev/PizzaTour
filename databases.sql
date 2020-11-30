@@ -1,9 +1,10 @@
 --
 -- Database : `PizzaTour`
 --
-CREATE DATABASE IF NOT EXISTS PizzaTour
-  DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-  USE PizzaTour;
+CREATE DATABASE IF NOT EXISTS pizza;
+ALTER SCHEMA pizza DEFAULT CHARACTER SET utf8 ;
+
+USE pizza;
 
 --
 -- Table structure for table `menu`
@@ -22,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `Menu` (
 --
 CREATE TABLE IF NOT EXISTS `Price` (
 	`idx` INT(5) unsigned NOT NULL auto_increment,
-  `M` INT(11) default 0,
+  `M` INT(11) NOT NULL default 0, 
   `L` INT(11) default 0,
   `Big` INT(11) default 0,
 
@@ -50,3 +51,7 @@ CREATE TABLE IF NOT EXISTS `Admin` (
     `created_at` datetime,
     PRIMARY KEY (`idx`)
 );
+
+-- Insert Menu
+INSERT INTO Menu(name, class) VALUES("test",1);
+INSERT INTO Price(M,L,Big) VALUES(7900,9900,16000);
