@@ -2,11 +2,11 @@
 include_once("header.php");
 include_once("db.php");
 
-$sql_total = mq("select * from Menu");
-$sql_pizza = mq("select * from Menu where class=1");
-$sql_topping = mq("select * from Menu where class=2");
-$sql_side= mq("select * from Menu where class=3");
-$sql_beverage = mq("select * from Menu where class=4");
+$sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체메뉴
+$sql_pizza = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=1;"); //피자
+$sql_topping = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2;");  //토핑
+$sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //사이드
+$sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=4;"); //음료
 ?>
 
     <!-- Banner Area Starts -->
@@ -56,11 +56,14 @@ $sql_beverage = mq("select * from Menu where class=4");
                     <div class="row tab-content">
                     <?php //전체 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_total)) {
-                            $menu_idx = $row[0];
-                            $menu_name = $row[1];
-                            $menu_description = $row[2];
-                            $menu_origin = $row[4];
-							$menu_score = $row[5];
+                            $menu_idx = $row[0];  
+                            $menu_name = $row[1];  //메뉴 이름
+                            $menu_description = $row[2];  //메뉴 설명
+                            $menu_origin = $row[4];  //원산지
+                            $menu_score = $row[5];  //별점
+                            $price_m = $row[7];  //M 가격
+                            $price_l = $row[8];  //L 가격
+                            $price_big = $row[9];  //Big 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -70,9 +73,9 @@ $sql_beverage = mq("select * from Menu where class=4");
                                 <div class="food-content">
                                     <div class="">
                                         <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: 7,900</div>
-                                        <div class="style-change">  L: 9,900</div>
-                                        <div class="style-change">Big:16,000</div>
+                                        <div class="style-change">  M: <?php echo $price_m?></div>
+                                        <div class="style-change">  L: <?php echo $price_l?></div>
+                                        <div class="style-change">Big: <?php echo $price_big?></div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
                                 </div>
@@ -83,9 +86,16 @@ $sql_beverage = mq("select * from Menu where class=4");
                 </div>
                 <div class="tab-pane container fade" id="pizza">
                 <div class="row tab-content">
-                    <?php //전체 메뉴 조회
+                    <?php //피자 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_pizza)) {
-							$menu_name = $row[1];
+							$menu_idx = $row[0];  
+                            $menu_name = $row[1];  //메뉴 이름
+                            $menu_description = $row[2];  //메뉴 설명
+                            $menu_origin = $row[4];  //원산지
+                            $menu_score = $row[5];  //별점
+                            $price_m = $row[7];  //M 가격
+                            $price_l = $row[8];  //L 가격
+                            $price_big = $row[9];  //Big 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -95,9 +105,9 @@ $sql_beverage = mq("select * from Menu where class=4");
                                 <div class="food-content">
                                     <div class="">
                                         <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: 7,900</div>
-                                        <div class="style-change">  L: 9,900</div>
-                                        <div class="style-change">Big:16,000</div>
+                                        <div class="style-change">  M: <?php echo $price_m?></div>
+                                        <div class="style-change">  L: <?php echo $price_l?></div>
+                                        <div class="style-change">Big: <?php echo $price_big?></div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
                                 </div>
@@ -108,9 +118,14 @@ $sql_beverage = mq("select * from Menu where class=4");
                 </div>
                 <div class="tab-pane container fade" id="topping">topping
                 <div class="row tab-content">
-                    <?php //전체 메뉴 조회
+                    <?php //토핑 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_topping)) {
-							$menu_name = $row[1];
+							$menu_idx = $row[0];  
+                            $menu_name = $row[1];  //메뉴 이름
+                            $menu_description = $row[2];  //메뉴 설명
+                            $menu_origin = $row[4];  //원산지
+                            $menu_score = $row[5];  //별점
+                            $price = $row[7];  //M 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -120,9 +135,7 @@ $sql_beverage = mq("select * from Menu where class=4");
                                 <div class="food-content">
                                     <div class="">
                                         <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: 7,900</div>
-                                        <div class="style-change">  L: 9,900</div>
-                                        <div class="style-change">Big:16,000</div>
+                                        <div class="style-change">  M: <?php echo $price?></div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
                                 </div>
@@ -133,9 +146,14 @@ $sql_beverage = mq("select * from Menu where class=4");
                 </div>
                 <div class="tab-pane container fade" id="side">
                 <div class="row tab-content">
-                    <?php //전체 메뉴 조회
+                    <?php //사이드 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_side)) {
-							$menu_name = $row[1];
+							$menu_idx = $row[0];  
+                            $menu_name = $row[1];  //메뉴 이름
+                            $menu_description = $row[2];  //메뉴 설명
+                            $menu_origin = $row[4];  //원산지
+                            $menu_score = $row[5];  //별점
+                            $price = $row[7];  //M 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -145,9 +163,7 @@ $sql_beverage = mq("select * from Menu where class=4");
                                 <div class="food-content">
                                     <div class="">
                                         <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: 7,900</div>
-                                        <div class="style-change">  L: 9,900</div>
-                                        <div class="style-change">Big:16,000</div>
+                                        <div class="style-change">  M: <?php echo $price?></div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
                                 </div>
@@ -158,9 +174,14 @@ $sql_beverage = mq("select * from Menu where class=4");
                 </div>
                 <div class="tab-pane container fade" id="beverage">beverage
                 <div class="row tab-content">
-                    <?php //전체 메뉴 조회
+                    <?php //음료 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_beverage)) {
-							$menu_name = $row[1];
+							$menu_idx = $row[0];  
+                            $menu_name = $row[1];  //메뉴 이름
+                            $menu_description = $row[2];  //메뉴 설명
+                            $menu_origin = $row[4];  //원산지
+                            $menu_score = $row[5];  //별점
+                            $price = $row[7];  //M 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -170,9 +191,7 @@ $sql_beverage = mq("select * from Menu where class=4");
                                 <div class="food-content">
                                     <div class="">
                                         <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: 7,900</div>
-                                        <div class="style-change">  L: 9,900</div>
-                                        <div class="style-change">Big:16,000</div>
+                                        <div class="style-change">  M: <?php echo $price?></div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
                                 </div>
@@ -186,7 +205,4 @@ $sql_beverage = mq("select * from Menu where class=4");
         </div>
     </section>
     <!-- Food Area End -->
-
-
-
 <?php include_once("footer.php")?>
