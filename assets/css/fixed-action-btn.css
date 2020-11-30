@@ -1,0 +1,34 @@
+.fixed-action-btns{
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 9999;
+    text-align: right;
+
+}
+.fab {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    border-radius: 30px;
+    background-color: #f8b600;
+
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    /* line-height: 70px; */
+    -webkit-box-shadow: 3px 4px 10px 2px rgba(0,0,0,.2);
+    box-shadow: 3px 4px 10px 2px rgba(0,0,0,.2);
+    transition: .2s ease-out;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+ }
+ .fab:hover {
+    width: 100px;
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05);
+ }
