@@ -1,5 +1,6 @@
 <?php 
-include_once("admin_header.php");?>
+include_once("admin_header.php");
+?>
 
     <!-- Banner Area Starts -->
 			<section class="banner full">

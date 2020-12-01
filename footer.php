@@ -1,3 +1,5 @@
+<?php include 'session_check.php';?>
+    
     <!-- Footer Area Starts -->
     <footer class="footer-area">
         <div class="footer-widget section-padding">
@@ -62,7 +64,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="col-lg-5 col-md-6">
                         <div class="social-icons">
                             <ul>
-                                <li class="no-margin"><a href="admin.php" style="color: white">관리자 페이지</a></li>
+                                <?php
+                                if($admin_login){
+                                    echo '<li class="no-margin"><a href="login/logout.php" style="color: white">관리자 로그아웃</a></li>';
+                                }
+                                else{
+                                    echo '<li class="no-margin"><a href="admin_login_form.php" style="color: white">관리자 로그안</a></li>';
+                                }
+                                ?>
                                 <li class="no-margin">Follow Us</li>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>

@@ -11,6 +11,10 @@ if (isset($_POST)) {
         // 관리자 등록
         $user = $c->storeUser($userID, $name, $email, $password);
         if ($user) {// 관리자 등록 성공
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+            $_SESSION['admin'] = "admin"; 
             echo("<script>alert('등록 성공');location.href='../index.php';</script>"); 
         } else {
             // 관리자 등록 실패

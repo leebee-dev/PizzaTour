@@ -3,28 +3,7 @@ include_once("admin_header.php");
 include_once("db.php");
 $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체메뉴
 ?>
-
-<script>
-function delete_menu(select_obj) {
-    if (confirm("메뉴를 삭제하시겠습니까?") == true) { //재확인
-        $.ajax({ //삭제
-            type: 'POST',
-            url: "admin/delete_menu.php",
-            data: {
-                select_obj: select_obj
-            },
-            success: function(result) { 
-            }
-        })
-        alert(select_obj);
-        alert("삭제되었습니다.");
-        location.reload();
-    } else {
-        return false; //취소
-    }
-}
-</script>
-
+  
   <!-- Banner Area Starts -->
   <section class="banner-area banner-area2 menu-bg text-center">
       <div class="container">
@@ -56,7 +35,7 @@ function delete_menu(select_obj) {
                                       <div class="tab-pane container fade" id="menu">
                                         <h3 class="text-heading title_color">Menu</h3>
                                         <div class="section-top-border">
-                                        <a href="admin_add_menu.php" class="genric-btn primary-border small">Add</a>
+                                        <a href="#" class="genric-btn primary-border small">Add</a>
                 <div class="progress-table-wrap">
                     <div class="progress-table">
                         <div class="table-head">
@@ -85,8 +64,8 @@ function delete_menu(select_obj) {
                             <div class="country"><?php echo $menu_name?></div>
                             <div class="percentage"><?php echo $menu_description?></div>
                             <div class="visit"><?php echo $price_m?></div>
-                            <div class="country"><a href="admin_update_menu.php" class="genric-btn primary-border small">update</a></div>
-                            <div class="country"><input type="button" id="<?php echo $menu_idx ?>" value="delete" onClick="delete_menu(<?php echo $menu_idx?>)" class="genric-btn primary-border small"></div>
+                            <div class="country"><a href="#" class="genric-btn primary-border small">update</a></div>
+                            <div class="country"><a href="#" class="genric-btn primary-border small">delete</a></div>
                         </div>
                         <?php }?>
                     </div>
