@@ -29,16 +29,45 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- Popup page Starts-->
+    <!-- <div class="popup" data-popup="example">
+        <div class="popup-inner">
+          <div class="popup-contents">
+          <a class="popup-close" data-popup-close="example" href="#">
+              <span class="fa fa-expeditedssl"></span>X</a>
+          팝업 내용
+          </div>
+        </div>
+    </div> -->
+    <!-- Popup page End-->
+
     <!-- floating button Starts-->
     <ul class="fixed-action-btns">
         <li>
-            <a href="#" class="fab">
+            <a href="#" data-popup-open="call" class="fab action-call">
                 <span class="fa fa-phone"></span>
             </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
         </li>
         <li>
             <a href="#" class="fab">
                 <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-angle-up"></span>
             </a>
         </li>
     </ul>
@@ -71,6 +100,7 @@
                                 </ul>
                             </li> -->
                             <li><a href="contact-us.html">위치</a></li>
+                            <li><a href="cupon.html">쿠폰</a></li>
                             <li><a href="elements.html">Elements</a></li>
                         </ul>
                     </div>
@@ -84,21 +114,21 @@
     <!-- Banner Area Starts -->
 			<section class="banner full">
 				<article>
-					<img src="assets/images/banner5.jpg"  alt="" />
+					<img src="assets/images/banner11.jpg"  alt="" />
 					<div class="inner">
 						<header>
-                            <h1>CAFE in SEATTLE</h1>
+                            <h1 class="korean prime-color">피자투어</span></h1>
                             <h6>100년의 피자 카페 인 시애틀은 재료 하나하나 본사에서 선정한 엄선된 재료로 <br>
                             세상에서 가장 맛있는 웰빙피자라는 타이틀로 대한민국 최고의 프리미엄 웰빙 피자를 선보이고 있습니다.</h6>
                         </header>
-                        <a href="#" class="template-btn mt-3" style="font-weight: bolder; color : black;">메뉴 보기</a>
+                        <a href="#" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
                     </div>
 				</article>
 				<article>
-					<img src="assets/images/banner6.jpg"  alt="" />
+					<img src="assets/images/about2-bg.jpg"  alt="" />
 					<div class="inner">
 						<header>
-                            <h1>CAFE in SEATTLE</h1>
+                            <h1 class="korean prime-color">피자투어</span></h1>
                             <h6>100년의 피자 카페 인 시애틀은 재료 하나하나 본사에서 선정한 엄선된 재료로 <br>
                             세상에서 가장 맛있는 웰빙피자라는 타이틀로 대한민국 최고의 프리미엄 웰빙 피자를 선보이고 있습니다.</h6>
                         </header>
@@ -109,7 +139,7 @@
 					<img src="assets/images/banner1.jpg" alt="" />
 					<div class="inner">
 						<header>
-                            <h1>CAFE in SEATTLE</h1>
+                            <h1 class="korean prime-color">피자투어</span></h1>
                             <h6>100년의 피자 카페 인 시애틀은 재료 하나하나 본사에서 선정한 엄선된 재료로 <br>
                             세상에서 가장 맛있는 웰빙피자라는 타이틀로 대한민국 최고의 프리미엄 웰빙 피자를 선보이고 있습니다.</h6>
                         </header>
@@ -120,7 +150,7 @@
 					<img src="assets/images/banner9.jpg"  alt="" />
 					<div class="inner">
 						<header>
-                            <h1>CAFE in SEATTLE</h1>
+                            <h1 class="korean prime-color">피자투어</span></h1>
                             <h6>100년의 피자 카페 인 시애틀은 재료 하나하나 본사에서 선정한 엄선된 재료로 <br>
                             세상에서 가장 맛있는 웰빙피자라는 타이틀로 대한민국 최고의 프리미엄 웰빙 피자를 선보이고 있습니다.</h6><br>
                         </header>
@@ -462,5 +492,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/skel.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
+    <script src="assets/js/action-btns.js"></script>
 </body>
 </html>

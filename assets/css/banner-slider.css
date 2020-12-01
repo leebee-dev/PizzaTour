@@ -94,7 +94,7 @@
     }
 
       .banner .indicators li:before {
-        background: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 1);
         border-radius: 100%;
         content: '';
         display: inline-block;
