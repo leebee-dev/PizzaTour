@@ -1,3 +1,9 @@
+<?php include 'session_check.php';
+if(!$admin_login){
+    echo("<script>alert('관리자 로그인이 필요합니다.');location.href='admin_login_form.php';</script>"); 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

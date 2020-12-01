@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `Price` (
   `L` INT(11) default 0,
   `Big` INT(11) default 0,
 
-  FOREIGN KEY (`idx`) REFERENCES Menu(`idx`)
+  FOREIGN KEY (`idx`) REFERENCES Menu(`idx`) on delete cascade
 );
 
 --
