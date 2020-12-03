@@ -1,7 +1,21 @@
 <?php
 include_once("admin_header.php");
 include_once("db.php");
-$sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체메뉴
+
+$idx = $_GET['id'];
+$sql = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.idx =".$idx.";");
+while ($row = mysqli_fetch_array($sql)) {
+    $menu_idx = $row[0];  //index
+    $menu_name = $row[1];  //메뉴 이름
+    $menu_description = $row[2];  //메뉴 설명
+    $menu_class = $row[3];  //메뉴 설명
+    $menu_origin = $row[4];  //원산지
+    $menu_img = $row[5];  //이미지
+    $menu_score = $row[6];  //별점
+    $price_m = $row[8];  //M 가격
+    $price_l = $row[9];  //L 가격
+    $price_big = $row[10];  //Big 가격
+}
 ?>
   
   <!-- Banner Area Starts -->
@@ -16,102 +30,57 @@ $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체�
   </section>
   <!-- Banner Area End -->
 
-  <!-- Food Area starts -->
-  <section class="food-area section-padding py-5">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-md-9">
-                  <div class="food-detail">
-                      <div class="row food-detail-img px-1">
-                           <div class="col-xl-6 col-lg-5 col-md-10 col-sm-9">
-                              <div class="row food-detail-content mt-3 px-3">
-                                  <div class="tab-content d-flex flex-column">
-                                      <div class="tab-pane container fade" id="home">
-                                        <h3 class="text-heading title_color">Home</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="about">
-                                        <h3 class="text-heading title_color">About</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="menu">
-                                        <h3 class="text-heading title_color">Menu</h3>
-                                        <div class="section-top-border">
-                                        <a href="#" class="genric-btn primary-border small">Add</a>
-                <div class="progress-table-wrap">
-                    <div class="progress-table">
-                        <div class="table-head">
-                            <div class="serial">#</div>
-                            <div class="country">name</div>
-                            <div class="percentage">description</div>
-                            <div class="visit">price</div>
-                            <div class="country">update</div>
-                            <div class="country">delete</div>
-                        </div>
-                        <?php //피자 메뉴 조회
-                        $idx = 0;
-						while ($row = mysqli_fetch_array($sql_total)) {
-                            $idx += 1;
-							$menu_idx = $row[0];  
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price_m = $row[7];  //M 가격
-                            $price_l = $row[8];  //L 가격
-                            $price_big = $row[9];  //Big 가격
-						?>
-                        <div class="table-row">
-                            <div class="serial"><?php echo $idx?></div>
-                            <div class="country"><?php echo $menu_name?></div>
-                            <div class="percentage"><?php echo $menu_description?></div>
-                            <div class="visit"><?php echo $price_m?></div>
-                            <div class="country"><a href="#" class="genric-btn primary-border small">update</a></div>
-                            <div class="country"><a href="#" class="genric-btn primary-border small">delete</a></div>
-                        </div>
-                        <?php }?>
+    
+    <!-- Start Align Area -->
+    <div class="whole-wrap">
+        <div class="container">
+            <div class="section-top-border">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <h3 class="mb-30 title_color">메뉴 수정</h3>
+                        <form action="admin/update_menu.php" method = "post" enctype="multipart/form-data">
+                            <input type="hidden" name = "idx" value = <?php echo $idx;?> >
+                            <div class="mt-10">
+                                <input type= "text" name="name" value = '<?php echo $menu_name;?>' placeholder="메뉴이름*" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴이름'" required class="single-input">
+                            </div>
+                            <div class="mt-10">
+                                <textarea class="single-textarea" name = "description" value = '<?php echo $menu_description;?>' placeholder= "메뉴설명" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴설명'"></textarea>
+                            </div>
+                            <div class="mt-10">
+                                <input type="text" name="M" value = '<?php echo $price_m;?>' placeholder="M 또는 단품가격*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'M 또는 단품가격'" required class="single-input">
+                            </div>
+                            <div class="mt-10">
+                                <input type="text" name="L" value = '<?php echo $price_l;?>' placeholder="L 가격" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L 가격'" class="single-input">
+                            </div>
+                            <div class="mt-10">
+                                <input type="text" name="Big" value = '<?php echo $price_big;?>' placeholder="Big 가격" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Big 가격'" class="single-input">
+                            </div>
+                            <div class="mt-10">
+                                <input type="text" name="origin" value = '<?php echo $menu_origin;?>' placeholder="원산지" onfocus="this.placeholder = ''" onblur="this.placeholder = '원산지'" class="single-input">
+                            </div>
+                            <div class="mt-10">
+                                <input type="file" name="img" value = '<?php echo $menu_img;?>' placeholder="메뉴 이미지" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴 이미지'">
+                            </div>
+                            <div class="input-group-icon mt-10">
+                                <div class="form-select" id="default-select" name = "class">
+                                    <select selected = '<?php echo $menu_class;?>'>
+                                        <option value="0">--메뉴 종류 선택--</option>
+                                        <option value="1">피자</option>
+                                        <option value="2">치킨</option>
+                                        <option value="3">세트</option>
+                                        <option value="4">사이드</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="button-group-area mt-10">
+                                <input type="submit" class="genric-btn default-border" value = "등록">
+                            </div>
+                            </form>
                     </div>
                 </div>
             </div>
-                                      </div>
-                                      <div class="tab-pane container fade" id="location">
-                                        <h3 class="text-heading title_color">Location</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="admin">
-                                        <h3 class="text-heading title_color">Administrator</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="information">
-                                        <h3 class="text-heading title_color">Information</h3>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-3">
-                  <ul id="info-tab" class="nav nav-pills flex-column px-2 px-md-0">
-                      <li class="nav-item">
-                          <a class="nav-link active" data-toggle="pill" href="#home">홈 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#about">소개 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#menu">메뉴 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#location">위치 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#admin">관리자 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#information">매장 정보</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- Food Area End -->
+        </div>
+    </div>
+    <!-- End Align Area --> 
 
 <?php include_once("footer.php")?>

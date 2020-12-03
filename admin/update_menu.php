@@ -14,13 +14,13 @@ else{
 
 if(isset($name)){
     mq("START TRANSACTION;");
-    mq('INSERT INTO Menu(name, description, class, origin, img) VALUES('.$name.','.$description.','.$class.','.$origin.','.$filename.');');
-    mq('INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),'.$price_m.','.$price_l.','.$price_big.');');
+    mq('UPDATE Menu SET idx = '.$idx.'name = '.$name.'description = '.$description.'class = '.$class.'origin ='.$origin.'img ='.$img.' WHERE idx='.$idx.';');
+    mq('UPDATE Price SET M = '.$M.' L ='.$L.' Big ='.$Big.' WHERE idx='.$idx.';');
     mq("COMMIT;");
 }?>
 
 <meta charset="utf-8" />
 <script type="text/javascript">
-alert('추가되었습니다.');
+alert('수정되었습니다.');
 location.href="../admin_settings.php";
 </script>

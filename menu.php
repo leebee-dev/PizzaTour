@@ -4,9 +4,10 @@ include_once("db.php");
 
 $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체메뉴
 $sql_pizza = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=1;"); //피자
-$sql_topping = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2;");  //토핑
+$sql_chicken = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2;");  //치킨
+$sql_set= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //세트
 $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //사이드
-$sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=4;"); //음료
+
 ?>
 
     <!-- Banner Area Starts -->
@@ -41,13 +42,13 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                     <a class="nav-link" data-toggle="pill" href="#pizza">피자</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#topping">토핑</a>
+                    <a class="nav-link" data-toggle="pill" href="#chicken">치킨</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#set">세트</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="pill" href="#side">사이드</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#beverage">음료</a>
                 </li>
             </ul>
             <!-- Tab panes -->
@@ -56,14 +57,15 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                     <div class="row tab-content">
                     <?php //전체 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_total)) {
-                            $menu_idx = $row[0];  
+                            $menu_idx = $row[0];  //index
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price_m = $row[7];  //M 가격
-                            $price_l = $row[8];  //L 가격
-                            $price_big = $row[9];  //Big 가격
+                            $menu_img = $row[5];  //이미지
+                            $menu_score = $row[6];  //별점
+                            $price_m = $row[8];  //M 가격
+                            $price_l = $row[9];  //L 가격
+                            $price_big = $row[10];  //Big 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -77,7 +79,7 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                                         <div class="style-change">  L: <?php echo $price_l?></div>
                                         <div class="style-change">Big: <?php echo $price_big?></div>
                                     </div>
-                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                    <p class="pt-3"><?php echo $menu_description?></p>
                                 </div>
                             </a>
                         </div>
@@ -88,14 +90,15 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                 <div class="row tab-content">
                     <?php //피자 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_pizza)) {
-							$menu_idx = $row[0];  
+							$menu_idx = $row[0];  //index
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price_m = $row[7];  //M 가격
-                            $price_l = $row[8];  //L 가격
-                            $price_big = $row[9];  //Big 가격
+                            $menu_img = $row[5];  //이미지
+                            $menu_score = $row[6];  //별점
+                            $price_m = $row[8];  //M 가격
+                            $price_l = $row[9];  //L 가격
+                            $price_big = $row[10];  //Big 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -109,23 +112,24 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                                         <div class="style-change">  L: <?php echo $price_l?></div>
                                         <div class="style-change">Big: <?php echo $price_big?></div>
                                     </div>
-                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                    <p class="pt-3"><?php echo $menu_description?></p>
                                 </div>
                             </a>
                         </div>
                         <?php } ?>
                     </div>
                 </div>
-                <div class="tab-pane container fade" id="topping">topping
+                <div class="tab-pane container fade" id="chicken">
                 <div class="row tab-content">
-                    <?php //토핑 메뉴 조회
-						while ($row = mysqli_fetch_array($sql_topping)) {
-							$menu_idx = $row[0];  
+                    <?php //치킨 메뉴 조회
+						while ($row = mysqli_fetch_array($sql_chicken)) {
+							$menu_idx = $row[0];  //index
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price = $row[7];  //M 가격
+                            $menu_img = $row[5];  //이미지
+                            $menu_score = $row[6];  //별점
+                            $price = $row[8];  //M 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -137,7 +141,36 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                                         <h5><?php echo $menu_name?></h5>
                                         <div class="style-change">  M: <?php echo $price?></div>
                                     </div>
-                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                    <p class="pt-3"><?php echo $menu_description?></p>
+                                </div>
+                            </a>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="set">
+                <div class="row tab-content">
+                    <?php //세트 메뉴 조회
+						while ($row = mysqli_fetch_array($sql_set)) {
+							$menu_idx = $row[0];  //index
+                            $menu_name = $row[1];  //메뉴 이름
+                            $menu_description = $row[2];  //메뉴 설명
+                            $menu_origin = $row[4];  //원산지
+                            $menu_img = $row[5];  //이미지
+                            $menu_score = $row[6];  //별점
+                            $price = $row[8];  //M 가격
+						?>
+                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
+                            <a class="single-food" href="detail.html">
+                                <div class="food-img">
+                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="food-content">
+                                    <div class="">
+                                        <h5><?php echo $menu_name?></h5>
+                                        <div class="style-change">  M: <?php echo $price?></div>
+                                    </div>
+                                    <p class="pt-3"><?php echo $menu_description?></p>
                                 </div>
                             </a>
                         </div>
@@ -148,12 +181,13 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                 <div class="row tab-content">
                     <?php //사이드 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_side)) {
-							$menu_idx = $row[0];  
+							$menu_idx = $row[0];  //index
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price = $row[7];  //M 가격
+                            $menu_img = $row[5];  //이미지
+                            $menu_score = $row[6];  //별점
+                            $price = $row[8];  //M 가격
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
@@ -165,35 +199,7 @@ $sql_beverage = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=
                                         <h5><?php echo $menu_name?></h5>
                                         <div class="style-change">  M: <?php echo $price?></div>
                                     </div>
-                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-                <div class="tab-pane container fade" id="beverage">beverage
-                <div class="row tab-content">
-                    <?php //음료 메뉴 조회
-						while ($row = mysqli_fetch_array($sql_beverage)) {
-							$menu_idx = $row[0];  
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price = $row[7];  //M 가격
-						?>
-                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-                            <a class="single-food" href="detail.html">
-                                <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="food-content">
-                                    <div class="">
-                                        <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: <?php echo $price?></div>
-                                    </div>
-                                    <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                                    <p class="pt-3"><?php echo $menu_description?></p>
                                 </div>
                             </a>
                         </div>

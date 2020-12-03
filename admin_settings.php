@@ -70,22 +70,23 @@ function delete_menu(select_obj) {
                         <?php //피자 메뉴 조회
                         $idx = 0;
 						while ($row = mysqli_fetch_array($sql_total)) {
-                            $idx += 1;
-							$menu_idx = $row[0];  
+                            $idx+=1;
+                            $menu_idx = $row[0];  //index
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_origin = $row[4];  //원산지
-                            $menu_score = $row[5];  //별점
-                            $price_m = $row[7];  //M 가격
-                            $price_l = $row[8];  //L 가격
-                            $price_big = $row[9];  //Big 가격
+                            $menu_img = $row[5];  //이미지
+                            $menu_score = $row[6];  //별점
+                            $price_m = $row[8];  //M 가격
+                            $price_l = $row[9];  //L 가격
+                            $price_big = $row[10];  //Big 가격
 						?>
                         <div class="table-row">
                             <div class="serial"><?php echo $idx?></div>
                             <div class="country"><?php echo $menu_name?></div>
                             <div class="percentage"><?php echo $menu_description?></div>
                             <div class="visit"><?php echo $price_m?></div>
-                            <div class="country"><a href="admin_update_menu.php" class="genric-btn primary-border small">update</a></div>
+                            <div class="country"><a href="admin_update_menu.php?id=<?php echo $menu_idx?>" class="genric-btn primary-border small">update</a></div>
                             <div class="country"><input type="button" id="<?php echo $menu_idx ?>" value="delete" onClick="delete_menu(<?php echo $menu_idx?>)" class="genric-btn primary-border small"></div>
                         </div>
                         <?php }?>
@@ -93,14 +94,11 @@ function delete_menu(select_obj) {
                 </div>
             </div>
                                       </div>
-                                      <div class="tab-pane container fade" id="location">
-                                        <h3 class="text-heading title_color">Location</h3>
+                                      <div class="tab-pane container fade" id="information">
+                                        <h3 class="text-heading title_color">Information</h3>
                                       </div>
                                       <div class="tab-pane container fade" id="admin">
                                         <h3 class="text-heading title_color">Administrator</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="information">
-                                        <h3 class="text-heading title_color">Information</h3>
                                       </div>
                                   </div>
                               </div>
@@ -120,13 +118,10 @@ function delete_menu(select_obj) {
                           <a class="nav-link" data-toggle="pill" href="#menu">메뉴 관리</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#location">위치 관리</a>
+                          <a class="nav-link" data-toggle="pill" href="#information">매장 정보 관리</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" data-toggle="pill" href="#admin">관리자 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#information">매장 정보</a>
                       </li>
                   </ul>
               </div>
