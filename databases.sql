@@ -8,13 +8,15 @@ USE pizza;
 
 --
 -- Table structure for table `menu`
+-- class 1:pizza , 2:chicken, 3:set, 4:side
 --
 CREATE TABLE IF NOT EXISTS `Menu` (
 	`idx` INT(5) unsigned NOT NULL auto_increment,
 	`name` VARCHAR(100) NOT NULL default '',
 	`description` VARCHAR(255),
   `class` INT(5) unsigned NOT NULL default 0,
-	`origin` VARCHAR(64),
+	`origin` VARCHAR(255),
+  `img` VARCHAR(64) default "pizza.png",
 	`score` TINYINT default 0,
    PRIMARY KEY (`idx`)
 ); 
@@ -33,6 +35,20 @@ CREATE TABLE IF NOT EXISTS `Price` (
 --
 -- Table structure for table `Nutrition`
 --
+CREATE TABLE IF NOT EXISTS `Nutrition` (
+	`idx` INT(5) unsigned NOT NULL,
+  `calorie` FLOAT,
+  `carbohydrate` FLOAT,
+  `sugars` FLOAT,
+  `protein` FLOAT,
+  `fat` FLOAT,
+  `Saturated` FLOAT,
+  `trans` FLOAT,
+  `cholesterol` FLOAT,
+  `salt` FLOAT,
+
+  FOREIGN KEY (`idx`) REFERENCES Menu(`idx`) on delete cascade
+);
 
 --
 -- Table structure for table `Allergens`
@@ -52,6 +68,3 @@ CREATE TABLE IF NOT EXISTS `Admin` (
     PRIMARY KEY (`idx`)
 );
 
--- Insert Menu
-INSERT INTO Menu(name, class) VALUES("test",1);
-INSERT INTO Price(M,L,Big) VALUES(7900,9900,16000);
