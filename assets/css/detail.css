@@ -1,3 +1,6 @@
+html {
+    font-size: 14px;
+}
 .food-detail-content span{
     color:#131230;
     font-size: 24px;
@@ -61,11 +64,6 @@
 
 .comment-edit {
     font: normal normal normal 14px/1 FontAwesome;;
-}
-
-#name {
-    width: 66%;
-    margin-left: 10px;
 }
 
 .blind {

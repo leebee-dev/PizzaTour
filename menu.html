@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -449,8 +450,37 @@
     </section>-->
     <!-- Table Area End -->
     
-    <!-- GOTO Top button -->
-    <span id="goto-top-btn" class="btn genric-btn primary float">top</span>
+    <!-- Floating buttons -->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <span class="fab scroll-ctrl">
+                <span class="fa fa-angle-up"></span>
+            <span>
+        </li>
+    </ul>
+    <!-- <span class="fixed-action-btns btn genric-btn primary float">top</span>-->
 
     <!-- Footer Area Starts -->
     <footer class="footer-area">
@@ -539,5 +569,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/action-btns.js"></script>
 </body>
 </html>

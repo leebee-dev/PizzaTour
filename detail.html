@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -35,7 +36,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -106,7 +107,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img src="assets/images/pizza1.png" class="img-fluid food-detail-img col-xl-6 col-lg-7 col-md-10 col-sm-10 col-10" alt="">
+                            <img src="assets/images/pizza_1.png" class="img-fluid food-detail-img col-xl-6 col-lg-7 col-md-10 col-sm-10 col-10" alt="">
                             
                         </div>
                     </div>
@@ -195,13 +196,17 @@
                         </div>
                     </div>
                     <div id="comment-section">Edit Review</div>
-                    <form class="comment-edit d-flex flex-column" action="./detail.html" method="post">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="d-flex align-items-center">
-                                <div>이름</div>
-                                <input id="name" class="form-control form-control-sm"></input>
-                            </span>
-                            <div id="assign-star" class="d-flex ">
+                    <form class="comment-edit" action="detail.html" method="post">
+                        <div class="row justify-content-between">
+                            <div class="col-6 d-flex flex-column">
+                                <span class="d-flex justify-content-start pt-2 pb-1">
+                                    <input id="nickname" name="nickname" placeholder="닉네임" class="form-control form-control-sm"></input>
+                                </span>
+                                <span class="d-flex justify-content-start py-1">
+                                    <input id="order-date" name="order-date" type='date' placeholder="주문일시" class="form-control form-control-sm"></input>
+                                </span>
+                            </div>
+                            <div id="assign-star" class="col-5 justify-content-end d-flex align-self-center">
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="1" /> &#xf005</label>
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="2" /> &#xf005</label>
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="3" /> &#xf005</label>
@@ -209,14 +214,36 @@
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="5" /> &#xf005</label>
                             </div>
                         </div>
-                        <label for="comment-context">내용</label>
-                        <textarea id="comment-context" class="form-control" row="5"></textarea>
-                        <span class="d-flex justify-content-end mt-3"><button class="genric-btn primary radius small " type="submit" >댓글 작성</button></span>
+                        <span class="d-flex justify-content-between pt-1 pb-2">
+                            <textarea id="comment-body" placeholder="후기를 남겨주세요." class="form-control" row="5"></textarea>
+                        </span>
+                        <span class="row justify-content-end mt-3"><button id="comment-btn" class="genric-btn primary radius small " type="submit" >댓글 작성</button></span>
+                        <div id="temp" class="genric-btn primary">temp</button>
                     </form>                                     				
                 </div>
             </div>
     </section>
     <!-- Food Area End -->
+
+    <!-- Form Modal -->
+    <div id="comment-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Area Starts -->
     <footer class="footer-area">
@@ -297,7 +324,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Footer Area End -->
 
     <!-- GOTO Top button -->
-    <span id="goto-top-btn" class="btn genric-btn primary float">top</span>
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="contact-us.html" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <span class="fab scroll-ctrl">
+                <span class="fa fa-angle-up"></span>
+            </span>
+        </li>
+    </ul>
+    <!-- <span class="fixed-action-btns btn genric-btn primary float">top</span> -->
 
     <!-- Javascript -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -308,5 +364,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/detail.js"></script>
+    <script src="assets/js/action-btns.js"></script>
 </body>
 </html>
