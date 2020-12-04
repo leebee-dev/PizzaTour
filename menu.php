@@ -7,7 +7,6 @@ $sql_pizza = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=1;"
 $sql_chicken = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2;");  //치킨
 $sql_set= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //세트
 $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //사이드
-
 ?>
 
     <!-- Banner Area Starts -->
@@ -66,11 +65,12 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                             $price_m = $row[8];  //M 가격
                             $price_l = $row[9];  //L 가격
                             $price_big = $row[10];  //Big 가격
+
 						?>
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                    <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
@@ -103,7 +103,7 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
@@ -134,7 +134,7 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
@@ -163,7 +163,7 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
@@ -192,7 +192,7 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">

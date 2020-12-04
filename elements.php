@@ -1,4 +1,5 @@
 <?php include_once("header.php")?>
+
     <!-- Banner Area Starts -->
     <section class="banner-area banner-area2 blog-page text-center">
         <div class="container">

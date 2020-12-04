@@ -69,7 +69,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                     echo '<li class="no-margin"><a href="login/logout.php" style="color: white">관리자 로그아웃</a></li>';
                                 }
                                 else{
-                                    echo '<li class="no-margin"><a href="admin_login_form.php" style="color: white">관리자 로그안</a></li>';
+                                    echo '<li class="no-margin"><a href="admin_login_form.php" style="color: white">관리자 로그인</a></li>';
                                 }
                                 ?>
                                 <li class="no-margin">Follow Us</li>
