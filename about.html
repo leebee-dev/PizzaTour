@@ -10,7 +10,7 @@
     <title>About</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.jpg" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -27,13 +28,45 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- floating button Starts-->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-angle-up"></span>
+            </a>
+        </li>
+    </ul>
+    <!--folating button End-->
+
     <!-- Header Area Starts -->
 	<header class="header-area header-area2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -44,16 +77,11 @@
                     </div>  
                     <div class="main-menu main-menu2">
                         <ul>
-                            <li class="active"><a href="index.html">home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="menu.html">menu</a></li>
-                            <li><a href="#">blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact-us.html">contact</a></li>
+                            <li class="active"><a href="index.html">홈</a></li>
+                            <li><a href="about.html">소개</a></li>
+                            <li><a href="menu.html">메뉴</a></li>
+                            <li><a href="contact-us.html">위치</a></li>
+                            <li><a href="cupon.html">쿠폰</a></li>
                             <li><a href="elements.html">Elements</a></li>
                         </ul>
                     </div>
@@ -64,7 +92,7 @@
     <!-- Header Area End -->
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 text-center">
+    <section class="banner-area banner-area2 text-center" style="background-image: url(assets/images/dough.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -95,121 +123,271 @@
         </div>
     </section>
     <!-- Welcome Area End -->
-    
-    <!-- Deshes Area Starts -->
-    <div class="deshes-area section-padding2">
+
+
+    <!-- Services Area Starts -->
+    <a name="target1"> </a> 
+    <section class="update-area section-padding" 
+    style="background-image: url(assets/images/food-bg.jpg); background-repeat: no-repeat; background-position:top right">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
-                        <h3 class="korean">우리들의 <span>이야기</span></h3>
-                        <p><i>피자의 순수를 말하다. 100년의 피자투어</i></p>
+                        <h2><span class="korean prime-color">우리들의</span> <span class="korean" style="color: black;">이야기</span></h2>
+                        <p class="pt-3">마음을 담은 담은 건강한 재료를 사용합니다.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5 col-md-6 align-self-center">
-                    <h1>01.</h1>
-                    <div class="deshes-text">
-                        <h3 class="korean"><span>" 피자가 식어도<br>부드러운 도우 "</span><br></h3>
-                        <p class="korean">보통의 피자는 주문후 대여섯 시간 이상 지나면 돌덩이 처럼 딱딱해집니다. 피자투어는 이를 해결하기 위해 피자가 식어도 딱딱해지지 않는 도우를 개발했습니다.</p>
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img src="assets/images/dough-943245_1920.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content" style="background-color: white; border: solid 3px gray;">
+                            <div class="pt-4">
+                                <h5 class="korean prime-color" style="font-weight: bolder;">부드러운 도우</h5>
+                                <p>피자투어는 피자가 식어도 딱딱해지지 않도록 도우를 개발했습니다.<br><br><br></p>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="assets/images/pizzatour.jpg" alt="" class="img-fluid">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <div class="row mt-5">
-                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                    <img src="assets/images/banner5.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
-                    <h1>02.</h1>
-                    <div class="deshes-text">
-                        <h3 class="korean"><span>" 우리쌀 웰빙 피자 "</span><br></h3>
-                        <p class="korean">국내산 찹쌀을 사용한 발효 기법을 사용하여 최상의 풍미와 식감을 자랑하는 피자를 선보이고 있습니다.
-                            그 어떤 업체도 따라올 수 없는 기술력으로 피자의 차별화에 피자투가 앞서가고 있습니다.
-                            우리쌀 프리미엄 도우. 페스츄리도우 등
-                            다양한 도우로 소비자들의 입맛과 선택의 폭을 존중하게 되었고 여타 경쟁 브랜드와 확실한 차별화를 하였습니다.</p>
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img src="assets/images/rice-plant.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content" style="background-color: white; border: solid 3px gray;">
+                            <div class="pt-4">
+                                <h5 class="korean prime-color" style="font-weight: bolder;">우리쌀 피자</h5>
+                                <p>국내산 찹쌀을 사용한 발효 기법을 사용하여 최상의 풍미와 식감을 자랑하는 피자를 선보이고 있습니다.
+                                    다양한 도우로 소비자들의 입맛과 선택의 폭을 넓혀줍니다.</p>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <br>
-            <hr>
-            <div class="row">
-                <div class="col-lg-5 col-md-6 align-self-center">
-                    <h1>03.</h1>
-                    <div class="deshes-text">
-                        <h3 class="korean"><span>" 자연산 토핑치즈 "</span><br></h3>
-                        <p class="korean">과거에 수 많은 업체들이 양심을 속이고 이미테이션치즈와 식용유 치즈를 사용하다 적발된 적이 있습니다.
-                            인터넷에서 식용유치즈나 가짜치즈,모조치즈,이미테이션 치즈로 검색을 하시면 해당 브랜드가 어떤 브랜드인지 파악 하실 수 있습니다.
-                            하지만 피자투어의 모기업은 24년 동안 정직한 재료를 사용 하여 단 한건의 적발도 없으며 소비자들에게 기장 믿을 수 있는 신뢰를 얻고 있습니다.</p>
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img src="assets/images/banner9.jpg" class="img-fluid" alt="" >
+                        </div>
+                        <div class="food-content" style="background-color: white; border: solid 3px gray;">
+                            <div class="pt-4">
+                                <h5 class="korean prime-color" style="font-weight: bolder;">자연산 토핑치즈</h5>
+                                <p>피자투어는 이미테이션치즈와 식용유 치즈를 사용하는 것이 아닌 자연산 토핑치즈를 사용합니다.<br><br></p>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="assets/images/banner6.jpg" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Deshes Area End -->
+    </section>
+    <!--  Services Area End -->
 
-
-    
-    <div class="section-top-border section-padding4">
+    <!-- Services Area Starts -->
+    <a name="target2"> </a> 
+    <section class="update-area section-padding" style="background-image: url(assets/images/table.jpg); background-repeat: no-repeat;background-color: black;">
         <div class="container">
-            <div class="section-top2 text-center">
-                <h3 class="korean">우리들의 <span>기술력</span></h3>
-                <p><i>피자의 순수를 말하다. 100년의 피자투어</i></p>
-            </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mt-sm-30 typo-sec">
-                <div class="">
-                    <ul class="unordered-list">
-                        <li>피자가 식어도 딱딱해지지 않는 도우 개발</li>
-                        <li>최초 도우 하나로 빵의 두께를 자유롭게 조절 가능한 도우 개발</li>
-                        <li>최초 검은콩 도우 개발</li>
-                        <li>이스트를 사용하지 않는 천연유산균발효도우 개발</li>
-                        <li>최초 홍삼발효도우 개발 (kbs 방송에 두번 방영)</li>
-                        <li>최초 유산균함유 보리곡물 도우를 개발</li>
-                    </ul>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h2><span class="korean prime-color">우리들의</span> <span class="korean" style="color:black;">재료이야기</span></h2>
+                        <p class="pt-3">마음을 담은 담은 건강한 재료를 사용합니다.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 mt-sm-30 typo-sec">
-                <div class="">
-                    <ul class="unordered-list">
-                        <li>최초 기름에 튀지기 않고 굽는 웰빙찹쌀도너츠 개발</li>
-                        <li>우리쌀 100% 쌀도우 개발</li>
-                        <li>우리 보리쌀 100% 보리쌀도우 개발</li>
-                        <li>밀가루 0%의 천연 유산균과 허브로 반죽한 100% 우리쌀
-                            프리미엄 웰빙 도우 개발</li>
-                        <li>최초 오리지널 떡볶이 피자 개발</li>
-                        <li>최초 생강 닭강정 및 치킨 개발</li>
-                        <li>최초 열대과일 스위트 피자 개발</li>
-                    </ul>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-content" style="background-color: white; border: solid 3px gray; border-radius: 5px;">
+                            <div class="imamge">
+                                <img src="assets/images/potato.jpg" class="img-fluid">
+                            </div>
+                            <div class="pt-4">
+                                <h5 class="korean prime-color" style="font-weight: bolder;">고소한 감자</h5>
+                                <p>텃밭에서 직접 재배한 감자를 사용해<br> 감자의 식감을 더욱 살렸습니다.</p>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mt-sm-30 typo-sec">
-                <div class="">
-                    <ul class="unordered-list">
-                        <li>최초 가열식 피자소스가 아닌 생소스 개발</li>
-                        <li>최초 액상치즈 후라이드치킨 개발</li>
-                        <li>최초 액상치즈 양념치킨 개발</li>
-                        <li>최초 밀가루 0%의 와인발효 100% 우리쌀 허브 프리미엄 도우개발</li>
-                        <li>최초 밀가루 0%의 비피더스 유산균으로 반죽한 100% 우리쌀 로즈마리
-                            프리미엄 웰빙 쌀도우 개발 (현재 모든 피자투어 매장에서 사용중)</li>
-                        <li>최초 우리 토마토로 만든 피자소스 개발</li>
-                        <li>최초 우리쌀 화덕전용 찹쌀도우 개발 (피자투어 전용)</li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-content" style="background-color: white; border: solid 3px gray; border-radius: 5px;">
+                            <div class="imamge">
+                                <img src="assets/images/sweetpotato.jpg" class="img-fluid">
+                            </div>
+                            <div class="pt-4">
+                                <h5 class="korean prime-color" style="font-weight: bolder;">달콤한 고구마</h5>
+                                <p>텃밭에서 직접 재배한 고구마를 사용해<br> 고구마의 식감을 더욱 살렸습니다.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-content" style="background-color: white; border: solid 3px gray; border-radius: 5px;">
+                            <div class="imamge">
+                                <img src="assets/images/tomatoes.jpg" class="img-fluid">
+                            </div>
+                            <div class="pt-4">
+                                <h5 class="korean prime-color" style="font-weight: bolder;">신선한 토마토</h5>
+                                <p>우리 토마토를 사용해서 <br>피자소스를 만들었습니다.</p>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!--  Services Area End -->
+
+    <!-- Farm story1 Starts -->
+    <section class="welcome-area section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h2><span class="korean prime-color">우리들의</span> <span class="korean" style="color: black;;">텃밭이야기</span></h2>
+                        <p class="pt-3">마음을 담은 담은 건강한 재료를 사용합니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img">
+                        <img src="assets/images/farm.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text mt-5 mt-md-0">
+                        <h3><span class="prime-color">첫번째</span> 텃밭 일기 </h3>
+                        <h5 class="italic">2020. 3. 26. 8:37</h5>
+                        <p class="korean-ligth">
+                            넷째와 함께 감자를 심었다<br>
+
+                            물론 매장에서 포테이토피자를 만들때
+                            
+                            쓰기위해서다.<br>
+                            
+                            담달엔 고구마 피망을 심는다<br>
+                            
+                            직접 농사를 지어 토핑재료를 
+                            
+                            쓰다보니 <br>나도 뭔가 뿌듯하고
+                            
+                            고객님들은 감자가 살아있는 맛이라고
+                            
+                            칭찬을 아끼지 않는다.<br>
+                            
+                            다만 감자는 보관이 어려워 겨울과
+                            
+                            봄에는 싹이 많이나서 마트에서 사서쓴다<br>
+                            
+                            큰 저장 창고를 지어야 할까?<br>
+                            <br>
+                            [출처] 감자심기|작성자 purify2001</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Farm stroy1 End -->
+
+        <!-- Farm story2 Starts -->
+    <section class="welcome-area2 section-padding3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text2 mt-5 mt-md-0" style="text-align: right;">
+                        <h3><span class="prime-color">두번째</span> 텃밭 일기 </h3>
+                        <h5 class="italic">2020. 3. 26. 8:37</h5>
+                        <p class="korean-ligth">
+                                넷째와 함께 감자를 심었다<br>
+    
+                                물론 매장에서 포테이토피자를 만들때
+                                
+                                쓰기위해서다.<br>
+                                
+                                담달엔 고구마 피망을 심는다<br>
+                                
+                                직접 농사를 지어 토핑재료를 
+                                
+                                쓰다보니 <br>나도 뭔가 뿌듯하고
+                                
+                                고객님들은 감자가 살아있는 맛이라고
+                                
+                                칭찬을 아끼지 않는다.<br>
+                                
+                                다만 감자는 보관이 어려워 겨울과
+                                
+                                봄에는 싹이 많이나서 마트에서 사서쓴다<br>
+                                
+                                큰 저장 창고를 지어야 할까?<br>
+                                <br>
+                                [출처] 감자심기|작성자 purify2001</p>
+    
+    
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img2">
+                        <img src="assets/images/sweet-potato.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Farm stroy2 End -->
+
+
+    <!-- Farm gallery Start -->
+    <div class="container">
+    <div class="welcome-are section-padding3">
+        <div class="container-fluid">
+            <div class="section-top-border">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h2><span class="korean prime-color">우리들의</span> <span class="korean" style="color: black;;">앨범</span></h2>
+                        <p class="pt-3">마음을 담은 담은 건강한 재료를 사용합니다.</p>
+                    </div>
+                </div>
+                <div class="row gallery-item">
+                    <div class="col-md-4">
+                        <a href="assets/images/elements/g1.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g1.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="assets/images/elements/g2.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g2.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="assets/images/elements/g3.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g3.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="assets/images/elements/g4.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g4.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="assets/images/elements/g5.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g5.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="assets/images/elements/g6.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g6.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="assets/images/elements/g7.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g7.jpg);"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="assets/images/elements/g8.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(assets/images/elements/g8.jpg);"></div></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+    <!-- Farm gallery End -->
     
    <!-- Footer Area Starts -->
     <footer class="footer-area">

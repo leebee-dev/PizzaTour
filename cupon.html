@@ -10,7 +10,7 @@
     <title>Elements</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.jpg" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
     <link rel="stylesheet" href="assets/css/cupon.css">
     
 </head>
@@ -30,13 +31,44 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- floating button Starts-->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" code-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" code-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" code-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-angle-up"></span>
+            </a>
+        </li>
+    </ul>
+    <!--folating button End-->
+
     <!-- Header Area Starts -->
 	<header class="header-area header-area2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -47,16 +79,11 @@
                     </div>  
                     <div class="main-menu main-menu2">
                         <ul>
-                            <li class="active"><a href="index.html">home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="menu.html">menu</a></li>
-                            <li><a href="#">blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact-us.html">contact</a></li>
+                            <li class="active"><a href="index.html">홈</a></li>
+                            <li><a href="about.html">소개</a></li>
+                            <li><a href="menu.html">메뉴</a></li>
+                            <li><a href="contact-us.html">위치</a></li>
+                            <li><a href="cupon.html">쿠폰</a></li>
                             <li><a href="elements.html">Elements</a></li>
                         </ul>
                     </div>
@@ -67,14 +94,11 @@
     <!-- Header Area End -->
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 blog-page text-center">
+    <section class="banner-area banner-area2 blog-page text-center" style="background-image: url(assets/images/table-bg.jpg) ;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>Elements</i></h1>
-                    <a href="index.html">home</a>
-                    <span class="mx-2">/</span>
-                    <a href="elements.html">elements</a>
+                    <h1 class="korean title"><span class="style-change">쿠폰</span></h1>
                 </div>
             </div>
         </div>
@@ -87,19 +111,24 @@
             <div class ="cupon-area">
                 <div class="cupon">
                     <div class="grid-container">
-                        <div class="grid-item">1</div>
-                        <div class="grid-item">2</div>
-                        <div class="grid-item">3</div>
-                        <div class="grid-item">4</div>
-                        <div class="grid-item">5</div>
-                        <div class="grid-item">6</div>
-                        <div class="grid-item">7</div>
-                        <div class="grid-item">8</div>
-                        <div class="grid-item">9</div>
-                        <div class="grid-item">10</div>
-                        <div class="grid-item">11</div>
-                        <div class="grid-item">12</div>
+                        <div class="item" id="k">1</div>
+                        <div class="item 2">2</div>
+                        <div class="item 3">3</div>
+                        <div class="item 4">4</div>
+                        <div class="item 5">5</div>
+                        <div class="item 6">6</div>
+                        <div class="item 7">7</div>
+                        <div class="item 8">8</div>
+                        <div class="item 9">9</div>
+                        <div class="item 10">10</div>
+                        <div class="item 11">11</div>
+                        <div class="item 12">12</div>
                       </div>
+                      <div>
+                        <a href="#" class="template-btn circle mt-3 ml-5 " style="font-weight: bolder; color : black;">적립하기</a>
+                        
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,5 +223,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/action-btns.js"></script>
+    <script src="assets/js/cupon.js"></script>
 </body>
 </html>
