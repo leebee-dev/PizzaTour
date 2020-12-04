@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Elements</title>
+    <title>Coupon</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.jpg" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/coupon.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
     
 </head>
 <body>
@@ -30,13 +31,44 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- floating button Starts-->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" code-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" code-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" code-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-angle-up"></span>
+            </a>
+        </li>
+    </ul>
+    <!--folating button End-->
+
     <!-- Header Area Starts -->
 	<header class="header-area header-area2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -47,16 +79,11 @@
                     </div>  
                     <div class="main-menu main-menu2">
                         <ul>
-                            <li class="active"><a href="index.html">home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="menu.html">menu</a></li>
-                            <li><a href="#">blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact-us.html">contact</a></li>
+                            <li class="active"><a href="index.html">홈</a></li>
+                            <li><a href="about.html">소개</a></li>
+                            <li><a href="menu.html">메뉴</a></li>
+                            <li><a href="contact-us.html">위치</a></li>
+                            <li><a href="cupon.html">쿠폰</a></li>
                             <li><a href="elements.html">Elements</a></li>
                         </ul>
                     </div>
@@ -67,14 +94,11 @@
     <!-- Header Area End -->
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 blog-page text-center">
+    <section class="banner-area banner-area2 blog-page text-center" style="background-image: url(assets/images/table-bg.jpg) ;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>Elements</i></h1>
-                    <a href="index.html">home</a>
-                    <span class="mx-2">/</span>
-                    <a href="elements.html">elements</a>
+                    <h1 class="korean title"><span class="style-change">쿠폰</span></h1>
                 </div>
             </div>
         </div>
@@ -83,51 +107,73 @@
 
     <div class="row justify-content-center align-items-center">
         <!--Coupon Area Stars-->
-        <section class="update-area col-lg-4">
-            <div class="container">
-                <div class ="coupon-area">
-                    <div class="coupon">
-                        <div class="grid-container">
-                            <div class="grid-item">1</div>
-                            <div class="grid-item">2</div>
-                            <div class="grid-item">3</div>
-                            <div class="grid-item">4</div>
-                            <div class="grid-item">5</div>
-                            <div class="grid-item">6</div>
-                            <div class="grid-item">7</div>
-                            <div class="grid-item">8</div>
-                            <div class="grid-item">9</div>
-                            <div class="grid-item">10</div>
-                            <div class="grid-item">11</div>
-                            <div class="grid-item">12</div>
-                        </div>
+        <section class="update-area col-lg-4 col-md-5">
+            <div class ="coupon-area">
+                <div class="coupon container">
+                    <div class="row grid-container">
+                        <div class="item 1">1</div>
+                        <div class="item 2">2</div>
+                        <div class="item 3">3</div>
+                        <div class="item 4">4</div>
+                        <div class="item 5">5</div>
+                        <div class="item 6">6</div>
+                        <div class="item 7">7</div>
+                        <div class="item 8">8</div>
+                        <div class="item 9">9</div>
+                        <div class="item 10">10</div>
+                        <div class="item 11">11</div>
+                        <div class="item 12">12</div>
+                    </div>
+                    <div class="row py-4">
+                        <div id="saving-btn" class="template-btn circle">적립하기</div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Coupon Area End-->
 
         <!-- QRcode Area Starts -->
-        <section class="col-lg-8">
+        <section class="col-lg-7 col-md-6">
             <div class="card p-3 m-2">
                 <div class="row pt-2 pb-1">
                 </div>
                 <div class="row py-2 pr-3 justify-content-center">
                     <div class="card-body col-5">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">QR 쿠폰</h5>
+                        <p class="card-text">방문하실 때마다 하나씩 적립!<br>12개 적립시 ***가 공짜!</p>
                     </div>
                     <div id="qrcode" class="col-7 center qrcode-area">
                         <span></span>
                     </div>
                 </div>
                 <div class="row pt-1 pb-2 justify-content-center">
-                    <button id="saving-btn" class="genric-btn primary radius col-5">적립</button>
+                    <button id="using-btn" class="genric-btn primary radius col-5 disabled">사용하기</button>
                 <div>
             </div>
         </section>
         <!-- QRcode Area End -->
     </div>
+
+    <!-- Info Modal Start-->
+    <div id="info-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Info Modal End-->
+
     <!-- Footer Area Starts -->
     <footer class="footer-area">
         <div class="footer-widget section-padding">
