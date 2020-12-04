@@ -190,9 +190,7 @@
                                 </div>
                                 <p class="comment mx-3">Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!</p>
                             </div>
-                            <div class="reply-btn d-flex justify-content-end">
-                                <a href="" class="genric-btn primary small radius btn-reply text-uppercase">reply</a> 
-                            </div>
+                            
                         </div>
                     </div>
                     <div id="comment-section">Edit Review</div>
@@ -203,7 +201,7 @@
                                     <input id="nickname" name="nickname" placeholder="닉네임" class="form-control form-control-sm"></input>
                                 </span>
                                 <span class="d-flex justify-content-start py-1">
-                                    <input id="order-date" name="order-date" type='date' placeholder="주문일시" class="form-control form-control-sm"></input>
+                                    <input id="order-date" name="order-date" type='date' class="form-control form-control-sm" data-placeholder="주문일시" required aria-required="true"></input>
                                 </span>
                             </div>
                             <div id="assign-star" class="col-5 justify-content-end d-flex align-self-center">
@@ -218,7 +216,6 @@
                             <textarea id="comment-body" placeholder="후기를 남겨주세요." class="form-control" row="5"></textarea>
                         </span>
                         <span class="row justify-content-end mt-3"><button id="comment-btn" class="genric-btn primary radius small " type="submit" >댓글 작성</button></span>
-                        <div id="temp" class="genric-btn primary">temp</button>
                     </form>                                     				
                 </div>
             </div>

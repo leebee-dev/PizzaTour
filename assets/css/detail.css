@@ -66,6 +66,18 @@ html {
     font: normal normal normal 14px/1 FontAwesome;;
 }
 
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before { display:none; }
+
+#comment-body {
+    resize: none;
+}
+
 .blind {
     position: absolute;
     overflow: hidden;

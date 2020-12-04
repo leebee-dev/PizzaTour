@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/cupon.css">
+    <link rel="stylesheet" href="assets/css/coupon.css">
     
 </head>
 <body>
@@ -81,32 +81,53 @@
     </section>
     <!-- Banner Area End -->
 
-    <!--Cupon Area Stars-->
-    <section class="update-area">
-        <div class="container">
-            <div class ="cupon-area">
-                <div class="cupon">
-                    <div class="grid-container">
-                        <div class="grid-item">1</div>
-                        <div class="grid-item">2</div>
-                        <div class="grid-item">3</div>
-                        <div class="grid-item">4</div>
-                        <div class="grid-item">5</div>
-                        <div class="grid-item">6</div>
-                        <div class="grid-item">7</div>
-                        <div class="grid-item">8</div>
-                        <div class="grid-item">9</div>
-                        <div class="grid-item">10</div>
-                        <div class="grid-item">11</div>
-                        <div class="grid-item">12</div>
-                      </div>
+    <div class="row justify-content-center align-items-center">
+        <!--Coupon Area Stars-->
+        <section class="update-area col-lg-4">
+            <div class="container">
+                <div class ="coupon-area">
+                    <div class="coupon">
+                        <div class="grid-container">
+                            <div class="grid-item">1</div>
+                            <div class="grid-item">2</div>
+                            <div class="grid-item">3</div>
+                            <div class="grid-item">4</div>
+                            <div class="grid-item">5</div>
+                            <div class="grid-item">6</div>
+                            <div class="grid-item">7</div>
+                            <div class="grid-item">8</div>
+                            <div class="grid-item">9</div>
+                            <div class="grid-item">10</div>
+                            <div class="grid-item">11</div>
+                            <div class="grid-item">12</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!--Cupon Area End-->
+        </section>
+        <!--Coupon Area End-->
 
-  
+        <!-- QRcode Area Starts -->
+        <section class="col-lg-8">
+            <div class="card p-3 m-2">
+                <div class="row pt-2 pb-1">
+                </div>
+                <div class="row py-2 pr-3 justify-content-center">
+                    <div class="card-body col-5">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div id="qrcode" class="col-7 center qrcode-area">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="row pt-1 pb-2 justify-content-center">
+                    <button id="saving-btn" class="genric-btn primary radius col-5">적립</button>
+                <div>
+            </div>
+        </section>
+        <!-- QRcode Area End -->
+    </div>
     <!-- Footer Area Starts -->
     <footer class="footer-area">
         <div class="footer-widget section-padding">
@@ -193,6 +214,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/owl-carousel.min.js"></script>
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="assets/js/vendor/qrcode.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/coupon.js"></script>
 </body>
 </html>
