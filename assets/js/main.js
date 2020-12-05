@@ -290,19 +290,19 @@
         }
 
         // GOTO Top Button
-        $('#goto-top-btn').hide();
+        $('.scroll-ctrl').hide();
         
         $(document).scroll(function(){
             var scrollT = $(this).scrollTop(); // 스크롤바의 상단위치
             var totH = $(this).height(); // 전체 용량 높이
-            if(scrollT >= totH / 4) {
-                $('#goto-top-btn').show();
+            if(scrollT >= totH / 6) {
+                $('.scroll-ctrl').show();
             } else {
-                $('#goto-top-btn').hide();
+                $('.scroll-ctrl').hide();
             }
         });
 
-        $('#goto-top-btn').on("click",function(){
+        $('.scroll-ctrl').on("click",function(){
             window.scrollTo(0,0);
         });
     });

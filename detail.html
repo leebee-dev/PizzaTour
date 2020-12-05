@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Detail</title>
+    <title>피자투어 - 메뉴 상세정보</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.jpg" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -29,13 +30,45 @@
     </div>
     <!-- Preloader End -->
 
+    <!-- floating button Starts-->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-angle-up"></span>
+            </a>
+        </li>
+    </ul>
+    <!--folating button End-->
+
     <!-- Header Area Starts -->
 	<header id="header" class="header-area header-area2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -49,13 +82,8 @@
                             <li class="active"><a href="index.html">홈</a></li>
                             <li><a href="about.html">소개</a></li>
                             <li><a href="menu.html">메뉴</a></li>
-                            <!-- <li><a href="#">blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li> -->
                             <li><a href="contact-us.html">위치</a></li>
+                            <li><a href="cupon.html">쿠폰</a></li>
                             <li><a href="elements.html">Elements</a></li>
                         </ul>
                     </div>
@@ -70,8 +98,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>Our Menu</i></h1>
-                    <p class="pt-2"><i>Beast kind form divide night above let moveth bearing darkness.</i></p>
+                    <h1 class="korean title"><span class="style-change">상세정보</span></h1>
                 </div>
             </div>
         </div>
@@ -106,7 +133,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img src="assets/images/pizza1.png" class="img-fluid food-detail-img col-xl-6 col-lg-7 col-md-10 col-sm-10 col-10" alt="">
+                            <img src="assets/images/pizza_1.png" class="img-fluid food-detail-img col-xl-6 col-lg-7 col-md-10 col-sm-10 col-10" alt="">
                             
                         </div>
                     </div>
@@ -189,19 +216,21 @@
                                 </div>
                                 <p class="comment mx-3">Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!</p>
                             </div>
-                            <div class="reply-btn d-flex justify-content-end">
-                                <a href="" class="genric-btn primary small radius btn-reply text-uppercase">reply</a> 
-                            </div>
+                            
                         </div>
                     </div>
                     <div id="comment-section">Edit Review</div>
-                    <form class="comment-edit d-flex flex-column" action="./detail.html" method="post">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="d-flex align-items-center">
-                                <div>이름</div>
-                                <input id="name" class="form-control form-control-sm"></input>
-                            </span>
-                            <div id="assign-star" class="d-flex ">
+                    <form class="comment-edit" action="detail.html" method="post">
+                        <div class="row justify-content-between">
+                            <div class="col-6 d-flex flex-column">
+                                <span class="d-flex justify-content-start pt-2 pb-1">
+                                    <input id="nickname" name="nickname" placeholder="닉네임" class="form-control form-control-sm"></input>
+                                </span>
+                                <span class="d-flex justify-content-start py-1">
+                                    <input id="order-date" name="order-date" type='date' class="form-control form-control-sm" data-placeholder="주문일시" required aria-required="true"></input>
+                                </span>
+                            </div>
+                            <div id="assign-star" class="col-5 justify-content-end d-flex align-self-center">
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="1" /> &#xf005</label>
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="2" /> &#xf005</label>
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="3" /> &#xf005</label>
@@ -209,14 +238,53 @@
                                 <label class="star-radioBox pt-2" ><input type="radio" name="star-point" value="5" /> &#xf005</label>
                             </div>
                         </div>
-                        <label for="comment-context">내용</label>
-                        <textarea id="comment-context" class="form-control" row="5"></textarea>
-                        <span class="d-flex justify-content-end mt-3"><button class="genric-btn primary radius small " type="submit" >댓글 작성</button></span>
+                        <span class="d-flex justify-content-between pt-1 pb-2">
+                            <textarea id="comment-body" placeholder="후기를 남겨주세요." class="form-control" row="5"></textarea>
+                        </span>
+                        <span class="row justify-content-end mt-3"><button id="comment-btn" class="genric-btn primary radius small " type="submit" >댓글 작성</button></span>
                     </form>                                     				
                 </div>
             </div>
     </section>
     <!-- Food Area End -->
+
+    <!-- Form Modal Start-->
+    <div id="comment-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form Modal End-->
+
+    <div class="reservation-area section-padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Natural ingredients and tasty food</h2>
+                    <h4 class="mt-4">피자투어는 건강한 재료를 사용합니다</h4>
+                    <a href="" class="template-btn template-btn2 mt-4" style="font-weight: bolder;">재료이야기</a>
+                </div>
+                <div class="col-lg-12">
+                    <h2>Natural ingredients and tasty food</h2>
+                    <h4 class="mt-4">피자투어는 건강한 재료를 사용합니다</h4>
+                    <a href="" class="template-btn template-btn2 mt-4" style="font-weight: bolder;">재료이야기</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Area Starts -->
     <footer class="footer-area">
@@ -297,7 +365,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Footer Area End -->
 
     <!-- GOTO Top button -->
-    <span id="goto-top-btn" class="btn genric-btn primary float">top</span>
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="contact-us.html" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <span class="fab scroll-ctrl">
+                <span class="fa fa-angle-up"></span>
+            </span>
+        </li>
+    </ul>
+    <!-- <span class="fixed-action-btns btn genric-btn primary float">top</span> -->
 
     <!-- Javascript -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -308,5 +405,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/detail.js"></script>
+    <script src="assets/js/action-btns.js"></script>
 </body>
 </html>

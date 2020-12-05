@@ -1,0 +1,62 @@
+section {
+    padding: 30px;
+}
+
+.coupon-area{
+    margin: auto;
+}
+.coupon{
+    margin: auto;
+    height: 500px;
+    width: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0
+    10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    grid-gap: 10px;
+    align-self: center;
+    border-radius: inherit;
+}
+  
+.grid-container .item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.item:hover{
+    background-color: darkorange;
+}
+
+.center {
+    margin: auto;
+    border: 3px solid green;
+    padding: 5px;
+}
+
+.qrcode-area {
+    text-align: center;
+    border: 3px solid #aaa;
+    padding: 5px;
+}
+
+.empty-qrcode {
+    opacity: 20%;
+
+    margin: auto;
+    border: 3px solid green;
+    padding: 5px;
+}
+
+#saving-btn {
+    margin: auto;
+    font-weight: bolder;
+    color : black;
+}

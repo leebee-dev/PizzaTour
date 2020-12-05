@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>Menu</title>
+    <title>피자투어 - 메뉴</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.jpg" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -28,13 +29,47 @@
     </div>
     <!-- Preloader End -->
 
+
+
+    <!-- floating button Starts-->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-angle-up"></span>
+            </a>
+        </li>
+    </ul>
+    <!--folating button End-->
+
     <!-- Header Area Starts -->
 	<header class="header-area header-area2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo2.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -48,13 +83,8 @@
                             <li class="active"><a href="index.html">홈</a></li>
                             <li><a href="about.html">소개</a></li>
                             <li><a href="menu.html">메뉴</a></li>
-                            <!-- <li><a href="#">blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-home.html">Blog Home</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li> -->
                             <li><a href="contact-us.html">위치</a></li>
+                            <li><a href="cupon.html">쿠폰</a></li>
                             <li><a href="elements.html">Elements</a></li>
                         </ul>
                     </div>
@@ -65,12 +95,11 @@
     <!-- Header Area End -->
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 menu-bg text-center">
+    <section class="banner-area banner-area2 menu-bg text-center" style="background-image: url(assets/images/pizza-banner.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>Our Menu</i></h1>
-                    <p class="pt-2"><i>Beast kind form divide night above let moveth bearing darkness.</i></p>
+                    <h1 class="korean title"><span class="style-change">메뉴</span></h1>
                 </div>
             </div>
         </div>
@@ -83,8 +112,8 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="section-top">
-                        <h3><span class="style-change">we serve</span> <br>delicious food</h3>
-                        <p class="pt-3">They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.</p>
+                        <h3><span class="korean prime-color">피자투어의</span> <br><span class="korean">메뉴를 소개합니다.</span></h3>
+                        <p class="pt-3">피자투어 광탄점은 정성으로 피자를 만듭니다.</p>
                     </div>
                 </div>
             </div>
@@ -96,13 +125,10 @@
                     <a class="nav-link" data-toggle="pill" href="#pizza">피자</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#topping">토핑</a>
+                    <a class="nav-link" data-toggle="pill" href="#chicken">치킨</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="pill" href="#side">사이드</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#beverage">음료</a>
                 </li>
             </ul>
             <!-- Tab panes -->
@@ -112,11 +138,11 @@
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_1.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>더블치즈피자</h5>
+                                        <h5 class="korean">더블치즈피자</h5>
                                         <div class="style-change">  M: 7,900</div>
                                         <div class="style-change">  L: 9,900</div>
                                         <div class="style-change">Big:16,000</div>
@@ -128,11 +154,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5 mt-sm-0">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza2.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_2.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>페퍼로니피자</h5>
+                                        <h5 class="korean">페퍼로니피자</h5>
                                         <div class="style-change">  M: 9,000</div>
                                         <div class="style-change">  L:11,000</div>
                                         <div class="style-change">Big:18,000</div>
@@ -144,11 +170,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5 mt-md-0">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza3.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_3.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>스위트콘치즈피자</h5>
+                                        <h5 class="korean">스위트콘치즈피자</h5>
                                         <div class="style-change">  M:12,000</div>
                                         <div class="style-change">  L:14,000</div>
                                         <div class="style-change">Big:22,000</div>
@@ -160,11 +186,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza4.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_4.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>슈퍼콤비네이션피자</h5>
+                                        <h5 class="korean">슈퍼콤비네이션피자</h5>
                                         <div class="style-change">  M:11,000</div>
                                         <div class="style-change">  L:13,000</div>
                                         <div class="style-change">Big:22,000</div>
@@ -176,11 +202,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza5.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_5.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>직화수제불고기피자</h5>
+                                        <h5 class="korean">직화수제불고기피자</h5>
                                         <div class="style-change">  M:11,000</div>
                                         <div class="style-change">  L:13,000</div>
                                         <div class="style-change">Big:22,000</div>
@@ -192,11 +218,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza6.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_6.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>고구마피자</h5>
+                                        <h5 class="korean">고구마피자</h5>
                                         <div class="style-change">  M:12,000</div>
                                         <div class="style-change">  L:14,000</div>
                                         <div class="style-change">Big:23,000</div>
@@ -208,11 +234,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza7.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_7.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>포테이토피자</h5>
+                                        <h5 class="korean">포테이토피자</h5>
                                         <div class="style-change">  M:12,000</div>
                                         <div class="style-change">  L:14,000</div>
                                         <div class="style-change">Big:23,000</div>
@@ -224,11 +250,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza8.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_8.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>고르곤졸라피자</h5>
+                                        <h5 class="korean">고르곤졸라피자</h5>
                                         <div class="style-change">  M:13,000</div>
                                         <div class="style-change">  L:15,000</div>
                                         <div class="style-change">Big:25,000</div>
@@ -240,11 +266,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5 mt-sm-0">
                                 <div class="food-img">
-                                    <img src="assets/images/side1.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/side_1.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>치즈오븐스파게티</h5>
+                                        <h5 class="korean">치즈오븐스파게티</h5>
                                         <div class="style-change"> ₩7,900</div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
@@ -258,11 +284,11 @@
                         <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza1.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_1.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>더블치즈피자</h5>
+                                        <h5 class="korean">더블치즈피자</h5>
                                         <div class="style-change">  M: 7,900</div>
                                         <div class="style-change">  L: 9,900</div>
                                         <div class="style-change">Big:16,000</div>
@@ -274,11 +300,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5 mt-sm-0">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza2.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_2.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>페퍼로니피자</h5>
+                                        <h5 class="korean">페퍼로니피자</h5>
                                         <div class="style-change">  M: 9,000</div>
                                         <div class="style-change">  L:11,000</div>
                                         <div class="style-change">Big:18,000</div>
@@ -290,11 +316,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5 mt-md-0">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza3.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_3.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>스위트콘치즈피자</h5>
+                                        <h5 class="korean">스위트콘치즈피자</h5>
                                         <div class="style-change">  M:12,000</div>
                                         <div class="style-change">  L:14,000</div>
                                         <div class="style-change">Big:22,000</div>
@@ -306,11 +332,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza4.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_4.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>슈퍼콤비네이션피자</h5>
+                                        <h5 class="korean">슈퍼콤비네이션피자</h5>
                                         <div class="style-change">  M:11,000</div>
                                         <div class="style-change">  L:13,000</div>
                                         <div class="style-change">Big:22,000</div>
@@ -322,11 +348,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza5.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_5.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>직화수제불고기피자</h5>
+                                        <h5 class="korean">직화수제불고기피자</h5>
                                         <div class="style-change">  M:11,000</div>
                                         <div class="style-change">  L:13,000</div>
                                         <div class="style-change">Big:22,000</div>
@@ -338,11 +364,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza6.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_6.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>고구마피자</h5>
+                                        <h5 class="korean">고구마피자</h5>
                                         <div class="style-change">  M:12,000</div>
                                         <div class="style-change">  L:14,000</div>
                                         <div class="style-change">Big:23,000</div>
@@ -354,11 +380,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza7.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_7.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>포테이토피자</h5>
+                                        <h5 class="korean">포테이토피자</h5>
                                         <div class="style-change">  M:12,000</div>
                                         <div class="style-change">  L:14,000</div>
                                         <div class="style-change">Big:23,000</div>
@@ -370,11 +396,11 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5">
                                 <div class="food-img">
-                                    <img src="assets/images/pizza8.png" class="img-fluid" alt="">
+                                    <img src="assets/images/pizza_8.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>고르곤졸라피자</h5>
+                                        <h5 class="korean">고르곤졸라피자</h5>
                                         <div class="style-change">  M:13,000</div>
                                         <div class="style-change">  L:15,000</div>
                                         <div class="style-change">Big:25,000</div>
@@ -385,17 +411,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane container fade" id="topping">topping</div>
+                <div class="tab-pane container fade" id="chicken">chicken</div>
                 <div class="tab-pane container fade" id="side">
                     <div class="row tab-content">
                         <div class="col-md-4 col-sm-6">
                             <div class="single-food mt-5 mt-sm-0">
                                 <div class="food-img">
-                                    <img src="assets/images/side1.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/side_1.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5>치즈오븐스파게티</h5>
+                                        <h5 class="korean">치즈오븐스파게티</h5>
                                         <div class="style-change"> ₩7,900</div>
                                     </div>
                                     <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
@@ -452,8 +478,37 @@
     </section>-->
     <!-- Table Area End -->
     
-    <!-- GOTO Top button -->
-    <span id="goto-top-btn" class="btn genric-btn primary float">top</span>
+    <!-- Floating buttons -->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="#" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <span class="fab scroll-ctrl">
+                <span class="fa fa-angle-up"></span>
+            <span>
+        </li>
+    </ul>
+    <!-- <span class="fixed-action-btns btn genric-btn primary float">top</span>-->
 
     <!-- Footer Area Starts -->
     <footer class="footer-area">
@@ -542,6 +597,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/action-btns.js"></script>
 </body>
 </html>

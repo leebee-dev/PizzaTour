@@ -1,3 +1,6 @@
+html {
+    font-size: 14px;
+}
 .food-detail-content span{
     color:#131230;
     font-size: 24px;
@@ -63,9 +66,16 @@
     font: normal normal normal 14px/1 FontAwesome;;
 }
 
-#name {
-    width: 66%;
-    margin-left: 10px;
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before { display:none; }
+
+#comment-body {
+    resize: none;
 }
 
 .blind {
