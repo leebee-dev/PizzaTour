@@ -1,14 +1,14 @@
 <?php include 'session_check.php';?>
     
-    <!-- Footer Area Starts -->
-    <footer class="footer-area">
+        <!-- Footer Area Starts -->
+        <footer class="footer-area">
         <div class="footer-widget section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="single-widget single-widget1">
                             <a href="index.html"><img src="assets/images/logo/logo2.png" alt=""></a>
-                            <p class="mt-3">Which morning fourth great won't is to fly bearing man. Called unto shall seed, deep, herb set seed land divide after over first creeping. First creature set upon stars deep male gathered said she'd an image spirit our</p>
+                            <p class="mt-3">피자투어는 마음을 담은 건강한 재료로 맛있는 피자를 만듭니다.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -19,7 +19,7 @@
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div class="info-text">
-                                    <p>1234 Some St San Francisco, CA 94102, US 1.800.123.4567 </p>
+                                    <p>경기 파주시 광탄면 등원로 527 광탄하나로마트 A동</p>
                                 </div>
                             </div>
                             <div class="d-flex">
@@ -27,7 +27,7 @@
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="info-text">
-                                    <p>(123) 456 78 90</p>
+                                    <p>031-944-7733</p>
                                 </div>
                             </div>
                             <div class="d-flex">
@@ -64,14 +64,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="col-lg-5 col-md-6">
                         <div class="social-icons">
                             <ul>
-                                <?php
-                                if($admin_login){
-                                    echo '<li class="no-margin"><a href="login/logout.php" style="color: white">관리자 로그아웃</a></li>';
-                                }
-                                else{
-                                    echo '<li class="no-margin"><a href="admin_login_form.php" style="color: white">관리자 로그인</a></li>';
-                                }
-                                ?>
                                 <li class="no-margin">Follow Us</li>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -98,5 +90,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/skel.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
+    <script src="assets/js/action-btns.js"></script>
+    <script src="assets/js/coupon.js"></script>
+    <script src="assets/js/detail.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ section {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
     padding: 10px;
     grid-gap: 10px;
     align-self: center;
@@ -24,20 +24,22 @@ section {
 }
   
 .grid-container .item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: #aaa;
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    border-radius: 50%;
 }
 
 .item:hover{
     background-color: darkorange;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0), inset
 }
 
 .center {
     margin: auto;
-    border: 3px solid green;
+    /* border: 3px solid green; */
     padding: 5px;
 }
 
@@ -51,7 +53,7 @@ section {
     opacity: 20%;
 
     margin: auto;
-    border: 3px solid green;
+    /* border: 3px solid green; */
     padding: 5px;
 }
 
