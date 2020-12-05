@@ -8,14 +8,14 @@ $sql_chicken = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2
 $sql_set= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //세트
 $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //사이드
 ?>
+    <link rel="stylesheet" href="assets/css/menu.css">
 
     <!-- Banner Area Starts -->
-    <section class="banner-area banner-area2 menu-bg text-center">
+    <section class="banner-area banner-area2 menu-bg text-center" style="background-image: url(assets/images/pizza-banner.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1><i>Our Menu</i></h1>
-                    <p class="pt-2"><i>Beast kind form divide night above let moveth bearing darkness.</i></p>
+                    <h1 class="korean title"><span class="style-change">메뉴</span></h1>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
             <div class="row">
                 <div class="col-md-5">
                     <div class="section-top">
-                        <h3><span class="style-change">we serve</span> <br>delicious food</h3>
-                        <p class="pt-3">They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.</p>
+                        <h3><span class="korean prime-color">피자투어의</span> <br><span class="korean">메뉴를 소개합니다.</span></h3>
+                        <p class="pt-3">피자투어 광탄점은 정성으로 피자를 만듭니다.</p>
                     </div>
                 </div>
             </div>
@@ -56,33 +56,28 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                     <div class="row tab-content">
                     <?php //전체 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_total)) {
-                            $menu_idx = $row[0];  //index
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_img = $row[5];  //이미지
-                            $menu_score = $row[6];  //별점
-                            $price_m = $row[8];  //M 가격
-                            $price_l = $row[9];  //L 가격
-                            $price_big = $row[10];  //Big 가격
-
+                            include("single_food.php");
 						?>
-                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
+                        <!-- <div class="col-md-4 col-sm-6 tab-pane active" id="total">
                             <a class="single-food" href="detail.html">
                                 <div class="food-img">
-                                    <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
+                                    <img src="assets/images/<#?php echo $menu_img?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="food-content">
                                     <div class="">
-                                        <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: <?php echo $price_m?></div>
-                                        <div class="style-change">  L: <?php echo $price_l?></div>
-                                        <div class="style-change">Big: <?php echo $price_big?></div>
+                                        <h5 class="korean"><#?php echo $menu_name?></h5>
+                                        <#?php if($price_l != 0 and $price_big != 0) {?>
+                                            <div class="style-change">  M: ₩<#?php echo $price_m?>  </div>
+                                            <div class="style-change">  L: ₩<#?php echo $price_l?>  </div>
+                                            <div class="style-change">Big: ₩<#?php echo $price_big?></div>
+                                        <#?php } else {?>
+                                            <div class="style-change"> Price: ₩<#?php echo $price_m?>  </div>
+                                        <#?php }?>
                                     </div>
-                                    <p class="pt-3"><?php echo $menu_description?></p>
+                                    <p class="pt-3"><#?php echo $menu_description?></p>
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
                         <?php } ?>
                     </div>
                 </div>
@@ -90,120 +85,32 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
                 <div class="row tab-content">
                     <?php //피자 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_pizza)) {
-							$menu_idx = $row[0];  //index
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_img = $row[5];  //이미지
-                            $menu_score = $row[6];  //별점
-                            $price_m = $row[8];  //M 가격
-                            $price_l = $row[9];  //L 가격
-                            $price_big = $row[10];  //Big 가격
-						?>
-                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-                            <a class="single-food" href="detail.html">
-                                <div class="food-img">
-                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
-                                </div>
-                                <div class="food-content">
-                                    <div class="">
-                                        <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: <?php echo $price_m?></div>
-                                        <div class="style-change">  L: <?php echo $price_l?></div>
-                                        <div class="style-change">Big: <?php echo $price_big?></div>
-                                    </div>
-                                    <p class="pt-3"><?php echo $menu_description?></p>
-                                </div>
-                            </a>
-                        </div>
-                        <?php } ?>
+                            include("single_food.php");
+                        } ?>
                     </div>
                 </div>
                 <div class="tab-pane container fade" id="chicken">
                 <div class="row tab-content">
                     <?php //치킨 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_chicken)) {
-							$menu_idx = $row[0];  //index
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_img = $row[5];  //이미지
-                            $menu_score = $row[6];  //별점
-                            $price = $row[8];  //M 가격
-						?>
-                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-                            <a class="single-food" href="detail.html">
-                                <div class="food-img">
-                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
-                                </div>
-                                <div class="food-content">
-                                    <div class="">
-                                        <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: <?php echo $price?></div>
-                                    </div>
-                                    <p class="pt-3"><?php echo $menu_description?></p>
-                                </div>
-                            </a>
-                        </div>
-                        <?php } ?>
+                            include("single_food.php");
+						} ?>
                     </div>
                 </div>
                 <div class="tab-pane container fade" id="set">
                 <div class="row tab-content">
                     <?php //세트 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_set)) {
-							$menu_idx = $row[0];  //index
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_img = $row[5];  //이미지
-                            $menu_score = $row[6];  //별점
-                            $price = $row[8];  //M 가격
-						?>
-                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-                            <a class="single-food" href="detail.html">
-                                <div class="food-img">
-                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
-                                </div>
-                                <div class="food-content">
-                                    <div class="">
-                                        <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: <?php echo $price?></div>
-                                    </div>
-                                    <p class="pt-3"><?php echo $menu_description?></p>
-                                </div>
-                            </a>
-                        </div>
-                        <?php } ?>
+                            include("single_food.php");
+						} ?>
                     </div>
                 </div>
                 <div class="tab-pane container fade" id="side">
                 <div class="row tab-content">
                     <?php //사이드 메뉴 조회
 						while ($row = mysqli_fetch_array($sql_side)) {
-							$menu_idx = $row[0];  //index
-                            $menu_name = $row[1];  //메뉴 이름
-                            $menu_description = $row[2];  //메뉴 설명
-                            $menu_origin = $row[4];  //원산지
-                            $menu_img = $row[5];  //이미지
-                            $menu_score = $row[6];  //별점
-                            $price = $row[8];  //M 가격
-						?>
-                        <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-                            <a class="single-food" href="detail.html">
-                                <div class="food-img">
-                                <img src="./assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
-                                </div>
-                                <div class="food-content">
-                                    <div class="">
-                                        <h5><?php echo $menu_name?></h5>
-                                        <div class="style-change">  M: <?php echo $price?></div>
-                                    </div>
-                                    <p class="pt-3"><?php echo $menu_description?></p>
-                                </div>
-                            </a>
-                        </div>
-                        <?php } ?>
+                            include("single_food.php");
+						} ?>
                     </div>
 
                 </div>

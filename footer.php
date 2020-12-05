@@ -98,5 +98,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/skel.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
+
+    <script src="assets/js/detail.js"></script>
 </body>
 </html>
