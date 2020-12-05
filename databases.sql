@@ -51,10 +51,6 @@ CREATE TABLE IF NOT EXISTS `Nutrition` (
 );
 
 --
--- Table structure for table `Allergens`
---
-
---
 -- Table structure for table `admin`
 --
 CREATE TABLE IF NOT EXISTS `Admin` (
@@ -67,4 +63,17 @@ CREATE TABLE IF NOT EXISTS `Admin` (
     `created_at` datetime,
     PRIMARY KEY (`idx`)
 );
+
+--CREATE TABLE `user`
+CREATE TABLE IF NOT EXISTS `User` (
+    `idx` INT(5) unsigned NOT NULL auto_increment,
+    `userID` varchar(30) NOT NULL UNIQUE,
+    `userName` varchar(60) NOT NULL,
+    `Email` varchar(60) default NULL,
+    `password` varchar(80) NOT NULL,
+    `salt` varchar(10) NOT NULL,
+    `created_at` datetime,
+    PRIMARY KEY (`idx`)
+);
+
 

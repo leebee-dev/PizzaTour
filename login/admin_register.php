@@ -3,13 +3,13 @@ extract($_POST);
 if (isset($_POST)) {
     if($password==$pwd_chk){
     require_once './config/config.php';
-    $c = new MemberClass();
+    $c = new AdminClass();
     // 동일한 ID 등록되어 있는지 체크
-    if ($c->isUserExisted($userID)) {
+    if ($c->isAdminExisted($userID)) {
         echo("<script>alert('사용중인 아이디 입니다.');location.href='../admin_register_form.php';</script>"); 
       } else {
         // 관리자 등록
-        $user = $c->storeUser($userID, $name, $email, $password);
+        $user = $c->storeAdmin($userID, $name, $email, $password);
         if ($user) {// 관리자 등록 성공
             if (!isset($_SESSION)) {
                 session_start();

@@ -21,5 +21,5 @@ define('_CLASS_DIR',_CONFIG_DIR.'/Class/');
 //***************************
 require_once _CLASS_DIR.'DBConClass.php'; // DB 연결 클래스
 require_once _CLASS_DIR.'MemberClass.php';
-
+require_once _CLASS_DIR.'AdminClass.php';
 ?>
