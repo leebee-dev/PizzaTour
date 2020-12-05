@@ -1,7 +1,6 @@
 <?php include 'session_check.php';?>
-    
-    <!-- Footer Area Starts -->
-    <footer class="footer-area">
+<!-- Footer Area Starts -->
+<footer class="footer-area">
         <div class="footer-widget section-padding">
             <div class="container">
                 <div class="row">
@@ -64,7 +63,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="col-lg-5 col-md-6">
                         <div class="social-icons">
                             <ul>
-                                <?php
+                            <?php
                                 if($admin_login){
                                     echo '<li class="no-margin"><a href="login/logout.php" style="color: white">관리자 로그아웃</a></li>';
                                 }
@@ -98,5 +97,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/skel.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
+    <script src="assets/js/action-btns.js"></script>
 </body>
 </html>
