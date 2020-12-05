@@ -1,14 +1,14 @@
 <?php
-class MemberClass extends DBConClass {
-    //사용자 정보 신규 입력
-    public function storeUser($userID, $userNM, $email, $password) {
+class AdminClass extends DBConClass {
+    //관리자 정보 신규 입력
+    public function storeAdmin($userID, $userNM, $email, $password) {
         $hash = $this->hashSSHA($password);
         $encrypted_password = $hash['encrypted']; // encrypted password
         $salt = $hash['salt']; // salt
 
 		try{
 			$this->db->beginTransaction();
-			$sql = "INSERT INTO User(userID, userName, email, password, salt, created_at) VALUES(:userID,:userNM,:email,:passwd,:salt,:created_at)";
+			$sql = "INSERT INTO Admin(adminID, adminName, email, password, salt, created_at) VALUES(:userID,:userNM,:email,:passwd,:salt,:created_at)";
 			$stmt = $this->db->prepare($sql);
 			$stmt->bindValue(':userID',$userID,PDO::PARAM_STR);
 			$stmt->bindValue(':userNM',$userNM,PDO::PARAM_STR);
@@ -24,7 +24,7 @@ class MemberClass extends DBConClass {
 		}
         // check for successful store
         if ($result) {
-            $stmt = $this->db->prepare("SELECT * FROM User WHERE userID = :userID");
+            $stmt = $this->db->prepare("SELECT * FROM Admin WHERE adminID = :userID");
             $stmt->bindValue(':userID', $userID, PDO::PARAM_STR);
             $stmt->execute();
 			$user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -36,8 +36,8 @@ class MemberClass extends DBConClass {
     }
 
     // 로그인 체크
-    public function getUser($userID, $password) {
-		$sql = "SELECT * FROM User WHERE userID=:userID";
+    public function getAdmin($userID, $password) {
+		$sql = "SELECT * FROM Admin WHERE adminID=:userID";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(':userID', $userID);
 		$stmt->execute();
@@ -55,9 +55,9 @@ class MemberClass extends DBConClass {
             return NULL;
         }
     }
-    //등록 여부 체크
-    public function isUserExisted($userID) {
-        $stmt = $this->db->prepare("SELECT userID from User WHERE userID=:userID");
+    //관리자 등록 여부 체크
+    public function isAdminExisted($userID) {
+        $stmt = $this->db->prepare("SELECT adminID from Admin WHERE adminID=:userID");
 		$stmt->bindValue(':userID',$userID,PDO::PARAM_STR);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
@@ -67,11 +67,11 @@ class MemberClass extends DBConClass {
         }
     }
 
-	//정보 삭제
-	public function deleteUser($userID){
+	//관리자 정보 삭제
+	public function deleteAdmin($userID){
 		try{
 			$this->db->beginTransaction();
-			$stmt = $this->db->prepare("delete FROM User WHERE userID=:userID");
+			$stmt = $this->db->prepare("delete FROM Admin WHERE adminID=:userID");
 			$stmt->bindValue(':userID',$userID,PDO::PARAM_STR);
 			$stmt->execute();
 			$this->db->commit();

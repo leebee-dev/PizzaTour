@@ -2,9 +2,9 @@
 extract($_POST);
 if (isset($_POST)) {
     require_once './config/config.php';
-    $c = new MemberClass();
+    $c = new AdminClass();
 
-    $user = $c->getUser($userID, $password);
+    $user = $c->getAdmin($userID, $password);
 
     if ($user != false) {
         if (!isset($_SESSION)) {
