@@ -9,9 +9,11 @@
     $price_m = $row[8];             // M 가격
     $price_l = $row[9];             // L 가격
     $price_big = $row[10];          // Big 가격
+
+    $link = "detail.php?name=".urlencode(base64_encode($menu_name));
 ?>
 <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-    <a class="single-food" href="detail.php">
+    <a class="single-food" href=<?="$link"?>>
         <div class="food-img">
             <img src="assets/images/<?php echo $menu_img?>" class="img-fluid" alt="">
         </div>

@@ -20,6 +20,19 @@
             return true
         });
 
+        var score = ($("#bg_score div").width()/5.0*$("#total_score").text()).toFixed(2);
+        $("#score div").width(`${score}px`);
         
+        $(window).resize(function(){
+            var score = ($("#bg_score div").width()/5.0*$("#total_score").text()).toFixed(2);
+            $("#score div").width(`${score}px`);
+        });
+        
+    });
+
+    jQuery(document).resize(function(){
+        var score = ($("#bg_score div").width()/5.0*$("#total_score").text()).toFixed(2);
+        //$("#score div").css({"width":`${$("#total_score").text()*20}%`});
+        $("#score div").width(`${score}px`);
     });
 })(jQuery);

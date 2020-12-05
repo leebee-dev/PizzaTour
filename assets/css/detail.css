@@ -28,23 +28,41 @@ html {
     height: 50%;
 }
 
-#score i {
-    color: #f8b600;
-    margin-right: -10px
+#bg_score i {
+    color: #777;
 }
 
-#score {
+#bg_score {
     font-size: 60px;
 }
 
-@media (min-width: 425px) and (max-width: 1024.98px){
-    #score {
+#score div {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+}
+
+#score i {
+    color: #f8b600;
+}
+
+#bg_score, #score {
+    font-size: 60px;
+}
+
+#bg_score div{
+    display: inline-block;
+}
+
+@media (min-width: 425px) and (max-width: 1199.98px){
+    #bg_score, #score {
         font-size: 50px;
     }
 }
 
 @media (max-width: 425.98px){
-    #score {
+    #bg_score, #score {
         font-size: 35px;
     }
 }
