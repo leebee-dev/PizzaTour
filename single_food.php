@@ -5,10 +5,10 @@
     $menu_class = $row[3];          // 메뉴 분류
     $menu_origin = $row[4];         // 원산지
     $menu_img = $row[5];            // 이미지
-
-    $price_m = $row[7];             // M 가격
-    $price_l = $row[8];             // L 가격
-    $price_big = $row[9];          // Big 가격
+    $menu_best = $row[6];           // 추천
+    $price_m = $row[8];             // M 가격
+    $price_l = $row[9];             // L 가격
+    $price_big = $row[10];          // Big 가격
 
     $link = "detail.php?name=".urlencode(base64_encode($menu_name));
 ?>

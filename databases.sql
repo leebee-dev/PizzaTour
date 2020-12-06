@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `Menu` (
   `class` INT(5) unsigned NOT NULL default 0,
 	`origin` VARCHAR(255),
   `img` VARCHAR(64) default "pizza.png",
+  `best` TINYINT default 0,
    PRIMARY KEY (`idx`)
 ); 
 --

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php include 'session_check.php';?>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required Meta Tags -->
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>피자투어 광탄점</title>
+    <title>피자투어 - 웰빙프리미엄 국내산 찹쌀도우</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/logo3.png" type="image/x-icon">
@@ -93,7 +94,14 @@
                             <li><a href="menu.php">메뉴</a></li>
                             <li><a href="contact-us.php">위치</a></li>
                             <li><a href="coupon.php">쿠폰</a></li>
-                            <!-- <li><a href="elements.html">Elements</a></li> -->
+                            <?php
+                                if(!$jb_login){
+                                    echo '<li><a href="login_form.php">로그인</a></li>';
+                                }
+                                else{
+                                    echo '<li><a href="login/logout.php">로그아웃</a></li>';
+                                }
+                                ?>
                         </ul>
                     </div>
                 </div>
