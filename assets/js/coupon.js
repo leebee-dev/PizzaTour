@@ -5,7 +5,7 @@ function showCupon(cupon){
     var items = document.getElementsByClassName('item');
 
     for (var i=0; i<count; i++) {
-        items[i].style.backgroundColor="blue"
+        items[i].style.backgroundColor="#ffb606"
 
     }
 }

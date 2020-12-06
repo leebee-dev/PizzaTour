@@ -21,7 +21,10 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/banner-slider.css">
-    <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/action-btns.css">
+    <link rel="stylesheet" href="assets/css/coupon.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/fixed-action-btn.css">
 </head>
@@ -57,6 +60,11 @@
             </a>
         </li>
         <li>
+            <a href="coupon.html" class="fab">
+                <span class="fa fa-gift"></span>
+            </a>
+        </li>
+        <li>
             <span href="#" class="fab scroll-ctrl">
                 <span class="fa fa-angle-up"></span>
             </span>
@@ -81,11 +89,11 @@
                     </div>  
                     <div class="main-menu main-menu2">
                         <ul>
-                            <li class="active"><a href="index.html">홈</a></li>
-                            <li><a href="about.html">소개</a></li>
-                            <li><a href="menu.html">메뉴</a></li>
-                            <li><a href="contact-us.html">위치</a></li>
-                            <li><a href="coupon.html">쿠폰</a></li>
+                            <li class="active"><a href="index.php">홈</a></li>
+                            <li><a href="about.php">소개</a></li>
+                            <li><a href="menu.php">메뉴</a></li>
+                            <li><a href="contact-us.php">위치</a></li>
+                            <li><a href="coupon.php">쿠폰</a></li>
                             <?php
                                 if(!$jb_login){
                                     echo '<li><a href="login_form.php">로그인</a></li>';
