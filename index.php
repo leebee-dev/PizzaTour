@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-img">
-                        <img src="assets/images/photato.png" class="img-fluid" alt="">
+                        <img src="assets/images/potato.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center">

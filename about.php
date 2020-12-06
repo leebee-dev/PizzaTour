@@ -215,7 +215,7 @@
                 <div class="col-md-6 align-self-center">
                     <div class="welcome-text2 mt-5 mt-md-0" style="text-align: right;">
                         <h3><span class="prime-color">두번째</span> 텃밭 일기 </h3>
-                        <h5 class="italic">2020. 3. 26. 8:37</h5>
+                        <h5 class="italic">2020. 10. 26. 14:37</h5>
                         <p class="korean-ligth">
                                 넷째와 함께 감자를 심었다<br>
     

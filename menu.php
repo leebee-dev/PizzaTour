@@ -8,7 +8,7 @@ $sql_chicken = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2
 $sql_set= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //세트
 $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //사이드
 ?>
-    <link rel="stylesheet" href="assets/css/menu.css">
+
 
     <!-- Banner Area Starts -->
     <section class="banner-area banner-area2 menu-bg text-center" style="background-image: url(assets/images/pizza-banner.jpg);">
@@ -58,26 +58,6 @@ $sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;");
 						while ($row = mysqli_fetch_array($sql_total)) {
                             include("single_food.php");
 						?>
-                        <!-- <div class="col-md-4 col-sm-6 tab-pane active" id="total">
-                            <a class="single-food" href="detail.html">
-                                <div class="food-img">
-                                    <img src="assets/images/<#?php echo $menu_img?>" class="img-fluid" alt="">
-                                </div>
-                                <div class="food-content">
-                                    <div class="">
-                                        <h5 class="korean"><#?php echo $menu_name?></h5>
-                                        <#?php if($price_l != 0 and $price_big != 0) {?>
-                                            <div class="style-change">  M: ₩<#?php echo $price_m?>  </div>
-                                            <div class="style-change">  L: ₩<#?php echo $price_l?>  </div>
-                                            <div class="style-change">Big: ₩<#?php echo $price_big?></div>
-                                        <#?php } else {?>
-                                            <div class="style-change"> Price: ₩<#?php echo $price_m?>  </div>
-                                        <#?php }?>
-                                    </div>
-                                    <p class="pt-3"><#?php echo $menu_description?></p>
-                                </div>
-                            </a>
-                        </div> -->
                         <?php } ?>
                     </div>
                 </div>

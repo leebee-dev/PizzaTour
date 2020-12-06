@@ -35,6 +35,7 @@ showCupon(cupon);
     "use strict"
     jQuery(document).ready(function() {
         var qrcode = null;
+        var id = "";
         var count = 0;
 
         $("#qrcode span").text("사용하기를 누르시면 QRcode가 생성됩니다.");
@@ -72,7 +73,7 @@ function createQRCode() {
     $("#qrcode").children("img, canvas").remove();
 
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: "administrator url",
+        text: `haha.php?id=${$id}`,
         width: 128,
         height: 128,
         colorDark : "#000000",

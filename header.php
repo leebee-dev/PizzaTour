@@ -10,7 +10,7 @@
     <title>피자투어 광탄점</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/logo3.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.png" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/detail.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/contact-us.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -53,17 +54,17 @@
 
         </li>
         <li>
-            <a href="contact-us.html" class="fab">
+            <a href="contact-us.php" class="fab">
                 <span class="fa fa-map-marker"></span>
             </a>
         </li>
         <li>
-            <a href="coupon.html" class="fab">
+            <a href="coupon.php" class="fab">
                 <span class="fa fa-gift"></span>
             </a>
         </li>
         <li>
-            <span href="#" class="fab scroll-ctrl">
+            <span class="fab scroll-ctrl">
                 <span class="fa fa-angle-up"></span>
             </span>
         </li>
@@ -74,12 +75,12 @@
 	<header class="header-area2">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-4">
                     <div class="logo-area">
-                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                        <a href="index.php"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-8">
                     <div class="custom-navbar">
                         <span></span>
                         <span></span>
@@ -87,12 +88,12 @@
                     </div>  
                     <div class="main-menu main-menu2">
                         <ul>
-                            <li class="active"><a href="index.html">홈</a></li>
-                            <li><a href="about.html">소개</a></li>
-                            <li><a href="menu.html">메뉴</a></li>
-                            <li><a href="contact-us.html">위치</a></li>
-                            <li><a href="coupon.html">쿠폰</a></li>
-                            <li><a href="elements.html">Elements</a></li>
+                            <li class="active"><a href="index.php">홈</a></li>
+                            <li><a href="about.php">소개</a></li>
+                            <li><a href="menu.php">메뉴</a></li>
+                            <li><a href="contact-us.php">위치</a></li>
+                            <li><a href="coupon.php">쿠폰</a></li>
+                            <!-- <li><a href="elements.html">Elements</a></li> -->
                         </ul>
                     </div>
                 </div>

@@ -16,8 +16,10 @@
     <section class="welcome-area text-center section-padding2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="korean prime-color">" 경기 파주시 광탄면 등원로 527 광탄하나로마트 A동 "</h2>
+                <div class="contact-us-text col-lg-12">
+                    <h2  class="korean prime-color">" 경기 파주시 광탄면 등원로 527</h2>
+                    <br>
+                    <h2  class="korean prime-color">광탄하나로마트 A동 "</h2>
                     <br>
                     <h3 class="korean" style="color: #777777;">피자투어 광탄하나로마트점</h3>
                     <br>

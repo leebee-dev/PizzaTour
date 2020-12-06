@@ -15,7 +15,6 @@
     $price_l = $row[8];             // L 가격
     $price_big = $row[9];           // Big 가격
 ?>
-    <link rel="stylesheet" href="assets/css/detail.css">
     
     <!-- Banner Area Starts -->
     <section class="banner-area banner-area2 menu-bg text-center">
@@ -41,7 +40,7 @@
                                 <span class="badge badge-pill badge-danger">Hot</span>
                                 <div class="row food-detail-content mt-3 px-3">
                                     <div class="d-flex flex-column">
-                                        <h3><?="$menu_name"?></h3>
+                                        <h3 class="korean"><?="$menu_name"?></h3>
                                         <?php if($price_l != 0 and $price_big != 0) {?>
                                             <span>  M: ₩<?=$price_m?></span>
                                             <span>  L: ₩<?=$price_l?></span>
@@ -85,7 +84,7 @@
                     <div class="card">
                         <div class="card-header" id="origin-heading">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#origin" aria-expanded="true" aria-controls="origin">
+                                <button class="korean btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#origin" aria-expanded="true" aria-controls="origin">
                                     원산지
                                 </button>
                             </h2>
@@ -93,7 +92,7 @@
 
                         <div id="origin" class="collapse show" aria-labelledby="origin-heading">
                             <div class="card-body">
-                                <?=$menu_origin?>
+                                <?=$menu_origin != null ? $menu_origin:"찹쌀: 국내산, 치즈: 수입산" ?>
                             </div>
                         </div>
                     </div>
@@ -101,14 +100,14 @@
                     <div class=" card">
                         <div class="card-header" id="nutrient-heading">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#nutrient" aria-expanded="false" aria-controls="nutrient">
+                                <button class="korean btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#nutrient" aria-expanded="false" aria-controls="nutrient">
                                     영양성분
                                 </button>
                             </h2>
                         </div>
                         <div id="nutrient" class="collapse show" aria-labelledby="nutrient-heading">
                             <div class="card-body">
-                                <table class="table">
+                                <table class="korean table">
                                     <?php $heading=array("열량(kcal/100g)", "탄수화물(g/100g)", "당류(g/100g)","(조)단백질(g/100g)", "(조)지방(g/100g)", "포화지방(g/100g)","트랜스지방(g/100g)", "콜레스테롤(mg/100g)", "나트륨(mg/100g)")?>
                                     <?php for($i=10; $i < 19; $i++) {?>
                                     <tr>

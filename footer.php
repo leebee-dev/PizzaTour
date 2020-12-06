@@ -8,7 +8,7 @@
                     <div class="col-md-4">
                         <div class="single-widget single-widget1">
                             <a href="index.html"><img src="assets/images/logo/logo2.png" alt=""></a>
-                            <p class="mt-3">피자투어는 마음을 담은 건강한 재료로 맛있는 피자를 만듭니다.</p>
+                            <p class="mt-3">피자투어는 마음을 담은 <strong>건강한 재료</strong>로<br><strong>맛있는 피자</strong>를 만듭니다.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -19,7 +19,7 @@
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div class="info-text">
-                                    <p>경기 파주시 광탄면 등원로 527 광탄하나로마트 A동</p>
+                                    <p>경기 파주시 광탄면 등원로 527<br>광탄하나로마트 A동</p>
                                 </div>
                             </div>
                             <div class="d-flex">
@@ -30,23 +30,25 @@
                                     <p>031-944-7733</p>
                                 </div>
                             </div>
-                            <div class="d-flex">
+                            <!-- <div class="d-flex">
                                 <div class="into-icon">
                                     <i class="fa fa-envelope-o"></i>
                                 </div>
                                 <div class="info-text">
                                     <p>support@axiomthemes.com</p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="single-widget single-widget3">
                             <h5 class="mb-4">opening hours</h5>
-                            <p>Monday ...................... Closed</p>
+                            <p>Open ................. AM 10 : 30</p>
+                            <p>Close ................ PM 09 : 30</p>
+                            <!-- <p>Monday ...................... Closed</p>
                             <p>Tue-Fri .............. 10 am - 12 pm</p>
                             <p>Sat-Sun ............... 8 am - 11 pm</p>
-                            <p>Holidays ............. 10 am - 12 pm</p>
+                            <p>Holidays ............. 10 am - 12 pm</p> -->
                         </div>
                     </div>
                 </div>
@@ -88,6 +90,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/skel.min.js"></script>
+    <script src="assets/js/vendor/qrcode.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
     <script src="assets/js/action-btns.js"></script>

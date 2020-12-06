@@ -289,22 +289,6 @@
             });
         }
 
-        // GOTO Top Button
-        $('.scroll-ctrl').hide();
-        
-        $(document).scroll(function(){
-            var scrollT = $(this).scrollTop(); // 스크롤바의 상단위치
-            var totH = $(this).height(); // 전체 용량 높이
-            if(scrollT >= totH / 6) {
-                $('.scroll-ctrl').show();
-            } else {
-                $('.scroll-ctrl').hide();
-            }
-        });
-
-        $('.scroll-ctrl').on("click",function(){
-            window.scrollTo(0,0);
-        });
     });
 
     jQuery(window).on('load', function() {

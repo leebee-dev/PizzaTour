@@ -46,3 +46,24 @@ $(function() {
         e.preventDefault();
     });
 });
+
+(function($) {
+    "use strict"
+    jQuery(document).ready(function(){
+        // GOTO Top Button
+        $('.scroll-ctrl').hide();
+        
+        $(document).scroll(function(){
+            var scrollT = $(this).scrollTop(); // 스크롤바의 상단위치
+            if(scrollT != 0) {
+                $('.scroll-ctrl').show();
+            } else {
+                $('.scroll-ctrl').hide();
+            }
+        });
+
+        $('.scroll-ctrl').on("click",function(){
+            window.scrollTo(0,0);
+        });
+    });
+})(jQuery);

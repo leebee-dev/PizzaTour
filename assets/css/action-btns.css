@@ -1,8 +1,8 @@
 .fixed-action-btns{
 
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 40px;
+    bottom: 40px;
     z-index: 9999;
     text-align: right;
 
@@ -88,11 +88,11 @@
     padding-top: 20%;
 }
 
-@media (max-width: 575.98px)  {
+@media (max-width: 768.98px)  {
     .fixed-action-btns{
         position: fixed;
-        right: 35px;
-        bottom: 35px;
+        right: 25px;
+        bottom: 25px;
         z-index: 9999;
         text-align: right;
     }
@@ -100,13 +100,13 @@
         display: inline-block;
         overflow: hidden;
         position: relative;
-        width: 45px;
-        height: 45px;
+        width: 60px;
+        height: 60px;
 
         border-radius: 30px;
         background-color: #f8b600;
 
-        font-size: 30px;
+        font-size: 40px;
         color: white;
         text-align: center;
         /* line-height: 70px; */
