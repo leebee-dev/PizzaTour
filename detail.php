@@ -10,10 +10,38 @@
     $menu_class = $row[3];          // 메뉴 분류
     $menu_origin = $row[4];         // 원산지
     $menu_img = $row[5];            // 이미지
-    $menu_score = $row[6];          // 별점
-    $price_m = $row[7];             // M 가격
-    $price_l = $row[8];             // L 가격
-    $price_big = $row[9];           // Big 가격
+    $price_m = $row[6];             // M 가격
+    $price_l = $row[7];             // L 가격
+    $price_big = $row[8];           // Big 가격
+
+    $sql_comment = mq("select title, content, Review.score as score, userID, orderDate, Review.created_at as created_at from Review join User on Review.userIdx = User.idx join Menu on Review.menuIdx=Menu.idx where Menu.idx ='$menu_idx';");
+
+    $cmw_title = $_POST['comment-title'];
+    $cmw_content = $_POST['comment-body'];
+    $cmw_score = $_POST['star-point'];
+    $cmw_userID = $_POST['user-id'];
+    $cmw_orderDate = $_POST['order-date'];
+    $cmw_date = date("Y-m-d H:i:s");
+
+    $cmw_userIdx = $_POST['user-idx'];
+    $cmw_menuIdx = $_POST['menu-idx'];
+    $redirection = $_POST['redirection'];
+    //쿼리전송
+    $query="INSERT INTO Review(title,content,score,orderDate,userIdx,menuIdx,created_at)
+            VALUES ('$cmw_title','$cmw_content','$cmw_score','$cmw_orderDate','$cmw_userIdx','$cmw_menuIdx','$cmw_date');";
+
+    /*mysql_query("set names utf8",$connect); db한글문서깨질경우 추가*/
+    
+    $query_star = mq("SELECT menuIdx, AVG(score) FROM Review WHERE menuIdx = '$menu_idx' GROUP BY menuIdx;");
+    $result_star = mysqli_fetch_array($query_star)[1];
+    $result_star = empty($result_star)?'0.0':round($result_star,1);
+    
+    if (mysqli_query($maria_connect, $query)) {
+        header("Location:detail.php?name='$redirection'");
+    } else {
+        // echo "Error: " . $query . "<br>" . mysqli_error($maria_connect);
+    }
+    mysql_close; // 전송끝내기
 ?>
     
     <!-- Banner Area Starts -->
@@ -49,31 +77,17 @@
                                             <span>  Price: ₩<?=$price_m?></span>
                                         <?php }?>
                                         <p class="pt-3"><?=$menu_description?></p>
-                                        <div id="score">
-                                            <div>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
+                                        <div>
+                                            <div id="score" class="star fa fa-star" >
+                                                &#xf005 &#xf005 &#xf005 &#xf005 &#xf005
                                             </div>
+                                            <span id="total_score" class="ml-3"><?=$result_star?></span>
                                         </div>
-                                        <div id="bg_score">
-                                            <div>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                                <i class="star fa fa-star"></i>
-                                            </div>
-                                            <span id="total_score" class="ml-3"><?=$menu_score?></span>
-
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <img src="assets/images/<?=$menu_img?>" class="img-fluid food-detail-img col-xl-6 col-lg-7 col-md-10 col-sm-10 col-10" alt="">
-                            
                         </div>
                     </div>
                 </div>
@@ -109,9 +123,9 @@
                             <div class="card-body">
                                 <table class="korean table">
                                     <?php $heading=array("열량(kcal/100g)", "탄수화물(g/100g)", "당류(g/100g)","(조)단백질(g/100g)", "(조)지방(g/100g)", "포화지방(g/100g)","트랜스지방(g/100g)", "콜레스테롤(mg/100g)", "나트륨(mg/100g)")?>
-                                    <?php for($i=10; $i < 19; $i++) {?>
+                                    <?php for($i=9; $i < 18; $i++) {?>
                                     <tr>
-                                        <th><?=$heading[$i-10]?></th>
+                                        <th><?=$heading[$i-9]?></th>
                                         <td><?=$row[$i]?></td>
                                     </tr>
                                     <?php }?>
@@ -126,51 +140,14 @@
                 <div class="col-12 comments-area">
                     <div id="comment-section">Review</div>
                     <div class="comment-list">
-                        <div class="single-comment">
-                            <div class="user">
-                                <div id="personal-score" class="">
-                                    <span class="">
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                    </span>
-                                    <span class="">5.0</span>
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                </div>
-                                <p class="comment mx-3">Never say goodbye till the end comes!</p>
-                            </div>
-                            <div class="reply-btn d-flex justify-content-end">
-                                <a href="" class="genric-btn primary small radius btn-reply text-uppercase">reply</a> 
-                            </div>
-                        </div>
-                        <div class="single-comment">
-                            <div class="user">
-                                <div id="personal-score" class="">
-                                    <span class="">
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                        <i class="star fa fa-star"></i>
-                                    </span>
-                                    <span class="">5.0</span>
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                </div>
-                                <p class="comment mx-3">Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!Never say goodbye till the end comes!</p>
-                            </div>
-                            
-                        </div>
+                        <?php
+                            while($cm_row = mysqli_fetch_array($sql_comment)) {
+                                include("review.php");
+                            }                        
+                        ?>
                     </div>
                     <div id="comment-section">Edit Review</div>
-                    <form class="comment-edit" action="detail.php" method="post">
+                    <form class="comment-edit"  method="post">
                         <div class="row justify-content-between">
                             <div class="col-6 d-flex flex-column">
                                 <span class="d-flex justify-content-start pt-2 pb-1">
@@ -189,9 +166,11 @@
                             </div>
                         </div>
                         <span class="d-flex justify-content-between pt-1 pb-2">
-                            <textarea id="comment-body" placeholder="후기를 남겨주세요." class="form-control" row="5"></textarea>
+                            <textarea id="comment-body" name="comment-body" placeholder="후기를 남겨주세요." class="form-control" row="5"></textarea>
                         </span>
-                        <input type=hidden name="user-id"></input>
+                        <input type="hidden" name="user-idx" value="1"></input>
+                        <input type="hidden" name="menu-idx" value="<?=$menu_idx?>"></input>
+                        <input type="hidden" name="redirection" value="<?=$_GET['name']?>"></input>
                         <span class="row justify-content-end mt-3"><button id="comment-btn" class="genric-btn primary radius small " type="submit" >댓글 작성</button></span>
                     </form>                                     				
                 </div>

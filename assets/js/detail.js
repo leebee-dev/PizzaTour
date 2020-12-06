@@ -20,19 +20,20 @@
             return true
         });
 
-        var score = ($("#bg_score div").width()/5.0*$("#total_score").text()).toFixed(2);
-        $("#score div").width(`${score}px`);
+        // var score = ($("#bg_score").width()/5.0*$("#total_score").text()).toFixed(2);
+        // $("#score").width(`${score}px`);
         
-        $(window).resize(function(){
-            var score = ($("#bg_score div").width()/5.0*$("#total_score").text()).toFixed(2);
-            $("#score div").width(`${score}px`);
-        });
-        
-    });
+        // $(window).resize(function(){
+        //     var score = ($("#bg_score").width()/5.0*$("#total_score").text()).toFixed(2);
+        //     $("#score").width(`${score}px`);
+        // });
+        //alert(`${20*$("#total_score").text()}%`);
+        //alert($("#score::before"));
+        //$("#score::before").width(`${20*$("#total_score").text()}%`);
 
-    jQuery(document).resize(function(){
-        var score = ($("#bg_score div").width()/5.0*$("#total_score").text()).toFixed(2);
-        //$("#score div").css({"width":`${$("#total_score").text()*20}%`});
-        $("#score div").width(`${score}px`);
+        $(".personal-stars").each(function(){
+            var star_num = Number($(this).next().text()) + 1;
+            $(this).children(".0").nextUntil(`.${star_num}`).css({"color":"#f8b600"});
+        });
     });
 })(jQuery);

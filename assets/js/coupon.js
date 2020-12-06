@@ -73,7 +73,7 @@ function createQRCode() {
     $("#qrcode").children("img, canvas").remove();
 
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: `haha.php?id=${$id}`,
+        text: "sssssss",
         width: 128,
         height: 128,
         colorDark : "#000000",
