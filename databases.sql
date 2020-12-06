@@ -11,7 +11,7 @@ USE pizza;
 -- class 1:pizza , 2:chicken, 3:set, 4:side
 --
 CREATE TABLE IF NOT EXISTS `Menu` (
-	`idx` INT(5) unsigned NOT NULL auto_increment,
+	`idx` INT(11) unsigned NOT NULL auto_increment,
 	`name` VARCHAR(100) NOT NULL default '',
 	`description` VARCHAR(255),
   `class` INT(5) unsigned NOT NULL default 0,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `Menu` (
 -- Table structure for table `Price`
 --
 CREATE TABLE IF NOT EXISTS `Price` (
-	`idx` INT(5) unsigned NOT NULL,
+	`idx` INT(11) unsigned NOT NULL,
   `M` INT(11) NOT NULL default 0, 
   `L` INT(11) default 0,
   `Big` INT(11) default 0,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `Price` (
 -- Table structure for table `Nutrition`
 --
 CREATE TABLE IF NOT EXISTS `Nutrition` (
-	`idx` INT(5) unsigned NOT NULL,
+	`idx` INT(11) unsigned NOT NULL,
   `calorie` FLOAT,
   `carbohydrate` FLOAT,
   `sugars` FLOAT,
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `Nutrition` (
 -- Table structure for table `admin`
 --
 CREATE TABLE IF NOT EXISTS `Admin` (
-    `idx` INT(5) unsigned NOT NULL auto_increment,
+    `idx` INT(11) unsigned NOT NULL auto_increment,
     `adminID` varchar(30) NOT NULL UNIQUE,
     `adminName` varchar(60) NOT NULL,
     `Email` varchar(60) default NULL,
@@ -67,12 +67,13 @@ CREATE TABLE IF NOT EXISTS `Admin` (
 
 --CREATE TABLE `user`
 CREATE TABLE IF NOT EXISTS `User` (
-    `idx` INT(5) unsigned NOT NULL auto_increment,
+    `idx` INT(11) unsigned NOT NULL auto_increment,
     `userID` varchar(30) NOT NULL UNIQUE,
     `userName` varchar(60) NOT NULL,
     `Email` varchar(60) default NULL,
     `password` varchar(80) NOT NULL,
     `salt` varchar(10) NOT NULL,
+    `count` INT(11) unsigned default 0,
     `created_at` datetime,
     PRIMARY KEY (`idx`)
 );

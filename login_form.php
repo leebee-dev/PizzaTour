@@ -25,7 +25,7 @@
                             <input type="password" name="password" placeholder="PASSWORD" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PASSWORD'" required class="single-input">
                         </div>
                         <div class="button-group-area">
-                        <button type = "submit" class="genric-btn default">로그인</button>
+                        <input type = "submit" class="genric-btn default" value = "로그인">
                         </div>
                     </form>
     </div>
