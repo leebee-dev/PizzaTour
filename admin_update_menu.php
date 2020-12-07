@@ -8,10 +8,10 @@ while ($row = mysqli_fetch_array($sql)) {
     $menu_idx = $row[0];  //index
     $menu_name = $row[1];  //메뉴 이름
     $menu_description = $row[2];  //메뉴 설명
-    $menu_class = $row[3];  //메뉴 설명
+    $menu_class = $row[3];  //메뉴 종류
     $menu_origin = $row[4];  //원산지
     $menu_img = $row[5];  //이미지
-    $menu_score = $row[6];  //별점
+    $menu_score = $row[6];  //
     $price_m = $row[8];  //M 가격
     $price_l = $row[9];  //L 가격
     $price_big = $row[10];  //Big 가격
@@ -44,7 +44,7 @@ while ($row = mysqli_fetch_array($sql)) {
                                 <input type= "text" name="name" value = '<?php echo $menu_name;?>' placeholder="메뉴이름*" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴이름'" required class="single-input">
                             </div>
                             <div class="mt-10">
-                                <textarea class="single-textarea" name = "description" value = '<?php echo $menu_description;?>' placeholder= "메뉴설명" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴설명'"></textarea>
+                                <textarea name = "description" class="single-textarea" value = '<?php echo $menu_description;?>' placeholder= "메뉴설명" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴설명'"></textarea>
                             </div>
                             <div class="mt-10">
                                 <input type="text" name="M" value = '<?php echo $price_m;?>' placeholder="M 또는 단품가격*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'M 또는 단품가격'" required class="single-input">

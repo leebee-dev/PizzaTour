@@ -53,7 +53,7 @@ function delete_menu(select_obj) {
                     <div class="whole-wrap">
         <div class="container">
             <div class="section-top-border">
-                <h3 class="mb-30 title_color">Table</h3>
+                <h3 class="mb-30 title_color">Menu</h3>
                 <a href="admin_add_menu.php" class="genric-btn primary-border small">Add</a>
                 <div class="progress-table-wrap">
                     <div class="progress-table">

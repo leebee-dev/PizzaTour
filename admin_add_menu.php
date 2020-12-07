@@ -29,7 +29,7 @@ $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체�
                                 <input type= "text" name="name" placeholder="메뉴이름*" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴이름'" required class="single-input">
                             </div>
                             <div class="mt-10">
-                                <textarea class="single-textarea" placeholder= "메뉴설명" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴설명'"></textarea>
+                                <textarea name = "description" class="single-textarea" placeholder= "메뉴설명" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴설명'"></textarea>
                             </div>
                             <div class="mt-10">
                                 <input type="text" name="M" placeholder="M 또는 단품가격*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'M 또는 단품가격'" required class="single-input">
