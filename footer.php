@@ -1,4 +1,8 @@
-<?php include 'session_check.php';?>
+<?php include 'session_check.php';
+//<script src="assets/js/detail.js"></script>
+//<script src="assets/js/detail.js"></script>
+//<script src="assets/js/detail.js"></script>
+?>
 <!-- Footer Area Starts -->
 <footer class="footer-area">
         <div class="footer-widget section-padding">
@@ -95,12 +99,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/skel.min.js"></script>
-    <script src="assets/js/vendor/map.js"></script>
     <script src="assets/js/vendor/qrcode.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
     <script src="assets/js/action-btns.js"></script>
-    <script src="assets/js/coupon.js"></script>
-    <script src="assets/js/detail.js"></script>
 </body>
 </html>

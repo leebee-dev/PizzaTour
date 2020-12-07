@@ -37,35 +37,37 @@ function delete_menu(select_obj) {
   </section>
   <!-- Banner Area End -->
 
-  <!-- Food Area starts -->
-  <section class="food-area section-padding py-5">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-md-9">
-                  <div class="food-detail">
-                      <div class="row food-detail-img px-1">
-                           <div class="col-xl-6 col-lg-5 col-md-10 col-sm-9">
-                              <div class="row food-detail-content mt-3 px-3">
-                                  <div class="tab-content d-flex flex-column">
-                                      <div class="tab-pane container fade" id="home">
-                                        <h3 class="text-heading title_color">Home</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="about">
-                                        <h3 class="text-heading title_color">About</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="menu">
-                                        <h3 class="text-heading title_color">Menu</h3>
-                                        <div class="section-top-border">
-                                        <a href="admin_add_menu.php" class="genric-btn primary-border small">Add</a>
+    <section class="food-area section-padding">
+        <div class="container">
+            <ul id="classification" class="row nav nav-pills px-3 pb-3 align-right justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#total">메뉴 관리</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#pizza">댓글 관리</a>
+                </li>
+                <li class="nav-item">
+                    <input type="button" class="nav-link" data-toggle="pill" onclick = "location.href = 'admin_register_form.php'" value = "관리자 등록">
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="total">
+                    <div class="row tab-content">
+                    <div class="whole-wrap">
+        <div class="container">
+            <div class="section-top-border">
+                <h3 class="mb-30 title_color">Table</h3>
+                <a href="admin_add_menu.php" class="genric-btn primary-border small">Add</a>
                 <div class="progress-table-wrap">
                     <div class="progress-table">
                         <div class="table-head">
                             <div class="serial">#</div>
-                            <div class="country">name</div>
-                            <div class="percentage">description</div>
-                            <div class="visit">price</div>
-                            <div class="country">update</div>
-                            <div class="country">delete</div>
+                            <div class="country">이름</div>
+                            <div class="country">설명</div>
+                            <div class="percentage">가격</div>
+                            <div class="visit">수정</div>
+                            <div class="visit">삭제</div>
                         </div>
                         <?php //피자 메뉴 조회
                         $idx = 0;
@@ -82,52 +84,35 @@ function delete_menu(select_obj) {
                             $price_big = $row[10];  //Big 가격
 						?>
                         <div class="table-row">
-                            <div class="serial"><?php echo $idx?></div>
-                            <div class="country"><?php echo $menu_name?></div>
-                            <div class="percentage"><?php echo $menu_description?></div>
-                            <div class="visit"><?php echo $price_m?></div>
-                            <div class="country"><a href="admin_update_menu.php?id=<?php echo $menu_idx?>" class="genric-btn primary-border small">update</a></div>
-                            <div class="country"><input type="button" id="<?php echo $menu_idx ?>" value="delete" onClick="delete_menu(<?php echo $menu_idx?>)" class="genric-btn primary-border small"></div>
+                            <div class="serial"><?php echo $idx;?></div>
+                            <div class="country"><?php echo $menu_name;?></div>
+                            <div class="country"><?php echo $menu_description;?></div>
+                            <div class="percentage"><?php echo $price_m;?></div>
+                            <div class="visit"><a href="adn_update_menu.php?id=<?php echo $menu_idx?>" class="genric-btn primary-border small">update</a></div>
+                            <div class="visit"><input type="button" id="<?php echo $menu_idx ?>" value="delete" onClick="delete_menu(<?php echo $menu_idx?>)" class="genric-btn primary-border small"></div>
                         </div>
-                        <?php }?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
-                                      </div>
-                                      <div class="tab-pane container fade" id="information">
-                                        <h3 class="text-heading title_color">Information</h3>
-                                      </div>
-                                      <div class="tab-pane container fade" id="admin">
-                                        <h3 class="text-heading title_color">Administrator</h3>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-3">
-                  <ul id="info-tab" class="nav nav-pills flex-column px-2 px-md-0">
-                      <li class="nav-item">
-                          <a class="nav-link active" data-toggle="pill" href="#home">홈 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#about">소개 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#menu">메뉴 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#information">매장 정보 관리</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" data-toggle="pill" href="#admin">관리자 관리</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- Food Area End -->
+        </div>
+    </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="pizza">
+                <div class="row tab-content">
+                    
+                    </div>
+                </div>
+
+                <div class="tab-pane container fade" id="../admin_register_form.php">
+                <div class="row tab-content">
+                    <?php echo "<script>location.href = admin_register_form.php</script>";?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Align Area -->
 
 <?php include_once("footer.php")?>

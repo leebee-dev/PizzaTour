@@ -1,5 +1,6 @@
 <?php
 extract($_POST);
+
 if (isset($_POST)) {
     require_once './config/config.php';
     $c = new AdminClass();

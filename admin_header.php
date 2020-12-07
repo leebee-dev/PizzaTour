@@ -4,7 +4,7 @@ if(!$admin_login){
 }
 ?>
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required Meta Tags -->
@@ -13,10 +13,10 @@ if(!$admin_login){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>피자투어 광탄점-관리자</title>
+    <title>피자투어 - 웰빙프리미엄 국내산 찹쌀도우</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/logo3.png" type="image/x-icon">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
@@ -26,8 +26,12 @@ if(!$admin_login){
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/banner-slider.css">
-    <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/action-btns.css">
+    <link rel="stylesheet" href="assets/css/coupon.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/contact-us.css">
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -36,17 +40,53 @@ if(!$admin_login){
     </div>
     <!-- Preloader End -->
 
+    <!-- floating button Starts-->
+    <ul class="fixed-action-btns">
+        <li>
+            <a href="#" data-popup-open="call" class="fab action-call">
+                <span class="fa fa-phone"></span>
+            </a>
+            
+            <div class="popup" data-popup="call">
+                <div class="popup-inner">
+                    <div class="popup-contents">
+                        <a class="popup-close" data-popup-close="call" href="#">확인</a>
+                        전화연결은 모바일에서 가능합니다<br>
+                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
+                        <h5 class="korean">피자투어 광탄점</h5>
+                    </div>
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <a href="contact-us.php" class="fab">
+                <span class="fa fa-map-marker"></span>
+            </a>
+        </li>
+        <li>
+            <a href="coupon.php" class="fab">
+                <span class="fa fa-gift"></span>
+            </a>
+        </li>
+        <li>
+            <span class="fab scroll-ctrl">
+                <span class="fa fa-angle-up"></span>
+            </span>
+        </li>
+    </ul>
+    <!--folating button End-->
+
     <!-- Header Area Starts -->
 	<header class="header-area2">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-4">
                     <div class="logo-area">
-                        <a href="index.php"><img src="assets/images/logo/logo4.png" alt="logo"></a>
-                        <h6>관리자 메뉴</h6>
+                        <a href="index.php"><img src="assets/images/logo/logo.png" alt="logo"></a>
                     </div>
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-8">
                     <div class="custom-navbar">
                         <span></span>
                         <span></span>
@@ -54,11 +94,11 @@ if(!$admin_login){
                     </div>  
                     <div class="main-menu main-menu2">
                         <ul>
-                            <li class="active"><a href="admin.php">홈</a></li>
+                            <li class="active"><a href="index.php">홈</a></li>
                             <li><a href="about.php">소개</a></li>
-                            <li><a href="admin_menu.php">메뉴</a></li>
+                            <li><a href="menu.php">메뉴</a></li>
                             <li><a href="contact-us.php">위치</a></li>
-                            <li><a href="admin_settings.php">관리자설정</a></li>
+                            <li><a href="admin_settings.php">관리자 페이지</a></li>
                         </ul>
                     </div>
                 </div>
