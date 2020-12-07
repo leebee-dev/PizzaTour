@@ -103,8 +103,8 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                                     </div>
                                     <div class="food-content">
                                         <div class="d-flex flex-column justify-content-between">
-                                            <h5 class="prime-color korean"style="font-weight: bolder; font-size:15pt;"><?php  echo $menu_name;?></h5>
-                                            <span class="style-change" style="font-weight: bolder;"><?php echo $price_m."/"; echo $price_l."/"; echo $price_big."/"?></span>
+                                            <h5 id="menu-preview-title" class="prime-color korean"style="font-weight: bolder;"><?php  echo $menu_name;?></h5>
+                                            <span class="style-change" style="font-weight: bolder;"><?php echo $price_m."/"; echo $price_l."/"; echo $price_big."/";?></span>
                                         </div>
                                         <p class="pt-3" style="color: white;"><?php echo $menu_description;?></p>
                                     </div>

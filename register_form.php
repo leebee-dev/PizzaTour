@@ -16,7 +16,7 @@
 <section class="sample-text-area">
     <div class="container">
         <h3 class="mb-30 title_color">Register</h3>
-            <form method = "POST" action="./login/user_register.php">
+            <form method = "post" action="./login/user_register.php">
             <div class="mt-10">
                         <input type="text" name="userID" placeholder="ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ID'" required class="single-input">
                     </div>    
@@ -38,4 +38,4 @@
 </section>
 <!-- End Login Area -->
 
-<?php include_once('footer.php'); ?>
+<?php include_once('footer2.php'); ?>

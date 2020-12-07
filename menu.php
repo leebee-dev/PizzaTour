@@ -6,7 +6,7 @@ $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체�
 $sql_pizza = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=1;"); //피자
 $sql_chicken = mq("select * from Menu,Price where Menu.idx=Price.idx AND class=2;");  //치킨
 $sql_set= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //세트
-$sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=3;"); //사이드
+$sql_side= mq("select * from Menu,Price where Menu.idx=Price.idx AND class=4;"); //사이드
 ?>
 
 

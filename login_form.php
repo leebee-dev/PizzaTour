@@ -26,10 +26,11 @@
                         </div>
                         <div class="button-group-area">
                         <input type = "submit" class="genric-btn default" value = "로그인">
+                        <a type="button" href="register_form.php" class="genric-btn default">회원가입</a>
                         </div>
                     </form>
     </div>
 </section>
 <!-- End Login Area -->
 
-<?php include_once('footer.php'); ?>
+<?php include_once('footer2.php'); ?>

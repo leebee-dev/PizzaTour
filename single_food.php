@@ -10,7 +10,7 @@
     $price_l = $row[9];             // L 가격
     $price_big = $row[10];          // Big 가격
 
-    $link = "detail.php?name=".urlencode(base64_encode($menu_name));
+    $link = "detail.php?name=".base64_encode(urlencode($menu_name));
 ?>
 <div class="col-md-4 col-sm-6 tab-pane active" id="total">
     <a class="single-food" href=<?="$link"?>>

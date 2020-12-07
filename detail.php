@@ -1,9 +1,15 @@
 <?php
     include_once("header.php");
     include_once("db.php");
-    $name =  base64_decode(urldecode($_GET['name']));
-    // error_log("Debug::detail.php= "$name,3,"~/debug.log");
-    $sql_selected= mq("select * from Menu natural join Price natural join Nutrition where Menu.name='$name';") or die(mysql_error());
+    $userid = $_SESSION['user'];
+    //echo "userid: ".$userid;
+    $name =  urldecode(base64_decode($_GET['name']));
+    // echo "name: ".$name;
+    $sql_user = mq("SELECT idx FROM User WHERE userID='$userid';");
+    $useridx = mysqli_fetch_array($sql_user)[0];
+    // echo "useridx: ".$useridx;
+
+    $sql_selected= mq("select * from Menu natural join Price left outer join Nutrition on Menu.idx = Nutrition.idx where Menu.name='$name';");
     $row = mysqli_fetch_array($sql_selected);
     $menu_idx = $row[0];            // index
     $menu_name = $row[1];           // 메뉴 이름
@@ -128,7 +134,8 @@
             </div>
             
             <div class="row accordion justify-content-start my-5" id="info-tab">
-                <div class="col-lg-7 col-sm-12">    
+                <div class="col-lg-7 col-sm-12">
+                <p class="korean" style="font-size: 10pt;">*상기 이미지는 실제 제품과는 다를 수 있습니다.</p>
                     <div class="card">
                         <div class="card-header" id="origin-heading">
                             <h2 class="mb-0">
@@ -317,10 +324,16 @@
                         <span class="d-flex justify-content-between pt-1 pb-2">
                             <textarea id="comment-body" name="comment-body" placeholder="후기를 남겨주세요." class="form-control" row="5"></textarea>
                         </span>
-                        <input type="hidden" name="user-idx" value="1"></input>
+                        <input type="hidden" name="user-idx" value="<?=$useridx?>"></input>
                         <input type="hidden" name="menu-idx" value="<?=$menu_idx?>"></input>
                         <input type="hidden" name="redirection" value="<?=$_GET['name']?>"></input>
-                        <span class="row justify-content-end mt-3"><button id="comment-btn" class="genric-btn primary circle " type="submit" style="font-weight: bolder; color : black;" >댓글 작성</button></span>
+                        <span class="row justify-content-end mt-3">
+                            <?php if(empty($userid)) { ?>
+                                <button id="login-direct-btn" class="genric-btn primary circle " type="button" style="font-weight: bolder; color : black;" >댓글 작성</button>
+                            <?php } else {?>
+                                <button id="comment-btn" class="genric-btn primary circle " type="submit" style="font-weight: bolder; color : black;" >댓글 작성</button>
+                            <?php }?>
+                        </span>
                     </form>                                     				
                 </div>
             </div>
@@ -341,7 +354,7 @@
                     <p>Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+                    <button id="modal-btn" type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
                 </div>
             </div>
         </div>

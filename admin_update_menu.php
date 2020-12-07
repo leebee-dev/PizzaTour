@@ -83,4 +83,4 @@ while ($row = mysqli_fetch_array($sql)) {
     </div>
     <!-- End Align Area --> 
 
-<?php include_once("footer.php")?>
+<?php include_once("footer2.php")?>

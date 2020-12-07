@@ -4,7 +4,7 @@ if(!$admin_login){
 }
 ?>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required Meta Tags -->
@@ -84,6 +84,7 @@ if(!$admin_login){
                 <div class="col-sm-4">
                     <div class="logo-area">
                         <a href="index.php"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                        <h6>관리자 메뉴</h6>
                     </div>
                 </div>
                 <div class="col-sm-8">

@@ -27,5 +27,14 @@
             var star_num = Number($(this).next().text()) + 1;
             $(this).children(".0").nextUntil(`.${star_num}`).css({"color":"#f8b600"});
         });
+
+        $("#login-direct-btn").on("click",function(){
+            $('.modal-title').text("작성 실패");
+            $('.modal-body p').text("로그인이 필요합니다.");
+            $('#comment-modal').modal();
+            $("#modal-btn").on("click",function(){
+                window.location.href='login_form.php';
+            });
+        });
     });
 })(jQuery);
