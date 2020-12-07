@@ -1,6 +1,11 @@
 <?php 
 include_once("header.php");
+include_once("db.php");
 $userid = $_SESSION['user'];
+$sql = mq("SELECT * FROM User WHERE `userID`="."'".$userid."';");
+while ($row = mysqli_fetch_array($sql)) {
+    $count = $row[6];
+}
 ?>
 
     <!-- Banner Area Starts -->
@@ -50,6 +55,7 @@ $userid = $_SESSION['user'];
                 <div class="row py-2 pr-3 justify-content-center">
                     <div class="card-body col-5">
                         <input type = "hidden" id = "id" value = "<?php echo $userid?>"/>
+                        <input type = "hidden" id = "count" value = "<?php echo $count?>"/>
                         <h5 class="korean card-title">QR 쿠폰</h5>
                         <p class="card-text">방문하실 때마다 하나씩 적립!<br>12개 적립시 ***가 공짜!</p>
                     </div>
@@ -58,7 +64,7 @@ $userid = $_SESSION['user'];
                     </div>
                 </div>
                 <div class="row pt-1 pb-2 justify-content-center">
-                    <button id="using-btn" class="genric-btn primary radius col-5 disabled">사용하기</button>
+                    <button href = "delete_coupon.php" id="using-btn" class="genric-btn primary radius col-5 disabled" onclick = 'location.href = "delete_coupon.php"';> 사용하기</button>
                 <div>
             </div>
         </section>

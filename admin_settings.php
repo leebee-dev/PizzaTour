@@ -108,19 +108,19 @@ function delete_menu(select_obj) {
               </div>
               <div class="col-md-3">
                   <ul id="info-tab" class="nav nav-pills flex-column px-2 px-md-0">
-                      <li class="nav-item">
-                          <a class="nav-link active" data-toggle="pill" href="#home">홈 관리</a>
+                      <li class="nav-item my-3">
+                          <a class="nav-link active " data-toggle="pill" href="#home">홈 관리</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item my-3">
                           <a class="nav-link" data-toggle="pill" href="#about">소개 관리</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item my-3">
                           <a class="nav-link" data-toggle="pill" href="#menu">메뉴 관리</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item my-3">
                           <a class="nav-link" data-toggle="pill" href="#information">매장 정보 관리</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item my-3">
                           <a class="nav-link" data-toggle="pill" href="#admin">관리자 관리</a>
                       </li>
                   </ul>

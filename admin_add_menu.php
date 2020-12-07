@@ -68,4 +68,4 @@ $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체�
     </div>
     <!-- End Align Area --> 
 
-<?php include_once("footer.php")?>
+<?php include_once("footer2.php")?>

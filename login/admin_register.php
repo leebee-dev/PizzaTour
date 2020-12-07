@@ -15,17 +15,17 @@ if (isset($_POST)) {
                 session_start();
             }
             $_SESSION['admin'] = "admin"; 
-            echo("<script>alert('등록 성공');location.href='../index.php';</script>"); 
+            echo("<script>alert('관리자가 등록되었습니다');location.href='../index.php';</script>"); 
         } else {
             // 관리자 등록 실패
-            echo("<script>alert('등록 실패');location.href='../admin_register_form.php';</script>"); 
+            echo("<script>alert('관리자 등록에 실패했습니다');location.href='../admin_register_form.php';</script>"); 
         }
     }
 }else {//비밀번호 확인 입력오류
     echo("<script>alert('비밀번호를 다시 확인해주세요.');location.href='../admin_register_form.php';</script>"); 
 }
 }else {// 입력받은 데이터에 문제가 있을 경우
-    echo("<script>alert('등록 실패');location.href='../admin_register_form.php';</script>"); 
+    echo("<script>alert('관리자 등록에 실패했습니다');location.href='../admin_register_form.php';</script>"); 
 }
 ?>
 
