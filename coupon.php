@@ -58,7 +58,7 @@ $userid = $_SESSION['user'];
                     </div>
                 </div>
                 <div class="row pt-1 pb-2 justify-content-center">
-                    <button id="using-btn" class="genric-btn primary radius col-5 disabled">사용하기</button>
+                    <button href = "delete_coupon.php" id="using-btn" class="genric-btn primary radius col-5 disabled" onclick = 'location.href = "delete_coupon.php"';> 사용하기</button>
                 <div>
             </div>
         </section>

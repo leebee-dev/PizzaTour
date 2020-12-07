@@ -1,31 +1,12 @@
-var cupon = 5;
-function showCupon(cupon){
-    /*var count = cupon
+var cupon = 12;
+function showCupon(cupon){/*
+    var count = cupon
     var items = document.getElementsByClassName('item');
 
     for (var i=0; i<count; i++) {
         items[i].style.backgroundColor="blue";
     }*/
 }
-
-// $(function() {
-//     //----- OPEN
-//     $('[code-popup-open]').on('click', function(e)  {
-//         if(isMobile()){
-//             var targeted_popup_class = jQuery(this).attr('code-popup-open');
-//             $('[code-popup="' + targeted_popup_class + '"]').fadeIn(350);
-//             e.preventDefault();
-//         }
-//     });
-
-//     //----- CLOSE
-//     $('[code-popup-close]').on('click', function(e)  {
-//         var targeted_popup_class = jQuery(this).attr('code-popup-close');
-//         $('[code-popup="' + targeted_popup_class + '"]').fadeOut(350);
-
-//         e.preventDefault();
-//     });
-// });
 
 showCupon(cupon);
 
@@ -53,16 +34,24 @@ showCupon(cupon);
             if(qrcode == null) qrcode = createQRCode(count);
         });
 
-        $("#using-btn").on("click", function(){
+        /*$("#using-btn").on("click", function(){
+            
+            $('.modal-title').text("직원확인");
+                $('.modal-body p').text("직원확인 처리하시겠습니까? \n 직원 확인 후에는 쿠폰은 사용처리됩니다.");
+                $('#info-modal').modal();
+                location.href = "delete_coupon.php";
             if(count >= 12) {
                 count -= 12;
-                qrcode = removeQRcode();
+                $('.modal-title').text("사용 불가");
+                $('.modal-body p').text(`아직 ${12-count}개 덜 모으셨어요~! 조금만 더 파이팅`);
+                $('#info-modal').modal();
+                delete_coupon();
             } else {
                 $('.modal-title').text("사용 불가");
                 $('.modal-body p').text(`아직 ${12-count}개 덜 모으셨어요~! 조금만 더 파이팅`);
                 $('#info-modal').modal();
             }
-        });
+        });*/
     });
 })(jQuery);
 
@@ -82,21 +71,3 @@ function createQRCode() {
 
     return qrcode
 }
-
-function removeQRcode() {
-    $("#qrcode span").text("QRcode를 스캔해 주세요.");
-    $("#qrcode").children("img, canvas").remove();
-
-    new QRCode(document.getElementById("qrcode"), {
-        text: "Empty",
-        width: 128,
-        height: 128,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-    });
-    $("#qrcode").children("img").addClass("empty-qrcode");
-
-    return null;
-}
-
