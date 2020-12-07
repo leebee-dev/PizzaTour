@@ -11,12 +11,12 @@ if (isset($_POST)) {
             session_start();
         }
         $_SESSION['admin'] = "admin";
-        echo("<script>alert('로그인 성공');location.href='../admin.php';</script>"); 
+        echo("<script>alert('로그인 되었습니다.');location.href='../admin.php';</script>"); 
        } else {
-        echo("<script>alert('로그인 실패');location.href='../admin_login_form.php';</script>"); 
+        echo("<script>alert('로그인 실패하였습니다.');location.href='../admin_login_form.php';</script>"); 
     }
 } else {// 입력받은 데이터에 문제가 있을 경우
-    echo("<script>alert('로그인 실패2');location.href='../admin_login_form.php';</script>");   
+    echo("<script>alert('로그인 실패하였습니다.');location.href='../admin_login_form.php';</script>");   
 }
 ?>
 

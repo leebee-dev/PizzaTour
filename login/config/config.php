@@ -4,7 +4,7 @@
 //****************
 define('_DBHOST','localhost');
 define('_DBUSER','root'); // DB 사용자
-define('_DBPASS','990307'); // DB 패스워드
+define('_DBPASS','subal3712'); // DB 패스워드
 define('_DBNAME','pizza'); // DB 명
 define('_DBTYPE','mysql'); // 데이터베이스 종류
 define('_DSN',_DBTYPE.':host='._DBHOST.';dbname='._DBNAME.';charset=utf8mb4');
