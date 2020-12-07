@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_array($sql)) {
             <div class="section-top-border">
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
-                        <h3 class="mb-30 title_color">메뉴 수정</h3>
+                        <h3 class="mb-30 title_color">Update Menu</h3>
                         <form action="admin/update_menu.php" method = "post" enctype="multipart/form-data">
                             <input type="hidden" name = "idx" value = <?php echo $idx;?> >
                             <div class="mt-10">

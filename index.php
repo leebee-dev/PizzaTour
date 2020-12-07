@@ -91,9 +91,9 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_img = $row[5];  //이미지
-                            $price_m = $row[9];  //M 가격
-                            $price_l = $row[10];  //L 가격
-                            $price_big = $row[11];  //Big 가격
+                            $price_m = $row[8];  //M 가격
+                            $price_l = $row[9];  //L 가격
+                            $price_big = $row[10];  //Big 가격
                             $link = "detail.php?name=".urlencode(base64_encode($menu_name));    
                         ?>
                             <div class="single-slide d-md-inline-flex">

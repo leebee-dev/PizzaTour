@@ -14,7 +14,7 @@ else{
 
 if(isset($name)){
     mq("START TRANSACTION;");
-    mq('INSERT INTO Menu(name, description, class, origin, img) VALUES('.$name.','.$description.','.$class.','.$origin.','.$filename.');');
+    mq('INSERT INTO Menu(name, description, origin, img) VALUES('.'"'.$name.'"'.','.'"'.$description.'"'.','.'"'.$origin.'"'.','.'"'.$filename.'"'.');');
     mq('INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),'.$price_m.','.$price_l.','.$price_big.');');
     mq("COMMIT;");
 }?>

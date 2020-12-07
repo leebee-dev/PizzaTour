@@ -11,13 +11,14 @@ if(isset($_FILES['img']['name'])){
 else{
     $filename = "pizza.png";
 }
-
+echo "UPDATE Menu Set `name`="."'".$name."',"."`description` = "."'".$description."',"."`origin`="."'"."$origin"."',"."`img`="."'".$img."',"."WHERE idx=".$idx.";";
 if(isset($name)){
     mq("START TRANSACTION;");
-    mq('UPDATE Menu SET idx = '.$idx.'name = '.$name.'description = '.$description.'class = '.$class.'origin ='.$origin.'img ='.$img.' WHERE idx='.$idx.';');
-    mq('UPDATE Price SET M = '.$M.' L ='.$L.' Big ='.$Big.' WHERE idx='.$idx.';');
+    mq("UPDATE Menu Set `name`="."'".$name."',"."`description` = "."'".$description."',"."`origin`="."'"."$origin"."',"."`img`="."'".$img."',"."WHERE idx=".$idx.";");
+    mq('UPDATE Price Set `M` = '.$M.', L ='.$L.', Big ='.$Big.' WHERE idx='.$idx.';');
     mq("COMMIT;");
-}?>
+}
+?>
 
 <meta charset="utf-8" />
 <script type="text/javascript">

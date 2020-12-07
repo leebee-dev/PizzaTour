@@ -16,7 +16,6 @@ function delete_menu(select_obj) {
             success: function(result) { 
             }
         })
-        alert(select_obj);
         alert("삭제되었습니다.");
         location.reload();
     } else {
@@ -42,9 +41,6 @@ function delete_menu(select_obj) {
             <ul id="classification" class="row nav nav-pills px-3 pb-3 align-right justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="pill" href="#total">메뉴 관리</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#pizza">댓글 관리</a>
                 </li>
                 <li class="nav-item">
                     <input type="button" class="nav-link" data-toggle="pill" onclick = "location.href = 'admin_register_form.php'" value = "관리자 등록">
@@ -82,13 +78,20 @@ function delete_menu(select_obj) {
                             $price_m = $row[8];  //M 가격
                             $price_l = $row[9];  //L 가격
                             $price_big = $row[10];  //Big 가격
+                            $price = $price_m;
+
+                            
+                            if($price_l){
+                                $price = $price_m.'/'.$price_l.'/'.$price_big;
+                            }
+                          
 						?>
                         <div class="table-row">
                             <div class="serial"><?php echo $idx;?></div>
                             <div class="country"><?php echo $menu_name;?></div>
                             <div class="country"><?php echo $menu_description;?></div>
-                            <div class="percentage"><?php echo $price_m;?></div>
-                            <div class="visit"><a href="adn_update_menu.php?id=<?php echo $menu_idx?>" class="genric-btn primary-border small">update</a></div>
+                            <div class="percentage"><?php echo $price;?></div>
+                            <div class="visit"><a href="admin_update_menu.php?id=<?php echo $menu_idx?>" class="genric-btn primary-border small">update</a></div>
                             <div class="visit"><input type="button" id="<?php echo $menu_idx ?>" value="delete" onClick="delete_menu(<?php echo $menu_idx?>)" class="genric-btn primary-border small"></div>
                         </div>
                         <?php } ?>
@@ -97,11 +100,6 @@ function delete_menu(select_obj) {
             </div>
         </div>
     </div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade" id="pizza">
-                <div class="row tab-content">
-                    
                     </div>
                 </div>
 
