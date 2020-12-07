@@ -1,4 +1,7 @@
-<?php include_once("header.php")?>
+<?php 
+include_once("header.php");
+$userid = $_SESSION['user'];
+?>
 
     <!-- Banner Area Starts -->
     <section class="banner-area banner-area2 blog-page text-center" style="background-image: url(assets/images/table-bg.jpg) ;">
@@ -46,6 +49,7 @@
                 </div>
                 <div class="row py-2 pr-3 justify-content-center">
                     <div class="card-body col-5">
+                        <input type = "hidden" id = "id" value = "<?php echo $userid?>"/>
                         <h5 class="korean card-title">QR 쿠폰</h5>
                         <p class="card-text">방문하실 때마다 하나씩 적립!<br>12개 적립시 ***가 공짜!</p>
                     </div>

@@ -1,13 +1,11 @@
 var cupon = 5;
-
 function showCupon(cupon){
-    var count = cupon
+    /*var count = cupon
     var items = document.getElementsByClassName('item');
 
     for (var i=0; i<count; i++) {
-        items[i].style.backgroundColor="#ffb606"
-
-    }
+        items[i].style.backgroundColor="blue";
+    }*/
 }
 
 // $(function() {
@@ -73,7 +71,7 @@ function createQRCode() {
     $("#qrcode").children("img, canvas").remove();
 
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: "sssssss",
+        text: `localhost:8080/PizzaTour/add_coupon.php?id=${document.getElementById("id").value}`,
         width: 128,
         height: 128,
         colorDark : "#000000",

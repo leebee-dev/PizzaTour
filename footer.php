@@ -1,7 +1,6 @@
 <?php include 'session_check.php';?>
-
 <!-- Footer Area Starts -->
-        <footer class="footer-area">
+<footer class="footer-area">
         <div class="footer-widget section-padding">
             <div class="container">
                 <div class="row">
@@ -27,7 +26,7 @@
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="info-text">
-                                    <p>031-944-7733</p>
+                                    <p>(123) 456 78 90</p>
                                 </div>
                             </div>
                             <!-- <div class="d-flex">
@@ -89,13 +88,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!-- Javascript -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+   <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
     <script src="assets/js/vendor/wow.min.js"></script>
     <script src="assets/js/vendor/owl-carousel.min.js"></script>
     <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/skel.min.js"></script>
+    <script src="assets/js/vendor/map.js"></script>
     <script src="assets/js/vendor/qrcode.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/banner.js"></script>
