@@ -91,9 +91,9 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             $menu_name = $row[1];  //메뉴 이름
                             $menu_description = $row[2];  //메뉴 설명
                             $menu_img = $row[5];  //이미지
-                            $price_m = $row[9];  //M 가격
-                            $price_l = $row[10];  //L 가격
-                            $price_big = $row[11];  //Big 가격
+                            $price_m = $row[8];  //M 가격
+                            $price_l = $row[9];  //L 가격
+                            $price_big = $row[10];  //Big 가격
                             $link = "detail.php?name=".urlencode(base64_encode($menu_name));    
                         ?>
                             <div class="single-slide d-md-inline-flex">
@@ -103,8 +103,8 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                                     </div>
                                     <div class="food-content">
                                         <div class="d-flex flex-column justify-content-between">
-                                            <h5 class="prime-color korean"style="font-weight: bolder; font-size:15pt;"><?php  echo $menu_name;?></h5>
-                                            <span class="style-change" style="font-weight: bolder;"><?php echo $price_m."/"; echo $price_l."/"; echo $price_big."/"?></span>
+                                            <h5 id="menu-preview-title" class="prime-color korean"style="font-weight: bolder;"><?php  echo $menu_name;?></h5>
+                                            <span class="style-change" style="font-weight: bolder;"><?php echo $price_m."/"; echo $price_l."/"; echo $price_big."/";?></span>
                                         </div>
                                         <p class="pt-3" style="color: white;"><?php echo $menu_description;?></p>
                                     </div>

@@ -38,31 +38,31 @@ INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),15000, 17000, 29000);
 INSERT INTO Menu(name, class, origin,img) VALUES("더블쉬림프피자",1,"돼지고기: 국내산 / 냉동새우: 외국산(베트남) / 쇠고기: 외국산(뉴질랜드산, 호주산)","pizza_12.png");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),17000, 19000, 33000);
 INSERT INTO Nutrition VALUES(LAST_INSERT_ID(),216.5, 29.2, 6.8, 11.2, 6.1, 3.3, 0.1, 15.8, 479.7);
-INSERT INTO Menu(name, class) VALUES("치즈크러스트",1);
+INSERT INTO Menu(name, class, img) VALUES("치즈크러스트",1,"pizza_13.jpg");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),2000, 2500, 4000);
-INSERT INTO Nutrition VALUES(LAST_INSERT_ID(),226.8, 30.7, 1.7, 12.5, 6.0, 2.9, 0.1, 20.3, 509.5);
-INSERT INTO Menu(name, class) VALUES("고구마크러스트",1);
+--INSERT INTO Nutrition VALUES(LAST_INSERT_ID(),226.8, 30.7, 1.7, 12.5, 6.0, 2.9, 0.1, 20.3, 509.5);
+INSERT INTO Menu(name, class, img) VALUES("고구마크러스트",1,"pizza_13.jpg");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),2000, 2500, 4000);
-INSERT INTO Nutrition VALUES(LAST_INSERT_ID(),216.5, 29.2, 6.8, 11.2, 6.1, 3.3, 0.1, 15.8, 479.7);
+--INSERT INTO Nutrition VALUES(LAST_INSERT_ID(),216.5, 29.2, 6.8, 11.2, 6.1, 3.3, 0.1, 15.8, 479.7);
 
 --chicken
-INSERT INTO Menu(name, class, origin) VALUES("후라이드",2, "닭고기: 외국산(브라질 또는 태국산)");
+INSERT INTO Menu(name, class, origin, img) VALUES("후라이드",2, "닭고기: 외국산(브라질 또는 태국산)", "chicken_2.jpg");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),3000, 7000, 13000);
-INSERT INTO Menu(name, class, origin) VALUES("양념",2, "닭고기: 외국산(브라질 또는 태국산)");
+INSERT INTO Menu(name, class, origin, img) VALUES("양념",2, "닭고기: 외국산(브라질 또는 태국산)", "chicken_2.jpg");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),3000, 7000, 13000);
-INSERT INTO Menu(name, class, origin) VALUES("갈릭",2, "닭고기: 외국산(브라질 또는 태국산)");
+INSERT INTO Menu(name, class, origin, img) VALUES("갈릭",2, "닭고기: 외국산(브라질 또는 태국산)", "chicken_2.jpg");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),3000, 7000, 13000);
-INSERT INTO Menu(name, class, origin) VALUES("매운갈비맛",2, "닭고기: 외국산(브라질 또는 태국산)");
+INSERT INTO Menu(name, class, origin, img) VALUES("매운갈비맛",2, "닭고기: 외국산(브라질 또는 태국산)", "chicken_2.jpg");
 INSERT INTO Price(idx,M,L,Big) VALUES(LAST_INSERT_ID(),3000, 7000, 13000);
 
 --set
-INSERT INTO Menu(name, class, description) VALUES("순살왕특세트",3, "치킨 세 가지 맛(400g씩) + 치즈볼 4 + 보틀넥 감자튀김 + 1.25L 콜라");
+INSERT INTO Menu(name, class, description,img) VALUES("순살왕특세트",3, "치킨 세 가지 맛(400g씩) + 치즈볼 4 + 보틀넥 감자튀김 + 1.25L 콜라", "chicken_2.jpg");
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),27000);
-INSERT INTO Menu(name, class, description) VALUES("순살특세트",3, "치킨 두 가지 맛(400g씩) + 치즈볼 2 + 보틀넥 감자튀김 + 500mL 콜라");
+INSERT INTO Menu(name, class, description,img) VALUES("순살특세트",3, "치킨 두 가지 맛(400g씩) + 치즈볼 2 + 보틀넥 감자튀김 + 500mL 콜라", "chicken_2.jpg");
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),18000);
-INSERT INTO Menu(name, class, description) VALUES("나홀로세트A",3, "치킨 한 가지 맛(400g) + 치즈볼 2 + 보틀넥 감자튀김 + 캔 콜라");
+INSERT INTO Menu(name, class, description,img) VALUES("나홀로세트A",3, "치킨 한 가지 맛(400g) + 치즈볼 2 + 보틀넥 감자튀김 + 캔 콜라", "chicken_2.jpg");
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),10000);
-INSERT INTO Menu(name, class, description) VALUES("나홀로세트B",3, "치킨 한 가지 맛(400g) + 치즈 오븐 스파게티 + 캔 콜라");
+INSERT INTO Menu(name, class, description,img) VALUES("나홀로세트B",3, "치킨 한 가지 맛(400g) + 치즈 오븐 스파게티 + 캔 콜라", "chicken_2.jpg");
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),12500);
 INSERT INTO Menu(name, class, description) VALUES("A세트",3, "콤비(M) or 불고기(M) + 순살 치킨(중) + 500mL콜라");
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),18000);
@@ -72,3 +72,29 @@ INSERT INTO Menu(name, class, description) VALUES("C세트",3, "불고기(Big) o
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),35000);
 INSERT INTO Menu(name, class, description) VALUES("D세트",3, "콤비(L) or 불고기(L) + 치즈볼 4 + 보틀넥 감자튀김 + 1.25L콜라");
 INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),31000);
+
+--side
+INSERT INTO Menu(name, class, origin, img) VALUES("치즈볼 3개", 4, "치즈: 수입산", "side_1.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),2500);
+INSERT INTO Menu(name, class, origin, img) VALUES("치즈볼 6개", 4, "치즈: 수입산", "side_1.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),5000);
+INSERT INTO Menu(name, class, origin, img) VALUES("보틀넥 감자튀김(소)", 4, NULL, "side_2.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),3000);
+INSERT INTO Menu(name, class, origin, img) VALUES("보틀넥 감자튀김(대)", 4, NULL, "side_2.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),5000);
+INSERT INTO Menu(name, class, origin, img) VALUES("치킨텐더 5개", 4, "닭고기: 외국산(태국)", "side_3.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),4000);
+INSERT INTO Menu(name, class, origin, img) VALUES("치킨텐더 10개", 4, "닭고기: 외국산(태국)", "side_3.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),7500);
+INSERT INTO Menu(name, class, origin, img) VALUES("오븐구이 웨지감자(소)", 4, NULL, "side_4.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),3000);
+INSERT INTO Menu(name, class, origin, img) VALUES("오븐구이 웨지감자(대)", 4, NULL, "side_4.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),5000);
+INSERT INTO Menu(name, class, origin, img) VALUES("치즈 오븐 스파게티", 4, "치즈: 수입산", "side_5.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),5500);
+INSERT INTO Menu(name, class, origin, img) VALUES("피클", 4, NULL, "side_6.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),400);
+INSERT INTO Menu(name, class, origin, img) VALUES("갈릭소스", 4, NULL, "side_7.jpg");
+INSERT INTO Price(idx,M) VALUES(LAST_INSERT_ID(),300);
+
+INSERT INTO User(userID, userName, Email, password, salt, count, created_at) VALUES("test1", "lee", "test@test.test", "1234", "OVsdfFS", 0, now());

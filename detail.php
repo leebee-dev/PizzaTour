@@ -1,9 +1,9 @@
 <?php
     include_once("header.php");
     include_once("db.php");
-    $name =  base64_decode(urldecode($_GET['name']));
-    // error_log("Debug::detail.php= "$name,3,"~/debug.log");
-    $sql_selected= mq("select * from Menu natural join Price natural join Nutrition where Menu.name='$name';") or die(mysql_error());
+    $name =  urldecode(base64_decode($_GET['name']));
+
+    $sql_selected= mq("select * from Menu natural join Price left outer join Nutrition on Menu.idx = Nutrition.idx where Menu.name='$name';") or die(mysql_error());
     $row = mysqli_fetch_array($sql_selected);
     $menu_idx = $row[0];            // index
     $menu_name = $row[1];           // 메뉴 이름
@@ -128,7 +128,8 @@
             </div>
             
             <div class="row accordion justify-content-start my-5" id="info-tab">
-                <div class="col-lg-7 col-sm-12">    
+                <div class="col-lg-7 col-sm-12">
+                <p class="korean" style="font-size: 10pt;">*상기 이미지는 실제 제품과는 다를 수 있습니다.</p>
                     <div class="card">
                         <div class="card-header" id="origin-heading">
                             <h2 class="mb-0">

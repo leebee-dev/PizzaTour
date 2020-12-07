@@ -36,33 +36,35 @@ showCupon(cupon);
         var id = "";
         var count = 0;
 
-        $("#qrcode span").text("사용하기를 누르시면 QRcode가 생성됩니다.");
-        new QRCode(document.getElementById("qrcode"), {
-            text: "Empty",
-            width: 128,
-            height: 128,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
+        if(document.getElementById("qrcode") != null) {
+            $("#qrcode span").text("사용하기를 누르시면 QRcode가 생성됩니다.");
+            new QRCode(document.getElementById("qrcode"), {
+                text: "Empty",
+                width: 128,
+                height: 128,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
 
-        $("#qrcode").children("img").addClass("empty-qrcode");
+            $("#qrcode").children("img").addClass("empty-qrcode");
 
-        $("#saving-btn").on("click", function(){
-            count++;
-            if(qrcode == null) qrcode = createQRCode(count);
-        });
+            $("#saving-btn").on("click", function(){
+                count++;
+                if(qrcode == null) qrcode = createQRCode(count);
+            });
 
-        $("#using-btn").on("click", function(){
-            if(count >= 12) {
-                count -= 12;
-                qrcode = removeQRcode();
-            } else {
-                $('.modal-title').text("사용 불가");
-                $('.modal-body p').text(`아직 ${12-count}개 덜 모으셨어요~! 조금만 더 파이팅`);
-                $('#info-modal').modal();
-            }
-        });
+            $("#using-btn").on("click", function(){
+                if(count >= 12) {
+                    count -= 12;
+                    qrcode = removeQRcode();
+                } else {
+                    $('.modal-title').text("사용 불가");
+                    $('.modal-body p').text(`아직 ${12-count}개 덜 모으셨어요~! 조금만 더 파이팅`);
+                    $('#info-modal').modal();
+                }
+            });
+        }
     });
 })(jQuery);
 
