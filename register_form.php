@@ -32,7 +32,7 @@
                         <input type="password" name="pwd_chk" placeholder="PASSWORD CHECK" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm PASSWORD'" required class="single-input">
                     </div>
                     <div class="button-group-area">
-                    <button type = "submit" class="genric-btn default">등록</button>                    </div>
+                    <input type = "submit" class="genric-btn default" value = "등록"/>                    </div>
                     </form>
     </div>
 </section>

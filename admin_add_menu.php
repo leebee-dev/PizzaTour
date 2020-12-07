@@ -23,7 +23,7 @@ $sql_total = mq("select * from Menu,Price where Menu.idx=Price.idx;"); //전체�
             <div class="section-top-border">
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
-                        <h3 class="mb-30 title_color">메뉴 추가</h3>
+                        <h3 class="mb-30 title_color">Add Menu</h3>
                         <form action="admin/add_menu.php" method = "post" enctype="multipart/form-data">
                             <div class="mt-10">
                                 <input type= "text" name="name" placeholder="메뉴이름*" onfocus="this.placeholder = ''" onblur="this.placeholder = '메뉴이름'" required class="single-input">

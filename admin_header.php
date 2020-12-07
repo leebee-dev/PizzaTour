@@ -4,8 +4,7 @@ if(!$admin_login){
 }
 ?>
 
-<?php include 'session_check.php';?>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required Meta Tags -->
@@ -14,7 +13,7 @@ if(!$admin_login){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Page Title -->
-    <title>피자투어 광탄점-관리자</title>
+    <title>피자투어 - 웰빙프리미엄 국내산 찹쌀도우</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/logo3.png" type="image/x-icon">
@@ -97,8 +96,10 @@ if(!$admin_login){
                     <div class="main-menu main-menu2">
                         <ul>
                             <li class="active"><a href="index.php">홈</a></li>
-                            <li><a href="admin_menu.php">메뉴</a></li>
-                            <li><a href="admin_settings.php">관리자설정</a></li>
+                            <li><a href="about.php">소개</a></li>
+                            <li><a href="menu.php">메뉴</a></li>
+                            <li><a href="contact-us.php">위치</a></li>
+                            <li><a href="admin_settings.php">관리자 페이지</a></li>
                         </ul>
                     </div>
                 </div>

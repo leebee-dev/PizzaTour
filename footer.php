@@ -1,4 +1,8 @@
-<?php include 'session_check.php';?>
+<?php include 'session_check.php';
+//<script src="assets/js/detail.js"></script>
+//<script src="assets/js/detail.js"></script>
+//<script src="assets/js/detail.js"></script>
+?>
 <!-- Footer Area Starts -->
 <footer class="footer-area">
         <div class="footer-widget section-padding">
@@ -102,6 +106,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/action-btns.js"></script>
     <script src="assets/js/detail.js"></script>
     <script src="assets/js/coupon.js"></script>
-    
 </body>
 </html>
