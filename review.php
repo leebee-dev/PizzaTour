@@ -28,8 +28,8 @@
                 <span class="score-num"><?=$cm_score?></span>
             </div>
             <div class="desc pl-5 korean">
-                <div><?=$cm_title?></div>
-                <p><?=$cm_content?></p>
+                <h5 class="korean"><?=$cm_title?></h5>
+                <p class="korean"><?=$cm_content?></p>
             </div>
         </div>
         <p class="comment mx-3">주문일시: <?=$cm_orderDate?></p>

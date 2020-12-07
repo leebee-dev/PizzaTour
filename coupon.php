@@ -12,7 +12,7 @@
     </section>
     <!-- Banner Area End -->
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row mx-1 justify-content-center align-items-center">
         <!--Coupon Area Stars-->
         <section class="update-area col-lg-4 col-md-5">
             <div class ="coupon-area">
@@ -37,9 +37,10 @@
                 </div>
             </div>
         </section>
+        <!--Coupon Area Ends-->
 
         <!-- QRcode Area Starts -->
-        <section class="col-lg-7 col-md-6">
+        <section class="m-auto col-lg-7 col-md-6">
             <div class="card p-3 m-2">
                 <div class="row pt-2 pb-1">
                 </div>

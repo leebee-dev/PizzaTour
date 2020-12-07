@@ -2,6 +2,7 @@
     include_once("header.php");
     include_once("db.php");
     $name =  base64_decode(urldecode($_GET['name']));
+    // error_log("Debug::detail.php= "$name,3,"~/debug.log");
     $sql_selected= mq("select * from Menu natural join Price natural join Nutrition where Menu.name='$name';") or die(mysql_error());
     $row = mysqli_fetch_array($sql_selected);
     $menu_idx = $row[0];            // index
@@ -36,6 +37,35 @@
     $query_star = mq("SELECT menuIdx, AVG(score) FROM Review WHERE menuIdx = '$menu_idx' GROUP BY menuIdx;");
     $result_star = mysqli_fetch_array($query_star)[1];
     $result_star = empty($result_star)?'0.0':round($result_star,1);
+
+    $query_stars = mq("SELECT score, count(score) FROM Review WHERE menuIdx = '$menu_idx' GROUP BY score ORDER BY score;");
+
+    $one_star = 0;
+    $two_star = 0;
+    $thr_star = 0;
+    $fou_star = 0;
+    $fiv_star = 0;
+    while($stat = mysqli_fetch_array($query_stars)) {
+        switch($stat[0]) {
+        case 1:
+            $one_star = $stat[1];
+            break;
+        case 2:
+            $two_star = $stat[1];
+            break;
+        case 3:
+            $thr_star = $stat[1];
+            break;
+        case 4:
+            $fou_star = $stat[1];
+            break;
+        case 5:
+            $fiv_star = $stat[1];
+            break;
+        }
+    }
+    $tot_count = ($one_star + $two_star + $thr_star + $fou_star + $fiv_star) * 1.0;
+
 
     if (mysqli_query($maria_connect, $query)) { 
         header("Location:detail.php?name='$redirection'");
@@ -80,10 +110,11 @@
                                             <span>  Price: ₩<?=$price_m?></span>
                                         <?php }?>
                                         <p class="pt-3"><?=$menu_description?></p>
-                                        <div>
-                                            <div id="score" class="star fa fa-star" >
-                                                &#xf005 &#xf005 &#xf005 &#xf005 &#xf005
-                                            </div>
+                                        <div class="container row">
+                                            <span id="score" class="star fa">&#xf005&#xf005&#xf005&#xf005&#xf005
+                                                <span class="star fa">&#xf005&#xf005&#xf005&#xf005&#xf005</span>
+                                            </span>
+                                            
                                             <span id="total_score" class="ml-3"><?=$result_star?></span>
                                         </div>
                                         
@@ -153,15 +184,11 @@
                     <div class="comment-total">
                         <div id="comment-section bolder">TOTAL</div>
                             <div class="row">
-                                <div class="total-comment col-xs-9 col-lg-5 mt-12">
-                                    <div id="text-center bolder" class="korean">사용자 총점</div>
+                                <div class="total-comment align-self-center col-xs-9 col-lg-5 mt-12">
+                                    <div id="" class="korean text-center bolder">사용자 총점</div>
                                     <div id="total-score" class="text-center">
-                                        <span class="" style="font-size: 450%;">
-                                            <i class="star fa fa-star"></i>
-                                            <i class="star fa fa-star"></i>
-                                            <i class="star fa fa-star"></i>
-                                            <i class="star fa fa-star"></i>
-                                            <i class="star fa fa-star"></i>
+                                        <span class="star fa big-star">&#xf005&#xf005&#xf005&#xf005&#xf005
+                                            <span class="star fa">&#xf005&#xf005&#xf005&#xf005&#xf005</span>
                                         </span>
                                     </div>
                                     <div id="total-score-num" class="text-center">
@@ -174,7 +201,7 @@
                                         <div class="table-head">
                                             <div class="serial">#</div>
                                             <div class="korean country"> 별점</div>
-                                            <div class="korean percentage">Percentages</div>
+                                            <div class="korean percentage">Count</div>
                                         </div>
                                         <div class="table-row">
                                             <div class="serial">01</div>
@@ -187,7 +214,8 @@
                                             </span>
                                             <div class="percentage">
                                                 <div class="progress">
-                                                    <div class="progress-bar color-1" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar color-1" role="progressbar" style="width: <?=$one_star/$tot_count*100?>%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <span class="pl-2"><?=$one_star?></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,7 +230,8 @@
                                             </span>
                                             <div class="percentage">
                                                 <div class="progress">
-                                                    <div class="progress-bar color-2" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar color-2" role="progressbar" style="width: <?=$two_star/$tot_count*100?>%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <span class="pl-2"><?=$two_star?></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,7 +246,8 @@
                                             </span>
                                             <div class="percentage">
                                                 <div class="progress">
-                                                    <div class="progress-bar color-3" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar color-3" role="progressbar" style="width: <?=$thr_star/$tot_count*100?>%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <span class="pl-2"><?=$thr_star?></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,7 +262,8 @@
                                             </span>
                                             <div class="percentage">
                                                 <div class="progress">
-                                                    <div class="progress-bar color-7" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar color-7" role="progressbar" style="width: <?=$fou_star/$tot_count*100?>%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <span class="pl-2"><?=$fou_star?></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -247,7 +278,8 @@
                                             </span>
                                             <div class="percentage">
                                                 <div class="progress">
-                                                    <div class="progress-bar color-5" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar color-5" role="progressbar" style="width: <?=$fiv_star/$tot_count*100?>%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <span class="pl-2"><?=$fiv_star?></span>
                                                 </div>
                                             </div>
                                         </div>

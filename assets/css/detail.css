@@ -28,35 +28,36 @@ html {
     height: 50%;
 }
 
-#score {
+#score, #score span {
+    font-size: 50px;
     position: relative;
-    margin: 0;
-    color: #f8b600;
+    width: 232.15px;
+    color: #777;
     white-space: nowrap;
 }
-
-#score::before {
+#score span{
+    color: #f8b600;
     position: absolute;
-    top: 0;
     left: 0;
-    content: attr(data-split);
-    width: 50%;
-    color: #777;
+    width: 116.075px;
     overflow: hidden;
+    z-index: 999;
 }
 
-
-
-@media (min-width: 425px) and (max-width: 1199.98px){
-    #score {
-        font-size: 50px;
-    }
+.big-star, .big-star span {
+    font-size: 65px;
+    position: relative;
+    width: 301.79px;
+    color: #777;
+    white-space: nowrap;
 }
-
-@media (max-width: 425.98px){
-    #score {
-        font-size: 35px;
-    }
+.big-star span{
+    color: #f8b600;
+    position: absolute;
+    left: 0;
+    width: 116.075px;
+    overflow: hidden;
+    z-index: 999;
 }
 
 .single-comment {

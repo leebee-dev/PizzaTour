@@ -12,6 +12,7 @@
     </section>
     <!-- Banner Area End -->
 
+    
 
     <!-- Welcome Area Starts -->
     <section class="welcome-area section-padding text-center">
@@ -21,6 +22,17 @@
                     <div class="section-top2 text-center">
                         <h3 class="korean">피자투어 <span>광탄점</span></h3>
                         <p><i>피자의 순수를 말하다. 100년의 피자투어입니다.</i></p>
+                    </div>
+                    <div class="">
+                        <a href="https://blog.naver.com/purify2001" class="fa fa-square" style="font-size: 200%; padding: 15px;"><br>
+                            <p style="font-size: 15px;">네이버 블로그</p>
+                        </a>
+                        <a href="https://www.yogiyo.co.kr/mobile/#/444603/" class="fa fa-square-o" style="font-size: 200%; padding: 15px;"><br>
+                            <p style="font-size: 15px;">요기요</p>
+                        </a>
+                        <a href="https://pf.kakao.com/_spFsxb" class="fa fa-square" style="font-size: 200%; padding: 15px;"><br>
+                            <p style="font-size: 15px;">카카오톡</p>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -217,7 +229,7 @@
                         <h3><span class="prime-color">두번째</span> 텃밭 일기 </h3>
                         <h5 class="italic">2020. 10. 26. 14:37</h5>
                         <p class="korean-ligth">
-                                넷째와 함께 감자를 심었다<br>
+                                고구마를 캐러 온 가족이 모였다<br>
     
                                 물론 매장에서 포테이토피자를 만들때
                                 

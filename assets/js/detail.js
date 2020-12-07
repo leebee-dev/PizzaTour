@@ -20,16 +20,8 @@
             return true
         });
 
-        // var score = ($("#bg_score").width()/5.0*$("#total_score").text()).toFixed(2);
-        // $("#score").width(`${score}px`);
-        
-        // $(window).resize(function(){
-        //     var score = ($("#bg_score").width()/5.0*$("#total_score").text()).toFixed(2);
-        //     $("#score").width(`${score}px`);
-        // });
-        //alert(`${20*$("#total_score").text()}%`);
-        //alert($("#score::before"));
-        //$("#score::before").width(`${20*$("#total_score").text()}%`);
+        $("#score span").width(`${20*$("#total_score").text()}%`);
+        $(".big-star span").width(`${20*$("#total_score").text()}%`);
 
         $(".personal-stars").each(function(){
             var star_num = Number($(this).next().text()) + 1;

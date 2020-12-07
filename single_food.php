@@ -20,6 +20,10 @@
         <div class="food-content">
             <div class="">
                 <h5 class="korean"><?php echo $menu_name?></h5>
+                <?php if($menu_best != 0) {?>
+                    <!-- <span class="badge badge-pill badge-primary">New</span> -->
+                    <span class="badge badge-pill badge-danger">Best!</span>
+                <?php }?>
                 <?php if($price_l != 0 and $price_big != 0) {?>
                     <div class="style-change">  M: ₩<?php echo $price_m?>  </div>
                     <div class="style-change">  L: ₩<?php echo $price_l?>  </div>
@@ -28,6 +32,7 @@
                     <div class="style-change"> Price: ₩<?php echo $price_m?>  </div>
                 <?php }?>
             </div>
+            
             <p class="pt-3"><?php echo $menu_description?></p>
         </div>
     </a>

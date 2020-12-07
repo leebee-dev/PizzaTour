@@ -1,7 +1,7 @@
 <?php include_once("header.php");
 include_once("db.php");
 
-$sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=1;"); //전체메뉴
+$sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=1;");
 
 ?>
 
@@ -44,7 +44,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             <h1 class="korean prime-color">피자투어</span></h1>
                             <h6 class="korean">피자투어 광탄점은 하나하나 마음을 담은<br> 건강한 재료로 세상에서 가장 맛있는 피자를 선보이고 있습니다.</h6>
                         </header>
-                        <a href="#" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
+                        <a href="about.html#target1" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
                     </div>
                 </article>
 			</section>
@@ -93,15 +93,17 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             $menu_img = $row[5];  //이미지
                             $price_m = $row[9];  //M 가격
                             $price_l = $row[10];  //L 가격
-                            $price_big = $row[11];  //Big 가격?>
+                            $price_big = $row[11];  //Big 가격
+                            $link = "detail.php?name=".urlencode(base64_encode($menu_name));    
+                        ?>
                             <div class="single-slide d-md-inline-flex">
                                 <div class="single-food">
                                     <div class="food-img">
-                                        <a href="#"><img src="assets/images/<?php echo $menu_img;?>" class="img-fluid" alt="" ></a><br>
+                                        <a href="<?=$link?>"><img src="assets/images/<?php echo $menu_img;?>" class="img-fluid" alt="" ></a><br>
                                     </div>
                                     <div class="food-content">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="prime-color"style="font-weight: bolder;"><?php  echo $menu_name;?></h5>
+                                        <div class="d-flex flex-column justify-content-between">
+                                            <h5 class="prime-color korean"style="font-weight: bolder; font-size:15pt;"><?php  echo $menu_name;?></h5>
                                             <span class="style-change" style="font-weight: bolder;"><?php echo $price_m."/"; echo $price_l."/"; echo $price_big."/"?></span>
                                         </div>
                                         <p class="pt-3" style="color: white;"><?php echo $menu_description;?></p>
@@ -137,9 +139,9 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                         <div class="food-content">
                             <div class="d-flex justify-content-between">
                                 <h3>A</h3>
-                                <span class="style-change">$14.50</span>
+                                <span class="style-change">₩18000</span>
                             </div>
-                            <p class="pt-3">A세트, 15900, 콤비 or 불고기 M + 강정반박스 + 캔콜라
+                            <p class="pt-3">A세트, 18000, 콤비(M) or 불고기(M) + 순살 치킨(중) + 500mL콜라
                                 </p>
                         </div>
                     </div>
@@ -152,9 +154,9 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                         <div class="food-content">
                             <div class="d-flex justify-content-between">
                                 <h3>B</h3>
-                                <span class="style-change">$9.50</span>
+                                <span class="style-change">₩25000</span>
                             </div>
-                            <p class="pt-3">B세트, 21900, 포테이토 or 통고구마 M+ 강정한박스 + 500mL콜라</p>
+                            <p class="pt-3">B세트, 25000, 포테이토(M) or 고구마(M) + 순살 치킨(대) + 1.25L콜라</p>
                         </div>
                     </div>
                 </div>
@@ -166,12 +168,13 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                         <div class="food-content">
                             <div class="d-flex justify-content-between">
                                 <h3>C</h3>
-                                <span class="style-change">$12.50</span>
+                                <span class="style-change">₩35000</span>
                             </div>
-                            <p class="pt-3">C세트, 31900, 빅피자 + 강정한박스 + 1.25L콜라</p>
+                            <p class="pt-3">C세트, 35000, 불고기(Big) or 콤비(Big) + 순살 치킨(대) + 1.25L콜라</p>
                         </div>
                     </div>
                 </div>
+                <a href="menu.php" class="genric-btn primary circle my-3 ml-auto mr-auto" style="font-weight: bolder; color: black;">자세히 보기</a>
             </div>
         </div>
     </section>

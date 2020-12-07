@@ -75,11 +75,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 }
                                 ?>
                                 <li class="no-margin">Follow Us</li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/pages/category/Food---Beverage-Company/%ED%94%BC%EC%9E%90%ED%88%AC%EC%96%B4-%EA%B4%91%ED%83%84%EC%A0%90-561928407281965/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-kakaotalk"></i></a></li>
+                                <li><a href="#"><i class="fa fa-naver"></i></a></li>
                             </ul>
                         </div>
                     </div>
