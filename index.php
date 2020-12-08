@@ -174,7 +174,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                         </div>
                     </div>
                 </div>
-                <a href="menu.php" class="genric-btn primary circle my-3 ml-auto mr-auto" style="font-weight: bolder; color: black;">자세히 보기</a>
+                <a href="menu.php" class="genric-btn primary circle my-3 ml-auto mr-auto" style="font-weight: bolder; color: black;">메뉴</a>
             </div>
         </div>
     </section>

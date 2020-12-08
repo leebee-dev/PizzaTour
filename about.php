@@ -23,17 +23,23 @@
                         <h3 class="korean">피자투어 <span>광탄점</span></h3>
                         <p><i>피자의 순수를 말하다. 100년의 피자투어입니다.</i></p>
                     </div>
-                    <div class="">
-                        <a href="https://blog.naver.com/purify2001" class="fa fa-square" style="font-size: 200%; padding: 15px;"><br>
-                            <p style="font-size: 15px;">네이버 블로그</p>
-                        </a>
-                        <a href="https://www.yogiyo.co.kr/mobile/#/444603/" class="fa fa-square-o" style="font-size: 200%; padding: 15px;"><br>
-                            <p style="font-size: 15px;">요기요</p>
-                        </a>
-                        <a href="https://pf.kakao.com/_spFsxb" class="fa fa-square" style="font-size: 200%; padding: 15px;"><br>
-                            <p style="font-size: 15px;">카카오톡</p>
-                        </a>
-                    </div>
+                    <div class="row m-3" >
+                            <div class="col-lg-4 p-2">
+                                <a href="https://pf.kakao.com/_spFsxb" class="">
+                                    <img src="assets/images/kakao-talk.png">
+                                </a>
+                            </div>
+                            <div class="col-md-4 p-2">
+                                <a href="https://www.yogiyo.co.kr/mobile/?gclid=CjwKCAiAwrf-BRA9EiwAUWwKXtHa4j_bdGAKUS6dTkbJXdRRYiTiAZzwPuM7XY0HGSq1jQp29IVsMRoCQ_YQAvD_BwE#/444603/" class="">
+                                    <img src="assets/images/yogiyo.png">
+                                </a>
+                            </div>
+                            <div class="col-md-4 p-2">
+                                <a href="https://blog.naver.com/purify2001" class="">
+                                    <img src="assets/images/naver.png">
+                                </a>
+                            </div>
+                            
                 </div>
                 <div class="col-lg-12">
                     <div class="text-center">
