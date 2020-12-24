@@ -14,7 +14,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             <h1 class="korean prime-color">피자투어</span></h1>
                             <h6 class="korean">피자투어 광탄점은 하나하나 마음을 담은<br> 건강한 재료로 세상에서 가장 맛있는 피자를 선보이고 있습니다.</h6>
                         </header>
-                        <a href="about.html" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
+                        <a href="about.php" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
                     </div>
 				</article>
                 <article>

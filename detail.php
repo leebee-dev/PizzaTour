@@ -179,15 +179,6 @@
             <!--Comment Start-->
             <div class="row justify-content-start">
                 <div class="col-12 comments-area">
-                    
-                    <div class="comment-list">
-                        
-                        <div id="comment-section bolder">REVIEW</div>
-                    </div>                            				
-                </div>
-            </div>
-            <div class="row justify-content-start">
-                <div class="col-12 comments-area">
                     <div class="comment-total">
                         <div id="comment-section bolder">TOTAL</div>
                             <div class="row">

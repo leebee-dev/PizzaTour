@@ -1,5 +1,8 @@
 <?php include_once("header.php")?>
 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0" nonce="PDCzbCxI"></script>
+
     <!-- Banner Area Starts -->
     <section class="banner-area banner-area2 text-center" style="background-image: url(assets/images/dough.jpg);">
         <div class="container">
@@ -24,22 +27,43 @@
                         <p><i>피자의 순수를 말하다. 100년의 피자투어입니다.</i></p>
                     </div>
                     <div class="row m-3" >
-                            <div class="col-lg-4 p-2">
-                                <a href="https://pf.kakao.com/_spFsxb" class="">
-                                    <img src="assets/images/kakao-talk.png">
-                                </a>
-                            </div>
-                            <div class="col-md-4 p-2">
-                                <a href="https://www.yogiyo.co.kr/mobile/?gclid=CjwKCAiAwrf-BRA9EiwAUWwKXtHa4j_bdGAKUS6dTkbJXdRRYiTiAZzwPuM7XY0HGSq1jQp29IVsMRoCQ_YQAvD_BwE#/444603/" class="">
-                                    <img src="assets/images/yogiyo.png">
-                                </a>
-                            </div>
-                            <div class="col-md-4 p-2">
-                                <a href="https://blog.naver.com/purify2001" class="">
-                                    <img src="assets/images/naver.png">
-                                </a>
-                            </div>
-                            
+                        <div class="col-md-4 p-2">
+                            <a href="https://pf.kakao.com/_spFsxb" class="">
+                                <img src="assets/images/kakao-talk.png">
+                            </a>
+                        </div>
+                        <div class="col-md-4 p-2">
+                            <a href="https://www.yogiyo.co.kr/mobile/?gclid=CjwKCAiAwrf-BRA9EiwAUWwKXtHa4j_bdGAKUS6dTkbJXdRRYiTiAZzwPuM7XY0HGSq1jQp29IVsMRoCQ_YQAvD_BwE#/444603/" class="">
+                                <img src="assets/images/yogiyo.png">
+                            </a>
+                        </div>
+                        <div class="col-md-4 p-2">
+                            <a href="https://blog.naver.com/purify2001" class="">
+                                <img src="assets/images/naver.png">
+                            </a>
+                        </div>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="col-md-6 fb-video my-3" data-href="https://ko-kr.facebook.com/561928407281965/videos/603668510489081/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/facebookapp/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/facebookapp/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>게시: <a href="https://www.facebook.com/facebookapp/">피자투어 광탄점</a> 2014년 12월 5일 금요일</blockquote></div>
+                    <div class="col-md-5 my-3 align-self-center">
+                        <h2><span class="korean" style="color: black;">정성 </span> <span class="korean prime-color">가득~한 </span> <span class="korean" style="color: black;">피자</span></h2>
+                        <p class="pt-3">건강한 재료로 마음을 담고 담은 피자를 만듭니다.</p>
+                    </div>
+                    <div class="col-md-5 my-3 lg-show align-self-center">
+                        <h2><span class="korean prime-color">노릇노릇</span><span class="korean" style="color: black;">한 그대로 전달</span></h2>
+                        <p class="pt-3">따끈할 때가 제맛! 얼른 가져다 드릴게요</p>
+                    </div>
+                    <div class="col-md-6 fb-video my-3" data-href="https://www.facebook.com/561928407281965/videos/619846152130425/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/facebookapp/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/facebookapp/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>게시: <a href="https://www.facebook.com/facebookapp/">피자투어 광탄점</a> 2014년 12월 5일 금요일</blockquote></div>
+                    <div class="col-md-5 my-3 md-show align-self-center">
+                        <h2><span class="korean prime-color">노릇노릇</span><span class="korean" style="color: black;">한 그대로 전달</span></h2>
+                        <p class="pt-3">따끈할 때가 제맛! 얼른 가져다 드릴게요</p>
+                    </div>
+                    <video class="col-md-6 my-3" src="assets/images/making2.mp4" type="video/mp4" muted autoplay loop></video>
+                    <div class="col-md-5 my-3 align-self-center">
+                        <h2><span class="korean prime-color">단체주문 환영</span></h2>
+                        <p class="pt-3">군부대, 학교, 기업체, 교회, 학원 단체주문 환영합니다!</p>
+                    </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="text-center">
@@ -55,13 +79,13 @@
     <!-- Services Area Starts -->
     <a name="target1"> </a> 
     <section class="update-area section-padding" 
-    style="background-image: url(assets/images/food-bg.jpg); background-repeat: no-repeat; background-position:top right">
+    style="background-image: url(assets/images/food-bg.png); background-repeat: no-repeat; background-position:top right">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-top2 text-center">
                         <h2><span class="korean prime-color">우리들의</span> <span class="korean" style="color: black;">이야기</span></h2>
-                        <p class="pt-3">마음을 담은 담은 건강한 재료를 사용합니다.</p>
+                        <p class="pt-3">마음을 담은 건강한 재료를 사용합니다.</p>
                     </div>
                 </div>
             </div>
