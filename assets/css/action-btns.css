@@ -46,8 +46,8 @@
 
 .popup-inner {
     position:absolute;
-    width: 30%;
-    height: 50%;
+    width: 320px;
+    height: 300px;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
@@ -63,7 +63,6 @@
     display: block;
     top: 70%;
     left: 40%;
-
 
     color:#131230 !important;
     padding:10px 24px !important;
