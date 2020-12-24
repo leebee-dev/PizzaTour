@@ -44,14 +44,14 @@
             
             <div class="popup" data-popup="call">
                 <div class="popup-inner">
-                    <div class="popup-contents">
+                    <div class="popup-contents"style="font-size:1.5vw !important;">
                         <a class="popup-close" data-popup-close="call" href="#">확인</a>
                         전화연결은 모바일에서 가능합니다<br>
-                        <h3 class="korean prime-color">" 031-944-7733 "</h3>
-                        <h5 class="korean">피자투어 광탄점</h5>
+                        <h3 class="korean prime-color" style="font-size:2.5vw !important;">" 031-944-7733 "</h3>
+                        <h5 class="korean" style="font-size:2.3vw !important;">피자투어 광탄점</h5>
                     </div>
                 </div>
-              </div>
+            </div>
 
         </li>
         <li>

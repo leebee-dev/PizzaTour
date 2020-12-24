@@ -24,7 +24,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             <h1 class="korean prime-color">피자투어</span></h1>
                             <h6 class="korean">피자투어 광탄점은 하나하나 마음을 담은<br> 건강한 재료로 세상에서 가장 맛있는 피자를 선보이고 있습니다.</h6>
                         </header>
-                        <a href="about.html" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
+                        <a href="about.php" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
                     </div>
 				</article>
                 <article>
@@ -34,7 +34,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             <h1 class="korean prime-color">피자투어</span></h1>
                             <h6 class="korean">피자투어 광탄점은 하나하나 마음을 담은<br> 건강한 재료로 세상에서 가장 맛있는 피자를 선보이고 있습니다.</h6>
                         </header>
-                        <a href="about.html" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
+                        <a href="about.php" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
                     </div>
                 </article>
                 <article>
@@ -44,7 +44,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                             <h1 class="korean prime-color">피자투어</span></h1>
                             <h6 class="korean">피자투어 광탄점은 하나하나 마음을 담은<br> 건강한 재료로 세상에서 가장 맛있는 피자를 선보이고 있습니다.</h6>
                         </header>
-                        <a href="about.html#target1" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
+                        <a href="about.php#target1" class="template-btn circle mt-3" style="font-weight: bolder; color : black;">자세히 보기</a>
                     </div>
                 </article>
 			</section>
@@ -63,7 +63,7 @@ $sql_best = mq("select * from Menu,Price where Menu.idx=Price.idx AND Menu.best=
                     <div class="welcome-text mt-5 mt-md-0">
                         <h2><span class="korean prime-color">우리들의</span> <br><span class="korean" style="color: black;">이야기</span></h2>
                         <p class="pt-3">피자투어 광탄점은 주문 즉시 즉석에서 만드는 생치자 시스템으로 따끈따끈한 프리미엄 웰빙피자를 드실 수 있습니다. 피자투어 카페의 닭강정 등 사이드 메뉴는 피자투어만의 레시피로 만들어지는 독특한 맛으로 이미 20년간 소비자들의 사랑과 선택으로 만들어지고 있습니다.</p>
-                        <a href="about.html#target1" class="template-btn mt-3" style="font-weight: bolder;">자세히</a>
+                        <a href="about.php#target1" class="template-btn mt-3" style="font-weight: bolder;">자세히</a>
                     </div>
                 </div>
             </div><br><br>

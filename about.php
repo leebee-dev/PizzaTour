@@ -44,24 +44,34 @@
                         </div>
                     </div>   
                 </div>
-                <div class="row">
-                    <div class="col-md-6 fb-video my-3" data-href="https://ko-kr.facebook.com/561928407281965/videos/603668510489081/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/facebookapp/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/facebookapp/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>게시: <a href="https://www.facebook.com/facebookapp/">피자투어 광탄점</a> 2014년 12월 5일 금요일</blockquote></div>
+                <div class="container row">
+                    <div class="col-md-6 fb-video my-3"  data-href="https://ko-kr.facebook.com/561928407281965/videos/603668510489081/" data-show-text="false" data-width="">
+                        <blockquote cite="https://developers.facebook.com/facebookapp/videos/10153231379946729/" class="fb-xfbml-parse-ignore">
+                            <a href="https://developers.facebook.com/facebookapp/videos/10153231379946729/">
+                                How to Share With Just Friends
+                            </a>
+                            <p>How to share with just friends.</p>
+                            게시:
+                            <a href="https://www.facebook.com/facebookapp/">피자투어 광탄점</a>
+                            2014년 12월 5일 금요일
+                        </blockquote>
+                    </div>
                     <div class="col-md-5 my-3 align-self-center">
-                        <h2><span class="korean" style="color: black;">정성 </span> <span class="korean prime-color">가득~한 </span> <span class="korean" style="color: black;">피자</span></h2>
+                        <h2><span class="korean" style="color: black;font-size:4.7vw;">정성 </span> <span class="korean prime-color" style="font-size:4.7vw;">가득~한 </span> <span class="korean" style="color: black;font-size:4.7vw;">피자</span></h2>
                         <p class="pt-3">건강한 재료로 마음을 담고 담은 피자를 만듭니다.</p>
                     </div>
                     <div class="col-md-5 my-3 lg-show align-self-center">
-                        <h2><span class="korean prime-color">노릇노릇</span><span class="korean" style="color: black;">한 그대로 전달</span></h2>
+                        <h2><span class="korean prime-color"style="font-size:4.7vw;">노릇노릇</span><span class="korean" style="color: black;font-size:4.7vw;">한 그대로 전달</span></h2>
                         <p class="pt-3">따끈할 때가 제맛! 얼른 가져다 드릴게요</p>
                     </div>
-                    <div class="col-md-6 fb-video my-3" data-href="https://www.facebook.com/561928407281965/videos/619846152130425/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/facebookapp/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/facebookapp/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>게시: <a href="https://www.facebook.com/facebookapp/">피자투어 광탄점</a> 2014년 12월 5일 금요일</blockquote></div>
+                    <div class="col-md-6 fb-video my-3" style="width:100%;" data-href="https://www.facebook.com/561928407281965/videos/619846152130425/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/facebookapp/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/facebookapp/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>게시: <a href="https://www.facebook.com/facebookapp/">피자투어 광탄점</a> 2014년 12월 5일 금요일</blockquote></div>
                     <div class="col-md-5 my-3 md-show align-self-center">
-                        <h2><span class="korean prime-color">노릇노릇</span><span class="korean" style="color: black;">한 그대로 전달</span></h2>
+                        <h2><span class="korean prime-color"style="font-size:4.7vw;">노릇노릇</span><span class="korean" style="color: black;font-size:4.7vw;">한 그대로 전달</span></h2>
                         <p class="pt-3">따끈할 때가 제맛! 얼른 가져다 드릴게요</p>
                     </div>
-                    <video class="col-md-6 my-3" src="assets/images/making2.mp4" type="video/mp4" muted autoplay loop></video>
+                    <video class="col-md-6 my-3" style="width:100%;" src="assets/images/making2.mp4" type="video/mp4" muted autoplay loop></video>
                     <div class="col-md-5 my-3 align-self-center">
-                        <h2><span class="korean prime-color">단체주문 환영</span></h2>
+                        <h2><span class="korean prime-color"style="font-size:4.7vw;">단체주문 환영</span></h2>
                         <p class="pt-3">군부대, 학교, 기업체, 교회, 학원 단체주문 환영합니다!</p>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ if (isset($_POST)) {
             session_start();
         }
         $_SESSION['admin'] = "admin";
-        echo("<script>alert('로그인 되었습니다.');location.href='../admin.php';</script>"); 
+        echo("<script>alert('로그인 되었습니다.');location.href='../admin_settings.php';</script>"); 
        } else {
         echo("<script>alert('로그인 실패하였습니다.');location.href='../admin_login_form.php';</script>"); 
     }

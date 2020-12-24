@@ -78,7 +78,6 @@
     } else {
         //echo "Error: " . $query . "<br>" . mysqli_error($maria_connect);
     }
-    mysql_close; // 전송끝내기
 ?>
     
     <!-- Banner Area Starts -->

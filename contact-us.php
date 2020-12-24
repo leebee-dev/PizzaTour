@@ -38,16 +38,16 @@
     <!-- Map Area Starts -->
     <section class="map-area section-padding">
         <div class="container">
-            <div class="wrap_content">
-                <div class="wrap_map">
-                    <div id="map" style="width:100%;height:100%"></div> <!-- 지도를 표시할 div 입니다 -->
+            <div class="row wrap_content" style="width:100%; height:100%;">
+                <div class="col-12 col-md-6 wrap_map">
+                    <div id="map" style="width:100%;height:100%;"></div> <!-- 지도를 표시할 div 입니다 -->
                     <div class="wrap_button">
                         <a href="javascript:;" class="btn_comm btn_linkMap" target="_blank" onclick="moveKakaoMap(this)"><span class="screen_out">지도 크게보기</span></a> <!-- 지도 크게보기 버튼입니다 -->
                         <a href="javascript:;" class="btn_comm btn_resetMap" onclick="resetKakaoMap()"><span class="screen_out">지도 초기화</span></a> <!-- 지도 크게보기 버튼입니다 -->
                     </div>
                 </div>
-                <div class="wrap_roadview">
-                    <div id="roadview" style="width:100%;height:100%"></div> <!-- 로드뷰를 표시할 div 입니다 -->
+                <div class="col-12 col-md-6 wrap_roadview">
+                    <div id="roadview" style="width:100%;height:100%;"></div> <!-- 로드뷰를 표시할 div 입니다 -->
                     <div class="wrap_button">
                         <a href="javascript:;" class="btn_comm btn_linkRoadview" target="_blank" onclick="moveKakaoRoadview(this)"><span class="screen_out">로드뷰 크게보기</span></a> <!-- 로드뷰 크게보기 버튼입니다 -->
                         <a href="javascript:;" class="btn_comm btn_resetRoadview" onclick="resetRoadview()"><span class="screen_out">로드뷰 크게보기</span></a> <!-- 로드뷰 리셋 버튼입니다 -->
