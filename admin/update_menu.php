@@ -5,6 +5,7 @@ extract($_POST);
 if(isset($_FILES['img']['name'])){
     $filepath = $_FILES['img']['tmp_name'];
     $filename = "../asset/images/".basename($_FILES['img']['name']);
+    $imgname = basename($_FILES['img']['name']);
     move_uploaded_file($filepath, $filename);
     echo $filepath;
 }
@@ -13,7 +14,7 @@ else{
 }
 if(isset($name)){
     mq("START TRANSACTION;");
-    mq("UPDATE Menu Set `name`="."'".$name."'".",`description` = "."'".$description."'".",`origin`="."'"."$origin"."'".",`img`="."'".$img."'"."WHERE idx=".$idx.";");
+    mq("UPDATE Menu Set `name`="."'".$name."'".",`description` = "."'".$description."'".",`origin`="."'"."$origin"."'".",`img`="."'".$imgname."'"."WHERE idx=".$idx.";");
     mq('UPDATE Price Set `M` = '.$M.', L ='.$L.', Big ='.$Big.' WHERE idx='.$idx.';');
     mq("COMMIT;");
 }
